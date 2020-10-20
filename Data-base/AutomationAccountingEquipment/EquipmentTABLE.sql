@@ -10,5 +10,5 @@ CREATE TABLE Equipment
 	Inventory_number NVARCHAR(30),
 	Components NVARCHAR(1000),
 	PRIMARY KEY(ID),
-	FOREIGN KEY(EmployeeID) REFERENCES Employee (ID),
+	FOREIGN KEY(EmployeeID) REFERENCES Employee (ID)
 );
