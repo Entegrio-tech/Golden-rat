@@ -18,7 +18,7 @@ namespace AAE
         {
             InitializeComponent();
         }
-
+        private byte counter;
         private void Validation()
         {
             labelError.Text = "";
@@ -26,9 +26,9 @@ namespace AAE
                 buttonLogin.Enabled = true;
         }
 
-        private void textBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (textBoxLogin.TextLength < 4)
+            if (textBoxLogin.TextLength < 4) // 4 минимальная длина логина
             {
                 labelError.Text = "Логин должен содержать не менее 4 символов";
                 buttonLogin.Enabled = false;
@@ -37,9 +37,9 @@ namespace AAE
                 Validation();
         }
 
-        private void textBoxPassword_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBoxPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (textBoxPassword.TextLength < 8)
+            if (textBoxPassword.TextLength < 8) // 8 минимальная длина пароля
             {
                 labelError.Text = "Пароль должен содержать не менее 8 символов";
                 buttonLogin.Enabled = false;
@@ -50,6 +50,11 @@ namespace AAE
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            if (counter++ == 5)  // Если попыток входа больше 5 - приложение закрывается
+            {
+                MessageBox.Show("Слишком много попыток входа!");
+                Application.Exit();
+            }
             string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
