@@ -1,0 +1,10 @@
+E:\GitHub\Golden-rat\Resourse\AAE\bin\Debug\AAE.exe.config
+E:\GitHub\Golden-rat\Resourse\AAE\bin\Debug\AAE.exe
+E:\GitHub\Golden-rat\Resourse\AAE\bin\Debug\AAE.pdb
+E:\GitHub\Golden-rat\Resourse\AAE\obj\Debug\AAE.csprojAssemblyReference.cache
+E:\GitHub\Golden-rat\Resourse\AAE\obj\Debug\AAE.Form1.resources
+E:\GitHub\Golden-rat\Resourse\AAE\obj\Debug\AAE.Properties.Resources.resources
+E:\GitHub\Golden-rat\Resourse\AAE\obj\Debug\AAE.csproj.GenerateResource.cache
+E:\GitHub\Golden-rat\Resourse\AAE\obj\Debug\AAE.csproj.CoreCompileInputs.cache
+E:\GitHub\Golden-rat\Resourse\AAE\obj\Debug\AAE.exe
+E:\GitHub\Golden-rat\Resourse\AAE\obj\Debug\AAE.pdb

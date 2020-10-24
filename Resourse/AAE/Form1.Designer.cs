@@ -47,6 +47,7 @@
             // 
             // buttonLogin
             // 
+            this.buttonLogin.Enabled = false;
             this.buttonLogin.Location = new System.Drawing.Point(384, 276);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(146, 57);
@@ -57,16 +58,20 @@
             // textBoxLogin
             // 
             this.textBoxLogin.Location = new System.Drawing.Point(232, 220);
+            this.textBoxLogin.MaxLength = 16;
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(298, 22);
             this.textBoxLogin.TabIndex = 2;
+            this.textBoxLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLogin_KeyPress);
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(232, 248);
+            this.textBoxPassword.MaxLength = 30;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(298, 22);
             this.textBoxPassword.TabIndex = 3;
+            this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPassword_KeyPress);
             // 
             // buttonForgot
             // 
