@@ -31,11 +31,10 @@ namespace AAE
             if (textBoxLogin.TextLength < 4)
             {
                 labelError.Text = "Логин должен содержать не менее 4 символов";
+                buttonLogin.Enabled = false;
             }
-            else 
-            {
+            else
                 Validation();
-            }
         }
 
         private void textBoxPassword_KeyPress(object sender, KeyPressEventArgs e)
@@ -43,11 +42,10 @@ namespace AAE
             if (textBoxPassword.TextLength < 8)
             {
                 labelError.Text = "Пароль должен содержать не менее 8 символов";
+                buttonLogin.Enabled = false;
             }
             else
-            {
                 Validation();
-            }
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
