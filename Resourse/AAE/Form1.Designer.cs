@@ -28,13 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.buttonRegistration = new System.Windows.Forms.Button();
+            this.buttonLogin = new System.Windows.Forms.Button();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.buttonForgot = new System.Windows.Forms.Button();
+            this.labelError = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // buttonRegistration
+            // 
+            this.buttonRegistration.Location = new System.Drawing.Point(232, 276);
+            this.buttonRegistration.Name = "buttonRegistration";
+            this.buttonRegistration.Size = new System.Drawing.Size(146, 57);
+            this.buttonRegistration.TabIndex = 0;
+            this.buttonRegistration.Text = "Регистрация";
+            this.buttonRegistration.UseVisualStyleBackColor = true;
+            // 
+            // buttonLogin
+            // 
+            this.buttonLogin.Location = new System.Drawing.Point(384, 276);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(146, 57);
+            this.buttonLogin.TabIndex = 1;
+            this.buttonLogin.Text = "Вход";
+            this.buttonLogin.UseVisualStyleBackColor = true;
+            // 
+            // textBoxLogin
+            // 
+            this.textBoxLogin.Location = new System.Drawing.Point(232, 220);
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(298, 22);
+            this.textBoxLogin.TabIndex = 2;
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.Location = new System.Drawing.Point(232, 248);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(298, 22);
+            this.textBoxPassword.TabIndex = 3;
+            // 
+            // buttonForgot
+            // 
+            this.buttonForgot.Location = new System.Drawing.Point(232, 340);
+            this.buttonForgot.Name = "buttonForgot";
+            this.buttonForgot.Size = new System.Drawing.Size(298, 23);
+            this.buttonForgot.TabIndex = 4;
+            this.buttonForgot.Text = "Забыли пароль?";
+            this.buttonForgot.UseVisualStyleBackColor = true;
+            // 
+            // labelError
+            // 
+            this.labelError.AutoSize = true;
+            this.labelError.Location = new System.Drawing.Point(347, 189);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(70, 17);
+            this.labelError.TabIndex = 5;
+            this.labelError.Text = "labelError";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelError);
+            this.Controls.Add(this.buttonForgot);
+            this.Controls.Add(this.textBoxPassword);
+            this.Controls.Add(this.textBoxLogin);
+            this.Controls.Add(this.buttonLogin);
+            this.Controls.Add(this.buttonRegistration);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button buttonRegistration;
+        private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.TextBox textBoxLogin;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.Button buttonForgot;
+        private System.Windows.Forms.Label labelError;
     }
 }
 
