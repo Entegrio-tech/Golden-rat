@@ -15,14 +15,18 @@ namespace AAE
 {
     public partial class Form1 : Form
     {
-        
         public Form1()
         {
             InitializeComponent();
         }
+
         const byte minimumLoginLength = 4; 
+
         const byte minimumPasswordLength = 8;
+
         private byte counter; // Переменная счетчик, необходимая для работы метода LoginAttemptsLimit.
+
+        string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
         //
         // Проверяет заполненность textBoxLogin и textBoxPassword.
@@ -80,10 +84,11 @@ namespace AAE
             }
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        //
+        // Проверяет логин и пароль.
+        //
+        private void Authentication()
         {
-            LoginAttemptsLimit();
-            string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -92,7 +97,10 @@ namespace AAE
                 SqlCommand command = new SqlCommand(sqlExpression, connection);
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
+                {
+                    reader.Close();
                     labelError.Text = "Успех";
+                }
                 else
                 {
                     reader.Close();
@@ -105,7 +113,14 @@ namespace AAE
                     else
                         labelError.Text = "Такого пользователя не существует";
                 }
+                reader.Close();
             }
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            LoginAttemptsLimit();
+            Authentication();
         }
     }
 }
