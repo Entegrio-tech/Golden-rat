@@ -97,10 +97,7 @@ namespace AAE
                 SqlCommand command = new SqlCommand(sqlExpression, connection);
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
-                {
-                    reader.Close();
                     labelError.Text = "Успех";
-                }
                 else
                 {
                     reader.Close();
@@ -113,7 +110,6 @@ namespace AAE
                     else
                         labelError.Text = "Такого пользователя не существует";
                 }
-                reader.Close();
             }
         }
 
