@@ -1,0 +1,30 @@
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.Form1.resources
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.Form2.resources
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.Form3.resources
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.Form4.resources
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.Form5.resources
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.Form6.resources
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Программа1.csproj.GenerateResource.cache
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Программа1.csproj.CoreCompileInputs.cache
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Программа1.csprojAssemblyReference.cache
+D:\Документы\Visual проэкты\Регистрация\Регистрация\bin\Debug\Программа1.exe.config
+D:\Документы\Visual проэкты\Регистрация\Регистрация\bin\Debug\Программа1.exe
+D:\Документы\Visual проэкты\Регистрация\Регистрация\bin\Debug\Программа1.pdb
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Программа1.Properties.Resources.resources
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Программа1.exe
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Программа1.pdb
+E:\GitHub\Golden-rat\Resourse2\Регистрация\Регистрация\bin\Debug\Программа1.exe.config
+E:\GitHub\Golden-rat\Resourse2\Регистрация\Регистрация\bin\Debug\Программа1.exe
+E:\GitHub\Golden-rat\Resourse2\Регистрация\Регистрация\bin\Debug\Программа1.pdb
+E:\GitHub\Golden-rat\Resourse2\Регистрация\Регистрация\obj\Debug\Программа1.csprojAssemblyReference.cache
+E:\GitHub\Golden-rat\Resourse2\Регистрация\Регистрация\obj\Debug\Регистрация.Form1.resources
+E:\GitHub\Golden-rat\Resourse2\Регистрация\Регистрация\obj\Debug\Регистрация.Form3.resources
+E:\GitHub\Golden-rat\Resourse2\Регистрация\Регистрация\obj\Debug\Регистрация.Form4.resources
+E:\GitHub\Golden-rat\Resourse2\Регистрация\Регистрация\obj\Debug\Регистрация.Form5.resources
+E:\GitHub\Golden-rat\Resourse2\Регистрация\Регистрация\obj\Debug\Регистрация.Form6.resources
+E:\GitHub\Golden-rat\Resourse2\Регистрация\Регистрация\obj\Debug\Программа1.Properties.Resources.resources
+E:\GitHub\Golden-rat\Resourse2\Регистрация\Регистрация\obj\Debug\Программа1.csproj.GenerateResource.cache
+E:\GitHub\Golden-rat\Resourse2\Регистрация\Регистрация\obj\Debug\Программа1.csproj.CoreCompileInputs.cache
+E:\GitHub\Golden-rat\Resourse2\Регистрация\Регистрация\obj\Debug\Программа1.exe
+E:\GitHub\Golden-rat\Resourse2\Регистрация\Регистрация\obj\Debug\Программа1.pdb
+E:\GitHub\Golden-rat\Resourse2\Регистрация\Регистрация\obj\Debug\Регистрация.Authorization.resources

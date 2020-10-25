@@ -1,0 +1,206 @@
+﻿namespace Регистрация
+{
+    partial class Authorization
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+    private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Authorization));
+            this.gradientPanel1 = new Регистрация.GradientPanel();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonRegistration = new System.Windows.Forms.Button();
+            this.buttonForgot = new System.Windows.Forms.Button();
+            this.buttonLogin = new System.Windows.Forms.Button();
+            this.labelError = new System.Windows.Forms.Label();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.labelLogin = new System.Windows.Forms.Label();
+            this.gradientPanel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // gradientPanel1
+            // 
+            this.gradientPanel1.AutoSize = true;
+            this.gradientPanel1.ColorBottom = System.Drawing.Color.Blue;
+            this.gradientPanel1.ColorTop = System.Drawing.Color.White;
+            this.gradientPanel1.Controls.Add(this.buttonExit);
+            this.gradientPanel1.Controls.Add(this.buttonRegistration);
+            this.gradientPanel1.Controls.Add(this.buttonForgot);
+            this.gradientPanel1.Controls.Add(this.buttonLogin);
+            this.gradientPanel1.Controls.Add(this.labelError);
+            this.gradientPanel1.Controls.Add(this.textBoxLogin);
+            this.gradientPanel1.Controls.Add(this.textBoxPassword);
+            this.gradientPanel1.Controls.Add(this.labelLogin);
+            this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.gradientPanel1.Name = "gradientPanel1";
+            this.gradientPanel1.Size = new System.Drawing.Size(645, 444);
+            this.gradientPanel1.TabIndex = 0;
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.Transparent;
+            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExit.FlatAppearance.BorderSize = 0;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonExit.ForeColor = System.Drawing.Color.Black;
+            this.buttonExit.Location = new System.Drawing.Point(601, 4);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(40, 32);
+            this.buttonExit.TabIndex = 11;
+            this.buttonExit.Text = "X";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // buttonRegistration
+            // 
+            this.buttonRegistration.BackColor = System.Drawing.Color.Transparent;
+            this.buttonRegistration.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRegistration.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRegistration.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonRegistration.Location = new System.Drawing.Point(177, 351);
+            this.buttonRegistration.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRegistration.Name = "buttonRegistration";
+            this.buttonRegistration.Size = new System.Drawing.Size(264, 57);
+            this.buttonRegistration.TabIndex = 10;
+            this.buttonRegistration.Text = "Регистрация";
+            this.buttonRegistration.UseVisualStyleBackColor = false;
+            // 
+            // buttonForgot
+            // 
+            this.buttonForgot.BackColor = System.Drawing.Color.Transparent;
+            this.buttonForgot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonForgot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonForgot.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonForgot.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonForgot.Location = new System.Drawing.Point(296, 273);
+            this.buttonForgot.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonForgot.Name = "buttonForgot";
+            this.buttonForgot.Size = new System.Drawing.Size(224, 57);
+            this.buttonForgot.TabIndex = 9;
+            this.buttonForgot.Text = "Забыли пароль?";
+            this.buttonForgot.UseVisualStyleBackColor = false;
+            // 
+            // buttonLogin
+            // 
+            this.buttonLogin.BackColor = System.Drawing.Color.Transparent;
+            this.buttonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogin.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLogin.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonLogin.Location = new System.Drawing.Point(127, 273);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(139, 57);
+            this.buttonLogin.TabIndex = 8;
+            this.buttonLogin.Text = "Войти";
+            this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            // 
+            // labelError
+            // 
+            this.labelError.AutoSize = true;
+            this.labelError.BackColor = System.Drawing.Color.Transparent;
+            this.labelError.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.labelError.Location = new System.Drawing.Point(120, 228);
+            this.labelError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(267, 38);
+            this.labelError.TabIndex = 7;
+            this.labelError.Text = "Неправильный пароль";
+            // 
+            // textBoxLogin
+            // 
+            this.textBoxLogin.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBoxLogin.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLogin.Location = new System.Drawing.Point(112, 128);
+            this.textBoxLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(421, 34);
+            this.textBoxLogin.TabIndex = 6;
+            this.textBoxLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxLogin_KeyPress);
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBoxPassword.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxPassword.Location = new System.Drawing.Point(112, 190);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(421, 34);
+            this.textBoxPassword.TabIndex = 5;
+            this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxPassword_KeyPress);
+            // 
+            // labelLogin
+            // 
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.BackColor = System.Drawing.Color.Transparent;
+            this.labelLogin.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.labelLogin.Location = new System.Drawing.Point(272, 34);
+            this.labelLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(106, 59);
+            this.labelLogin.TabIndex = 1;
+            this.labelLogin.Text = "Вход";
+            // 
+            // Authorization
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(645, 444);
+            this.Controls.Add(this.gradientPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Authorization";
+            this.Text = "Авторизация";
+            this.Load += new System.EventHandler(this.Authorization_Load);
+            this.gradientPanel1.ResumeLayout(false);
+            this.gradientPanel1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private GradientPanel gradientPanel1;
+        private System.Windows.Forms.Label labelLogin;
+        private System.Windows.Forms.Label labelError;
+        private System.Windows.Forms.TextBox textBoxLogin;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.Button buttonForgot;
+        private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Button buttonRegistration;
+        private System.Windows.Forms.Button buttonExit;
+    }
+}
