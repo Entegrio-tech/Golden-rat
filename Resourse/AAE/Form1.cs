@@ -20,13 +20,15 @@ namespace AAE
         {
             InitializeComponent();
         }
-        const byte minimumLoginLength = 4; 
-        const byte minimumPasswordLength = 8;
-        private byte counter; // Переменная счетчик, необходимая для работы метода LoginAttemptsLimit.
 
-        //
-        // Проверяет заполненность textBoxLogin и textBoxPassword.
-        //
+        const byte minimumLoginLength = 4; 
+
+        const byte minimumPasswordLength = 8;
+
+        // Переменная счетчик, необходимая для работы метода LoginAttemptsLimit.
+        private byte counter;
+
+        // Включает кнопку, когда введено минимальное количество символов в textBoxLogin и textBoxPassword.
         private void Validation()
         {
             labelError.Text = "";
@@ -34,9 +36,7 @@ namespace AAE
                 buttonLogin.Enabled = true;
         }
 
-        //
         // Выключает кнопку buttonLogin, если символов меньше чем minimumNumberCharacters.
-        //
         private void LockButtonLogin(object sender, byte minimumNumberCharacters, string fieldName)
         {
             TextBox textBox = (TextBox)sender;
@@ -49,28 +49,10 @@ namespace AAE
                 Validation();
         }
 
-        //
-        // Событие ввода символа в textBoxLogin.
-        //
-        private void TextBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            LockButtonLogin(sender, minimumLoginLength, "Логин");  // Выключает кнопку входа, когда в TextBoxLogin введено меньше 4 символов. 
-        }
-
-        //
-        // Событие ввода символа в textBoxPassword. 
-        //
-        private void TextBoxPassword_KeyPress(object sender, KeyPressEventArgs e) 
-        {
-            LockButtonLogin(sender, minimumPasswordLength, "Пароль");  // Выключает кнопку входа, когда в TextBoxPassword введено меньше 8 символов. 
-        }
-
-        //
         // Выключает кнопку входа на 5 секунд, если она нажата 5 раз.
-        //
-        private void LoginAttemptsLimit() 
+        private void LoginAttemptsLimit()
         {
-            if (counter++ == 5)  
+            if (counter++ == 5)
             {
                 MessageBox.Show("Слишком много попыток входа, попробуйте снова через 5 секунд!");
                 buttonLogin.Enabled = false;
@@ -78,6 +60,18 @@ namespace AAE
                 counter = 0;
                 buttonLogin.Enabled = true;
             }
+        }
+
+        private void TextBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Метод выключает кнопку входа, когда в TextBoxLogin введено меньше 4 символов.
+            LockButtonLogin(sender, minimumLoginLength, "Логин");   
+        }
+
+        private void TextBoxPassword_KeyPress(object sender, KeyPressEventArgs e) 
+        {
+            // Метод выключает кнопку входа, когда в TextBoxPassword введено меньше 8 символов.
+            LockButtonLogin(sender, minimumPasswordLength, "Пароль");   
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
