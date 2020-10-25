@@ -15,7 +15,6 @@ namespace AAE
 {
     public partial class Form1 : Form
     {
-        
         public Form1()
         {
             InitializeComponent();
@@ -25,21 +24,22 @@ namespace AAE
 
         const byte minimumPasswordLength = 8;
 
-        // Переменная счетчик, необходимая для работы метода LoginAttemptsLimit.
         private byte counter;
 
-        // Включает кнопку, когда введено минимальное количество символов в textBoxLogin и textBoxPassword.
+        string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+ 
         private void Validation()
         {
             labelError.Text = "";
+            // Ограничивает ввод символов.
             if ((textBoxLogin.TextLength >= minimumLoginLength) && (textBoxPassword.TextLength >= minimumPasswordLength))
                 buttonLogin.Enabled = true;
         }
 
-        // Выключает кнопку buttonLogin, если символов меньше чем minimumNumberCharacters.
         private void LockButtonLogin(object sender, byte minimumNumberCharacters, string fieldName)
         {
             TextBox textBox = (TextBox)sender;
+            // Выключает кнопку buttonLogin, если символов меньше чем minimumNumberCharacters.
             if (textBox.TextLength < minimumNumberCharacters)
             {
                 labelError.Text = $"{fieldName} должен содержать не менее {minimumNumberCharacters} символов";
@@ -48,10 +48,10 @@ namespace AAE
             else
                 Validation();
         }
-
-        // Выключает кнопку входа на 5 секунд, если она нажата 5 раз.
+    
         private void LoginAttemptsLimit()
         {
+            // Выключает кнопку входа на 5 секунд, если она нажата 5 раз.
             if (counter++ == 5)
             {
                 MessageBox.Show("Слишком много попыток входа, попробуйте снова через 5 секунд!");
@@ -62,22 +62,8 @@ namespace AAE
             }
         }
 
-        private void TextBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
+        private void Authentication()
         {
-            // Метод выключает кнопку входа, когда в TextBoxLogin введено меньше 4 символов.
-            LockButtonLogin(sender, minimumLoginLength, "Логин");   
-        }
-
-        private void TextBoxPassword_KeyPress(object sender, KeyPressEventArgs e) 
-        {
-            // Метод выключает кнопку входа, когда в TextBoxPassword введено меньше 8 символов.
-            LockButtonLogin(sender, minimumPasswordLength, "Пароль");   
-        }
-
-        private void buttonLogin_Click(object sender, EventArgs e)
-        {
-            LoginAttemptsLimit();
-            string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -86,7 +72,10 @@ namespace AAE
                 SqlCommand command = new SqlCommand(sqlExpression, connection);
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
+                {
+                    reader.Close();
                     labelError.Text = "Успех";
+                }
                 else
                 {
                     reader.Close();
@@ -99,7 +88,24 @@ namespace AAE
                     else
                         labelError.Text = "Такого пользователя не существует";
                 }
+                reader.Close();
             }
+        }
+        private void TextBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Метод выключает кнопку входа, когда в TextBoxLogin введено меньше 4 символов.
+            LockButtonLogin(sender, minimumLoginLength, "Логин");
+        }
+
+        private void TextBoxPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Метод выключает кнопку входа, когда в TextBoxPassword введено меньше 8 символов.
+            LockButtonLogin(sender, minimumPasswordLength, "Пароль");
+        }
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            LoginAttemptsLimit();
+            Authentication();
         }
     }
 }
