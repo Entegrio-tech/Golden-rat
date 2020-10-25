@@ -1,0 +1,15 @@
+INSERT INTO Employee(FirstName, LastName, Email, Login, Password, Privilage) VALUES (N'Максим', N'Мунтяну', 'EntegrioYung@gmail.com', 'Entegrio', CAST('EntegrioAdmin2' AS VARBINARY), 1);
+INSERT INTO Employee(FirstName, LastName, Email, Login, Password, Privilage) VALUES (N'Денис', N'Яровой', 'Gibrid@gmail.com', 'Denis', CAST('DenisDenis' AS VARBINARY), 0);
+INSERT INTO Employee(FirstName, LastName, Email, Login, Password, Privilage) VALUES (N'Вячеслав', N'Саул', 'defrigeratoralex@gmail.com', 'SoulSlave', CAST('SoulSlave2' AS VARBINARY), 1);
+INSERT INTO Employee(FirstName, LastName, Email, Login, Password, Privilage) VALUES (N'Алина', N'Думбрава', 'Topless@gmail.com', 'LoveKaneki', CAST('Alinakaneki' AS VARBINARY), 0);
+INSERT INTO Employee(FirstName, LastName, Email, Login, Password, Privilage) VALUES (N'Трас', N'Иванович', 'Guru@gmail.com', 'Tara$', CAST('taras13579' AS VARBINARY), 0);
+INSERT INTO Employee(FirstName, LastName, Email, Login, Password, Privilage) VALUES (N'Николай', N'Кузнецов', 'speedropants@gmail.com', 'Koral', CAST('ilovemymom' AS VARBINARY), 0);
+INSERT INTO Employee(FirstName, LastName, Email, Login, Password, Privilage) VALUES (N'Дмитрий', N'Кунев', 'difsented983@gmail.com', 'Dimka2299', CAST('dimdimdim' AS VARBINARY), 1);
+INSERT INTO Employee(FirstName, LastName, Email, Login, Password, Privilage) VALUES (N'Виктория', N'Немцова', 'ViaVictoria@gmail.com', 'Vika', CAST('vvnt1978' AS VARBINARY), 0);
+INSERT INTO Employee(FirstName, LastName, Email, Login, Password, Privilage) VALUES (N'Виктор', N'Кулик', 'Hipopopopotam@gmail.com', 'Hipno', CAST('topman2353' AS VARBINARY), 0);
+INSERT INTO Employee(FirstName, LastName, Email, Login, Password, Privilage) VALUES (N'Роман', N'Захаров', 'turbomail777@gmail.com', 'Piramides', CAST('toewcfw1212' AS VARBINARY), 0);
+INSERT INTO Employee(FirstName, LastName, Email, Login, Password, Privilage) VALUES (N'Александр', N'Захаров', 'hikkahikka17@gmail.com', 'GodOfTrash', CAST('q1111111' AS VARBINARY), 0);
+INSERT INTO Employee(FirstName, LastName, Email, Login, Password, Privilage) VALUES (N'Петр', N'Вольнов', 'Vrumdrum@gmail.com', 'VrumVrum', CAST('V54R54U54' AS VARBINARY), 0);
+INSERT INTO Employee(FirstName, LastName, Email, Login, Password, Privilage) VALUES ('Admin', 'Admin', 'Admin@gmail.com', 'Admin', CAST('AdminAdminAdminAdmin' AS VARBINARY), 1);
+INSERT INTO Employee(FirstName, LastName, Email, Login, Password, Privilage) VALUES (N'Ксения', N'Смирнова', 'KisKis@gmail.com', 'Kseniy', CAST('kpr23ktr24' AS VARBINARY), 0);
+INSERT INTO Employee(FirstName, LastName, Email, Login, Password, Privilage) VALUES (N'Анатолий', N'Миценгендлер', 'uebermarginal@gmail.com', 'uebermarginal', CAST('boomer71' AS VARBINARY), 0);

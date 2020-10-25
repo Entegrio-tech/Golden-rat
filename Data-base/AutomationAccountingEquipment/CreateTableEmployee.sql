@@ -2,11 +2,12 @@ USE AutomationAccountingEquipment;
 
 CREATE TABLE Employee
 (
-  id SMALLINT IDENTITY,
+  ID SMALLINT IDENTITY NOT NULL,
   FirstName NVARCHAR(20),
   LastName NVARCHAR(20),
-  Login VARCHAR(20),
-  Password VARBINARY(30),
-  Privilage bit,
+  Email NVARCHAR(30) UNIQUE,
+  Login NVARCHAR(20),
+  Password VARBINARY(60),
+  Privilage BIT,
   PRIMARY KEY (id)
 );
