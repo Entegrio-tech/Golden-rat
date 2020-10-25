@@ -1,0 +1,15 @@
+D:\Документы\Visual проэкты\Регистрация\Регистрация\bin\Debug\Регистрация.exe.config
+D:\Документы\Visual проэкты\Регистрация\Регистрация\bin\Debug\Регистрация.exe
+D:\Документы\Visual проэкты\Регистрация\Регистрация\bin\Debug\Регистрация.pdb
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.Form1.resources
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.Properties.Resources.resources
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.csproj.GenerateResource.cache
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.csproj.CoreCompileInputs.cache
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.exe
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.pdb
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.csprojAssemblyReference.cache
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.Form2.resources
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.Form3.resources
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.Form4.resources
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.Form5.resources
+D:\Документы\Visual проэкты\Регистрация\Регистрация\obj\Debug\Регистрация.Form6.resources
