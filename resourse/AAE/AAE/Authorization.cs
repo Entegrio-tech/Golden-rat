@@ -3,6 +3,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Threading;
 using System.Windows.Forms;
+using Программа1;
 
 namespace Регистрация
 {
@@ -13,41 +14,14 @@ namespace Регистрация
             InitializeComponent();
         }
 
-        const byte minimumLoginLength = 4;
-
-        const byte minimumPasswordLength = 8;
-
         private byte counter;
 
         bool mouseDown;
-
-        string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
         internal static void Open()
         {
             throw new NotImplementedException();
         }       
-
-        private void Validation()
-        {
-            labelError.Text = "";
-            // Ограничивает ввод символов.
-            if ((textBoxLogin.TextLength >= minimumLoginLength) && (textBoxPassword.TextLength >= minimumPasswordLength))
-                buttonLogin.Enabled = true;
-        }
-
-        private void LockButtonLogin(object sender, byte minimumNumberCharacters, string fieldName)
-        {
-            TextBox textBox = (TextBox)sender;
-            // Выключает кнопку buttonLogin, если символов меньше чем minimumNumberCharacters.
-            if (textBox.TextLength < minimumNumberCharacters)
-            {
-                labelError.Text = $"{fieldName} должен содержать не менее {minimumNumberCharacters} символов";
-                buttonLogin.Enabled = false;
-            }
-            else
-                Validation();
-        }
 
         private void LoginAttemptsLimit()
         {
@@ -64,7 +38,7 @@ namespace Регистрация
 
         private void Authentication()
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(Methods.connectionString))
             {
                 connection.Open();
                 string sqlExpression = $@"SELECT * FROM Employee
@@ -72,7 +46,10 @@ namespace Регистрация
                 SqlCommand command = new SqlCommand(sqlExpression, connection);
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
-                    labelError.Text = "Успех";
+                {
+                    this.Hide();
+                    Methods.mainMenu.Show();
+                }
                 else
                 {
                     reader.Close();
@@ -103,13 +80,13 @@ namespace Регистрация
         private void TextBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Метод выключает кнопку входа, когда в TextBoxLogin введено меньше 4 символов.
-            LockButtonLogin(sender, minimumLoginLength, "Логин");
+            Methods.LockButtonLogin(sender, Methods.minimumLoginLength, "Логин", labelError, buttonLogin, textBoxLogin, textBoxPassword);
         }
 
         private void TextBoxPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Метод выключает кнопку входа, когда в TextBoxPassword введено меньше 8 символов.
-            LockButtonLogin(sender, minimumPasswordLength, "Пароль");
+            Methods.LockButtonLogin(sender, Methods.minimumPasswordLength, "Пароль", labelError, buttonLogin, textBoxLogin, textBoxPassword);
         }
 
         private void ButtonExit_Click(object sender, EventArgs e)
@@ -147,6 +124,12 @@ namespace Регистрация
                 this.Left = Cursor.Position.X;
                 this.Top = Cursor.Position.Y;
             }
+        }
+
+        private void buttonRegistration_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Methods.registration.Show();
         }
     }
 }
