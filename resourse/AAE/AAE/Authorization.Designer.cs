@@ -60,6 +60,9 @@
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(645, 444);
             this.gradientPanel1.TabIndex = 0;
+            this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseDown);
+            this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseMove);
+            this.gradientPanel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseUp);
             // 
             // buttonExit
             // 
@@ -76,7 +79,7 @@
             this.buttonExit.TabIndex = 11;
             this.buttonExit.Text = "X";
             this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            this.buttonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // buttonRegistration
             // 
@@ -112,6 +115,7 @@
             // 
             this.buttonLogin.BackColor = System.Drawing.Color.Transparent;
             this.buttonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLogin.Enabled = false;
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonLogin.ForeColor = System.Drawing.Color.Transparent;
@@ -122,7 +126,7 @@
             this.buttonLogin.TabIndex = 8;
             this.buttonLogin.Text = "Войти";
             this.buttonLogin.UseVisualStyleBackColor = false;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            this.buttonLogin.Click += new System.EventHandler(this.ButtonLogin_Click);
             // 
             // labelError
             // 
@@ -143,9 +147,11 @@
             this.textBoxLogin.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxLogin.Location = new System.Drawing.Point(112, 128);
             this.textBoxLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxLogin.MaxLength = 20;
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(421, 34);
             this.textBoxLogin.TabIndex = 6;
+            this.textBoxLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxLogin_KeyDown);
             this.textBoxLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxLogin_KeyPress);
             // 
             // textBoxPassword
@@ -154,9 +160,12 @@
             this.textBoxPassword.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassword.Location = new System.Drawing.Point(112, 190);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxPassword.MaxLength = 60;
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(421, 34);
             this.textBoxPassword.TabIndex = 5;
+            this.textBoxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxLogin_KeyDown);
             this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxPassword_KeyPress);
             // 
             // labelLogin
@@ -180,6 +189,7 @@
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(1, 1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Authorization";
             this.Text = "Авторизация";

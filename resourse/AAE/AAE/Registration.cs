@@ -51,5 +51,10 @@ namespace Регистрация
          
 
         }
+
+        private void gradientPanel1_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

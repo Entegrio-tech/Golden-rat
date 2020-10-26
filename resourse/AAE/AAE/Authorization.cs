@@ -19,6 +19,8 @@ namespace Регистрация
 
         private byte counter;
 
+        bool mouseDown;
+
         string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
         internal static void Open()
@@ -89,7 +91,13 @@ namespace Регистрация
         private void Authorization_Load(object sender, EventArgs e)
         {
             textBoxLogin.AddPlaceholder("Введите логин");
-            textBoxPassword.AddPlaceholder("Введите пароль");
+        }
+        private void TextBoxLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonLogin.PerformClick();
+            }
         }
 
         private void TextBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
@@ -104,15 +112,41 @@ namespace Регистрация
             LockButtonLogin(sender, minimumPasswordLength, "Пароль");
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
+        private void ButtonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        private void ButtonLogin_Click(object sender, EventArgs e)
         {
             LoginAttemptsLimit();
             Authentication();
+        }
+
+        public void GradientPanel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                mouseDown = true;
+            }
+            
+        }
+
+        public void GradientPanel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                mouseDown = false;
+            }        
+        }
+
+        public void GradientPanel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown == true)
+            {
+                this.Left = Cursor.Position.X;
+                this.Top = Cursor.Position.Y;
+            }
         }
     }
 }

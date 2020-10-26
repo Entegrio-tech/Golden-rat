@@ -61,6 +61,7 @@
             this.gradientPanel1.Size = new System.Drawing.Size(645, 444);
             this.gradientPanel1.TabIndex = 0;
             this.gradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientPanel1_Paint);
+            this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.gradientPanel1_MouseMove);
             // 
             // button3
             // 
