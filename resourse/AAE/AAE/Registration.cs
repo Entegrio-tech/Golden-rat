@@ -36,8 +36,9 @@ namespace Регистрация
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Methods.authorization.Show();
+            Authorization authorization = new Authorization();
+            this.Close();
+            authorization.Show();
         }
 
         private void buttonRegistration_Click(object sender, EventArgs e)
@@ -53,8 +54,9 @@ namespace Регистрация
                     if (textBoxPassword1.Text == textBoxPassword2.Text)
                     {
                         command.ExecuteNonQuery();
-                        this.Hide();
-                        Methods.authorization.Show();
+                        Authorization authorization = new Authorization();
+                        this.Close();
+                        authorization.Show();
                     }
                     else
                         labelError.Text = "Пароли не совпадают";

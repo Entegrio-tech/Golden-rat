@@ -11,17 +11,14 @@ namespace Программа1
 {
     public static class Methods
     {
-        public static Регистрация.MainMenu mainMenu = new Регистрация.MainMenu();
-
-        public static Authorization authorization = new Authorization();
-
-        public static Registration registration = new Registration();
 
         public static string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
         public const byte minimumLoginLength = 4;
 
         public const byte minimumPasswordLength = 8;
+
+        public static CreateRequest createRequest = new CreateRequest();
 
         private static void Validation(Label labelError, Button buttonLogin, TextBox textBoxLogin, TextBox textBoxPassword)
         {
