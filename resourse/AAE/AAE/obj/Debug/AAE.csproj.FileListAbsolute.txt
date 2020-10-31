@@ -42,4 +42,3 @@ E:\GitHub\Golden-rat\resourse\AAE\AAE\bin\Debug\AAE.pdb
 E:\GitHub\Golden-rat\resourse\AAE\AAE\obj\Debug\AAE.Properties.Resources.resources
 E:\GitHub\Golden-rat\resourse\AAE\AAE\obj\Debug\AAE.exe
 E:\GitHub\Golden-rat\resourse\AAE\AAE\obj\Debug\AAE.pdb
-

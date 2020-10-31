@@ -56,12 +56,12 @@
             this.gradientPanel1.Controls.Add(this.labelLogin);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(484, 361);
+            this.gradientPanel1.Size = new System.Drawing.Size(645, 444);
             this.gradientPanel1.TabIndex = 0;
-            this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseDown);
+            this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gradientPanel1_MouseDown);
             this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseMove);
-            this.gradientPanel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseUp);
             // 
             // buttonExit
             // 
@@ -71,9 +71,10 @@
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonExit.ForeColor = System.Drawing.Color.Black;
-            this.buttonExit.Location = new System.Drawing.Point(451, 3);
+            this.buttonExit.Location = new System.Drawing.Point(601, 4);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(30, 26);
+            this.buttonExit.Size = new System.Drawing.Size(40, 32);
             this.buttonExit.TabIndex = 11;
             this.buttonExit.Text = "X";
             this.buttonExit.UseVisualStyleBackColor = false;
@@ -86,13 +87,14 @@
             this.buttonRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRegistration.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonRegistration.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonRegistration.Location = new System.Drawing.Point(133, 285);
+            this.buttonRegistration.Location = new System.Drawing.Point(190, 350);
+            this.buttonRegistration.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRegistration.Name = "buttonRegistration";
-            this.buttonRegistration.Size = new System.Drawing.Size(198, 46);
+            this.buttonRegistration.Size = new System.Drawing.Size(264, 57);
             this.buttonRegistration.TabIndex = 10;
             this.buttonRegistration.Text = "Регистрация";
             this.buttonRegistration.UseVisualStyleBackColor = false;
-            this.buttonRegistration.Click += new System.EventHandler(this.buttonRegistration_Click);
+            this.buttonRegistration.Click += new System.EventHandler(this.ButtonRegistration_Click);
             // 
             // buttonForgot
             // 
@@ -101,12 +103,14 @@
             this.buttonForgot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonForgot.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonForgot.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonForgot.Location = new System.Drawing.Point(222, 222);
+            this.buttonForgot.Location = new System.Drawing.Point(127, 270);
+            this.buttonForgot.Margin = new System.Windows.Forms.Padding(4);
             this.buttonForgot.Name = "buttonForgot";
-            this.buttonForgot.Size = new System.Drawing.Size(168, 46);
+            this.buttonForgot.Size = new System.Drawing.Size(224, 57);
             this.buttonForgot.TabIndex = 9;
             this.buttonForgot.Text = "Забыли пароль?";
             this.buttonForgot.UseVisualStyleBackColor = false;
+            this.buttonForgot.Click += new System.EventHandler(this.buttonForgot_Click);
             // 
             // buttonLogin
             // 
@@ -116,9 +120,10 @@
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonLogin.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonLogin.Location = new System.Drawing.Point(95, 222);
+            this.buttonLogin.Location = new System.Drawing.Point(379, 270);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(104, 46);
+            this.buttonLogin.Size = new System.Drawing.Size(139, 57);
             this.buttonLogin.TabIndex = 8;
             this.buttonLogin.Text = "Войти";
             this.buttonLogin.UseVisualStyleBackColor = false;
@@ -130,9 +135,10 @@
             this.labelError.BackColor = System.Drawing.Color.Transparent;
             this.labelError.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelError.Location = new System.Drawing.Point(90, 185);
+            this.labelError.Location = new System.Drawing.Point(120, 228);
+            this.labelError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(221, 31);
+            this.labelError.Size = new System.Drawing.Size(267, 38);
             this.labelError.TabIndex = 7;
             this.labelError.Text = "Неправильный пароль";
             // 
@@ -140,11 +146,11 @@
             // 
             this.textBoxLogin.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBoxLogin.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxLogin.Location = new System.Drawing.Point(112, 128);
+            this.textBoxLogin.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxLogin.MaxLength = 20;
-            this.textBoxLogin.Location = new System.Drawing.Point(84, 104);
             this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(317, 29);
+            this.textBoxLogin.Size = new System.Drawing.Size(421, 34);
             this.textBoxLogin.TabIndex = 6;
             this.textBoxLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxLogin_KeyDown);
             this.textBoxLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxLogin_KeyPress);
@@ -153,14 +159,12 @@
             // 
             this.textBoxPassword.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBoxPassword.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxPassword.MaxLength = 60;
+            this.textBoxPassword.Location = new System.Drawing.Point(112, 190);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(5);
+            this.textBoxPassword.MaxLength = 30;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(421, 34);
-            this.textBoxPassword.Location = new System.Drawing.Point(84, 154);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(317, 29);
             this.textBoxPassword.TabIndex = 5;
             this.textBoxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxLogin_KeyDown);
             this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxPassword_KeyPress);
@@ -171,22 +175,23 @@
             this.labelLogin.BackColor = System.Drawing.Color.Transparent;
             this.labelLogin.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelLogin.Location = new System.Drawing.Point(204, 28);
+            this.labelLogin.Location = new System.Drawing.Point(272, 34);
+            this.labelLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(85, 47);
+            this.labelLogin.Size = new System.Drawing.Size(106, 59);
             this.labelLogin.TabIndex = 1;
             this.labelLogin.Text = "Вход";
             // 
             // Authorization
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 361);
+            this.ClientSize = new System.Drawing.Size(645, 444);
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(1, 1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Authorization";
             this.Text = "Авторизация";
             this.Load += new System.EventHandler(this.Authorization_Load);

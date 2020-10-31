@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 using Программа1;
@@ -15,8 +16,6 @@ namespace Регистрация
         }
 
         private byte counter;
-
-        bool mouseDown;
 
         internal static void Open()
         {
@@ -72,9 +71,7 @@ namespace Регистрация
         private void TextBoxLogin_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-            {
                 buttonLogin.PerformClick();
-            }
         }
 
         private void TextBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
@@ -100,36 +97,26 @@ namespace Регистрация
             Authentication();
         }
 
-        public void GradientPanel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                mouseDown = true;
-            }
-            
-        }
-
-        public void GradientPanel1_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                mouseDown = false;
-            }        
-        }
-
         public void GradientPanel1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (mouseDown == true)
-            {
-                this.Left = Cursor.Position.X;
-                this.Top = Cursor.Position.Y;
-            }
+            Methods.GradientPanelMouseMove(this, e);
         }
 
-        private void buttonRegistration_Click(object sender, EventArgs e)
+        private void ButtonRegistration_Click(object sender, EventArgs e)
         {
             this.Hide();
             Methods.registration.Show();
+        }
+
+        private void gradientPanel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            Methods.gradientPanelMouseDown(e);
+        }
+
+        private void buttonForgot_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Methods.recoveryPassword.Show();
         }
     }
 }
