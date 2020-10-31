@@ -111,5 +111,15 @@ namespace Регистрация
         {
 
         }
+
+        private void labelError_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

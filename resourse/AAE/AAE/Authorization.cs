@@ -71,6 +71,7 @@ namespace Регистрация
         private void Authorization_Load(object sender, EventArgs e)
         {
             textBoxLogin.AddPlaceholder("Введите логин");
+            textBoxPassword.AddPlaceholder("Введите пароль");
         }
         private void TextBoxLogin_KeyDown(object sender, KeyEventArgs e)
         {
@@ -122,6 +123,16 @@ namespace Регистрация
         {
             this.Hide();
             Methods.recoveryPassword.Show();
+        }
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBoxPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
