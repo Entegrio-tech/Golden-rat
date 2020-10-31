@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.gradientPanel1 = new Регистрация.GradientPanel();
+            this.buttonViewRequest = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -45,6 +46,7 @@
             this.gradientPanel1.AutoSize = true;
             this.gradientPanel1.ColorBottom = System.Drawing.Color.Blue;
             this.gradientPanel1.ColorTop = System.Drawing.Color.White;
+            this.gradientPanel1.Controls.Add(this.buttonViewRequest);
             this.gradientPanel1.Controls.Add(this.buttonBack);
             this.gradientPanel1.Controls.Add(this.button4);
             this.gradientPanel1.Controls.Add(this.dataGridView1);
@@ -53,9 +55,26 @@
             this.gradientPanel1.Controls.Add(this.comboBox1);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(784, 461);
+            this.gradientPanel1.Size = new System.Drawing.Size(1088, 587);
             this.gradientPanel1.TabIndex = 0;
+            // 
+            // buttonViewRequest
+            // 
+            this.buttonViewRequest.BackColor = System.Drawing.Color.Transparent;
+            this.buttonViewRequest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonViewRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonViewRequest.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonViewRequest.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonViewRequest.Location = new System.Drawing.Point(527, 436);
+            this.buttonViewRequest.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonViewRequest.Name = "buttonViewRequest";
+            this.buttonViewRequest.Size = new System.Drawing.Size(340, 57);
+            this.buttonViewRequest.TabIndex = 19;
+            this.buttonViewRequest.Text = "Просмотр заявки";
+            this.buttonViewRequest.UseVisualStyleBackColor = false;
+            this.buttonViewRequest.Click += new System.EventHandler(this.buttonViewRequest_Click);
             // 
             // buttonBack
             // 
@@ -65,9 +84,10 @@
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonBack.ForeColor = System.Drawing.Color.Black;
-            this.buttonBack.Location = new System.Drawing.Point(3, 3);
+            this.buttonBack.Location = new System.Drawing.Point(4, 4);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(33, 26);
+            this.buttonBack.Size = new System.Drawing.Size(44, 32);
             this.buttonBack.TabIndex = 18;
             this.buttonBack.Text = "<-";
             this.buttonBack.UseVisualStyleBackColor = false;
@@ -81,9 +101,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(750, 3);
+            this.button4.Location = new System.Drawing.Point(1000, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(30, 26);
+            this.button4.Size = new System.Drawing.Size(40, 32);
             this.button4.TabIndex = 17;
             this.button4.Text = "X";
             this.button4.UseVisualStyleBackColor = false;
@@ -95,10 +116,11 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.Location = new System.Drawing.Point(50, 115);
+            this.dataGridView1.Location = new System.Drawing.Point(41, 142);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(669, 211);
+            this.dataGridView1.Size = new System.Drawing.Size(1007, 260);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -108,9 +130,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(33, 56);
+            this.label1.Location = new System.Drawing.Point(44, 69);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 47);
+            this.label1.Size = new System.Drawing.Size(143, 59);
             this.label1.TabIndex = 14;
             this.label1.Text = "Заявки";
             // 
@@ -121,9 +144,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(242, 352);
+            this.button1.Location = new System.Drawing.Point(179, 436);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(255, 46);
+            this.button1.Size = new System.Drawing.Size(340, 57);
             this.button1.TabIndex = 12;
             this.button1.Text = "Создать заявку";
             this.button1.UseVisualStyleBackColor = false;
@@ -135,22 +159,25 @@
             this.comboBox1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(684, 38);
+            this.comboBox1.Location = new System.Drawing.Point(912, 47);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(96, 31);
+            this.comboBox1.Size = new System.Drawing.Size(127, 36);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.Text = "Акаунт";
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(1088, 587);
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainMenu";
             this.Text = "Главное меню";
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -168,5 +195,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Button buttonViewRequest;
     }
 }

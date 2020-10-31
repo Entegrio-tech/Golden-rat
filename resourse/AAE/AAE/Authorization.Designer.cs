@@ -60,7 +60,7 @@
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(645, 444);
             this.gradientPanel1.TabIndex = 0;
-            this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gradientPanel1_MouseDown);
+            this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseDown);
             this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseMove);
             // 
             // buttonExit
@@ -110,7 +110,7 @@
             this.buttonForgot.TabIndex = 9;
             this.buttonForgot.Text = "Забыли пароль?";
             this.buttonForgot.UseVisualStyleBackColor = false;
-            this.buttonForgot.Click += new System.EventHandler(this.buttonForgot_Click);
+            this.buttonForgot.Click += new System.EventHandler(this.ButtonForgot_Click);
             // 
             // buttonLogin
             // 
@@ -135,12 +135,11 @@
             this.labelError.BackColor = System.Drawing.Color.Transparent;
             this.labelError.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelError.Location = new System.Drawing.Point(120, 228);
+            this.labelError.Location = new System.Drawing.Point(187, 228);
             this.labelError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(267, 38);
+            this.labelError.Size = new System.Drawing.Size(0, 38);
             this.labelError.TabIndex = 7;
-            this.labelError.Text = "Неправильный пароль";
             // 
             // textBoxLogin
             // 

@@ -47,7 +47,7 @@ namespace Регистрация
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    Methods.createRequest.EmployeeID = reader.GetInt32(0); 
+                    //Methods.createRequest.EmployeeID = reader.GetInt32(0); 
                     this.Hide();
                     MainMenu mainMenu = new MainMenu();
                     mainMenu.Show();
@@ -112,15 +112,16 @@ namespace Регистрация
             registration.Show();
         }
 
-        private void gradientPanel1_MouseDown(object sender, MouseEventArgs e)
+        private void GradientPanel1_MouseDown(object sender, MouseEventArgs e)
         {
             Methods.gradientPanelMouseDown(e);
         }
 
-        private void buttonForgot_Click(object sender, EventArgs e)
+        private void ButtonForgot_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Methods.recoveryPassword.Show();
+            RecoveryPassword recoveryPassword = new RecoveryPassword();
+            recoveryPassword.Show();
         }
     }
 }

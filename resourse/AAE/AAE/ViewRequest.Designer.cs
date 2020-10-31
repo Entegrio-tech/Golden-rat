@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRequest));
             this.gradientPanel1 = new Регистрация.GradientPanel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelError = new System.Windows.Forms.Label();
+            this.buttonJournal = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonReject = new System.Windows.Forms.Button();
+            this.buttonAcсept = new System.Windows.Forms.Button();
+            this.richTextBoxRequest = new System.Windows.Forms.RichTextBox();
+            this.labelName = new System.Windows.Forms.Label();
             this.gradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,12 +46,14 @@
             this.gradientPanel1.AutoSize = true;
             this.gradientPanel1.ColorBottom = System.Drawing.Color.Blue;
             this.gradientPanel1.ColorTop = System.Drawing.Color.White;
-            this.gradientPanel1.Controls.Add(this.button5);
-            this.gradientPanel1.Controls.Add(this.button4);
-            this.gradientPanel1.Controls.Add(this.button1);
-            this.gradientPanel1.Controls.Add(this.button2);
-            this.gradientPanel1.Controls.Add(this.richTextBox1);
-            this.gradientPanel1.Controls.Add(this.label1);
+            this.gradientPanel1.Controls.Add(this.labelError);
+            this.gradientPanel1.Controls.Add(this.buttonJournal);
+            this.gradientPanel1.Controls.Add(this.buttonBack);
+            this.gradientPanel1.Controls.Add(this.buttonExit);
+            this.gradientPanel1.Controls.Add(this.buttonReject);
+            this.gradientPanel1.Controls.Add(this.buttonAcсept);
+            this.gradientPanel1.Controls.Add(this.richTextBoxRequest);
+            this.gradientPanel1.Controls.Add(this.labelName);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gradientPanel1.Margin = new System.Windows.Forms.Padding(4);
@@ -57,92 +61,114 @@
             this.gradientPanel1.Size = new System.Drawing.Size(1045, 567);
             this.gradientPanel1.TabIndex = 0;
             // 
-            // button5
+            // labelError
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(4, 4);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(44, 32);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "<-";
-            this.button5.UseVisualStyleBackColor = false;
+            this.labelError.AutoSize = true;
+            this.labelError.Location = new System.Drawing.Point(375, 412);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(70, 17);
+            this.labelError.TabIndex = 23;
+            this.labelError.Text = "labelError";
             // 
-            // button4
+            // buttonJournal
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(1001, 4);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(40, 32);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "X";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonJournal.BackColor = System.Drawing.Color.Transparent;
+            this.buttonJournal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonJournal.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonJournal.ForeColor = System.Drawing.Color.Black;
+            this.buttonJournal.Location = new System.Drawing.Point(697, 55);
+            this.buttonJournal.Name = "buttonJournal";
+            this.buttonJournal.Size = new System.Drawing.Size(282, 43);
+            this.buttonJournal.TabIndex = 22;
+            this.buttonJournal.Text = "Журнал";
+            this.buttonJournal.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // buttonBack
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(139, 458);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(340, 57);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Отклонить";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonBack.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBack.FlatAppearance.BorderSize = 0;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBack.ForeColor = System.Drawing.Color.Black;
+            this.buttonBack.Location = new System.Drawing.Point(4, 4);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(44, 32);
+            this.buttonBack.TabIndex = 21;
+            this.buttonBack.Text = "<-";
+            this.buttonBack.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // buttonExit
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(537, 458);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(340, 57);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Принять";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonExit.BackColor = System.Drawing.Color.Transparent;
+            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExit.FlatAppearance.BorderSize = 0;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonExit.ForeColor = System.Drawing.Color.Black;
+            this.buttonExit.Location = new System.Drawing.Point(1001, 4);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(40, 32);
+            this.buttonExit.TabIndex = 15;
+            this.buttonExit.Text = "X";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
-            // richTextBox1
+            // buttonReject
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.LightGray;
-            this.richTextBox1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox1.Location = new System.Drawing.Point(67, 142);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(912, 250);
-            this.richTextBox1.TabIndex = 17;
-            this.richTextBox1.Text = "";
+            this.buttonReject.BackColor = System.Drawing.Color.Transparent;
+            this.buttonReject.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonReject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReject.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonReject.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonReject.Location = new System.Drawing.Point(139, 458);
+            this.buttonReject.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonReject.Name = "buttonReject";
+            this.buttonReject.Size = new System.Drawing.Size(340, 57);
+            this.buttonReject.TabIndex = 20;
+            this.buttonReject.Text = "Отклонить";
+            this.buttonReject.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // buttonAcсept
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(80, 55);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(341, 59);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Просморт заявки";
+            this.buttonAcсept.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAcсept.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAcсept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAcсept.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAcсept.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonAcсept.Location = new System.Drawing.Point(537, 458);
+            this.buttonAcсept.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonAcсept.Name = "buttonAcсept";
+            this.buttonAcсept.Size = new System.Drawing.Size(340, 57);
+            this.buttonAcсept.TabIndex = 19;
+            this.buttonAcсept.Text = "Принять";
+            this.buttonAcсept.UseVisualStyleBackColor = false;
+            // 
+            // richTextBoxRequest
+            // 
+            this.richTextBoxRequest.BackColor = System.Drawing.Color.LightGray;
+            this.richTextBoxRequest.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBoxRequest.Location = new System.Drawing.Point(67, 142);
+            this.richTextBoxRequest.Margin = new System.Windows.Forms.Padding(4);
+            this.richTextBoxRequest.Name = "richTextBoxRequest";
+            this.richTextBoxRequest.Size = new System.Drawing.Size(912, 250);
+            this.richTextBoxRequest.TabIndex = 17;
+            this.richTextBoxRequest.Text = "";
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.BackColor = System.Drawing.Color.Transparent;
+            this.labelName.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.labelName.Location = new System.Drawing.Point(80, 55);
+            this.labelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(341, 59);
+            this.labelName.TabIndex = 16;
+            this.labelName.Text = "Просморт заявки";
             // 
             // ViewRequest
             // 
@@ -155,6 +181,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ViewRequest";
             this.Text = "Просмотр запроса";
+            this.Load += new System.EventHandler(this.ViewRequest_Load);
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -165,11 +192,13 @@
         #endregion
 
         private GradientPanel gradientPanel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.RichTextBox richTextBoxRequest;
+        private System.Windows.Forms.Button buttonReject;
+        private System.Windows.Forms.Button buttonAcсept;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Button buttonJournal;
+        private System.Windows.Forms.Label labelError;
     }
 }

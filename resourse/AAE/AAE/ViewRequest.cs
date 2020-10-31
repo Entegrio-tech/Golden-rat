@@ -17,9 +17,14 @@ namespace Регистрация
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ViewRequest_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

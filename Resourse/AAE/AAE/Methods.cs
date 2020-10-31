@@ -28,8 +28,9 @@ namespace Программа1
 
         private static Point lastPoint;
 
-
         public static CreateRequest createRequest = new CreateRequest();
+
+        public static ViewRequest viewRequest = new ViewRequest();
 
         private static void Validation(Label labelError, Button buttonLogin, TextBox textBoxLogin, TextBox textBoxPassword)
         {
