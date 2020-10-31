@@ -47,7 +47,8 @@ namespace Регистрация
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    Methods.createRequest.EmployeeID = reader.GetInt32(0); 
+                    Methods.EmployeeID = reader.GetInt16(0);
+                    Methods.Privilage = reader.GetBoolean(6);
                     this.Hide();
                     MainMenu mainMenu = new MainMenu();
                     mainMenu.Show();

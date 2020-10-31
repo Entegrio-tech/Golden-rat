@@ -10,8 +10,12 @@ using Регистрация;
 
 namespace Программа1
 {
-    public class Methods
+    public static class Methods
     {
+        public static Int16 EmployeeID;
+
+        public static bool Privilage;
+
         public const byte minimumLoginLength = 4;
 
         public const byte minimumPasswordLength = 8;

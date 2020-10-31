@@ -53,10 +53,15 @@ namespace Регистрация
                     SqlCommand command = new SqlCommand(sqlExpression, connection);
                     if (textBoxPassword1.Text == textBoxPassword2.Text)
                     {
-                        command.ExecuteNonQuery();
-                        Authorization authorization = new Authorization();
-                        this.Close();
-                        authorization.Show();
+                        if (textBoxSurname.Text != "" && textBoxName.Text != "" && textBoxEmail.Text != "Введите E-MAIL" && textBoxLogin.Text != "Введите логин")
+                        {
+                            command.ExecuteNonQuery();
+                            Authorization authorization = new Authorization();
+                            this.Close();
+                            authorization.Show();
+                        }
+                        else
+                            labelError.Text = "Заполните поля!";
                     }
                     else
                         labelError.Text = "Пароли не совпадают";

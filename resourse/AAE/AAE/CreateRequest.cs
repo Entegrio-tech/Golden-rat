@@ -14,7 +14,6 @@ namespace Регистрация
 {
     public partial class CreateRequest : Form
     {
-        public int EmployeeID;
         public CreateRequest()
         {
             InitializeComponent();
@@ -31,14 +30,14 @@ namespace Регистрация
             {
                 connection.Open();
                 string sqlExpression1 = $@"SELECT * FROM Equipment
-                                          WHERE Name = N'{comboBox1.Text}'";
+                                           WHERE Name = N'{comboBox1.Text}'";
                 SqlCommand command = new SqlCommand(sqlExpression1, connection);
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
                     reader.Read();
                     string sqlExpression = $@"INSERT INTO Requests (EmployeeID, EquipmentID, Text, Title, RequestDate, Status) 
-                                            VALUES ({EmployeeID}, {reader.GetInt32(0)}, N'{textBox3.Text}', N'{richTextBox1.Text}', GETDATE(), 0)";
+                                              VALUES ({Methods.EmployeeID}, {reader.GetInt32(0)}, N'{textBox3.Text}', N'{richTextBox1.Text}', GETDATE(), 0)";
                     command.CommandText = sqlExpression;
                     reader.Close();
                     command.ExecuteNonQuery();
