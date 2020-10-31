@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Программа1;
 
 namespace Регистрация
 {
@@ -30,6 +31,19 @@ namespace Регистрация
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            Authorization authorization = new Authorization();
+            this.Close();
+            authorization.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Methods.createRequest.Show();
         }
     }
 }

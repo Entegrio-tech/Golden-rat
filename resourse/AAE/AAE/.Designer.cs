@@ -30,13 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecoveryPassword));
             this.gradientPanel1 = new Регистрация.GradientPanel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.buttonAcceptCode = new System.Windows.Forms.Button();
+            this.buttonSendMail = new System.Windows.Forms.Button();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.buttonRecovery = new System.Windows.Forms.Button();
+            this.labelNotification = new System.Windows.Forms.Label();
+            this.textBoxNewPassword = new System.Windows.Forms.TextBox();
+            this.textBoxCode = new System.Windows.Forms.TextBox();
+            this.labelName = new System.Windows.Forms.Label();
             this.gradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,113 +48,163 @@
             this.gradientPanel1.AutoSize = true;
             this.gradientPanel1.ColorBottom = System.Drawing.Color.Blue;
             this.gradientPanel1.ColorTop = System.Drawing.Color.Empty;
-            this.gradientPanel1.Controls.Add(this.button4);
-            this.gradientPanel1.Controls.Add(this.button5);
-            this.gradientPanel1.Controls.Add(this.button1);
-            this.gradientPanel1.Controls.Add(this.label2);
-            this.gradientPanel1.Controls.Add(this.textBox1);
-            this.gradientPanel1.Controls.Add(this.textBox3);
-            this.gradientPanel1.Controls.Add(this.label1);
+            this.gradientPanel1.Controls.Add(this.buttonAcceptCode);
+            this.gradientPanel1.Controls.Add(this.buttonSendMail);
+            this.gradientPanel1.Controls.Add(this.textBoxLogin);
+            this.gradientPanel1.Controls.Add(this.buttonExit);
+            this.gradientPanel1.Controls.Add(this.buttonBack);
+            this.gradientPanel1.Controls.Add(this.buttonRecovery);
+            this.gradientPanel1.Controls.Add(this.labelNotification);
+            this.gradientPanel1.Controls.Add(this.textBoxNewPassword);
+            this.gradientPanel1.Controls.Add(this.textBoxCode);
+            this.gradientPanel1.Controls.Add(this.labelName);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(645, 444);
             this.gradientPanel1.TabIndex = 0;
+            this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gradientPanel1_MouseDown);
+            this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.gradientPanel1_MouseMove);
             // 
-            // button4
+            // buttonAcceptCode
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(601, 4);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(40, 32);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "X";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonAcceptCode.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAcceptCode.Enabled = false;
+            this.buttonAcceptCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAcceptCode.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAcceptCode.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonAcceptCode.Location = new System.Drawing.Point(385, 219);
+            this.buttonAcceptCode.Name = "buttonAcceptCode";
+            this.buttonAcceptCode.Size = new System.Drawing.Size(167, 34);
+            this.buttonAcceptCode.TabIndex = 17;
+            this.buttonAcceptCode.Text = "Подтвердить";
+            this.buttonAcceptCode.UseVisualStyleBackColor = false;
+            this.buttonAcceptCode.Click += new System.EventHandler(this.buttonAcceptCode_Click);
             // 
-            // button5
+            // buttonSendMail
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(0, 4);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(44, 32);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "<-";
-            this.button5.UseVisualStyleBackColor = false;
+            this.buttonSendMail.BackColor = System.Drawing.Color.Transparent;
+            this.buttonSendMail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSendMail.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSendMail.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonSendMail.Location = new System.Drawing.Point(385, 179);
+            this.buttonSendMail.Name = "buttonSendMail";
+            this.buttonSendMail.Size = new System.Drawing.Size(167, 34);
+            this.buttonSendMail.TabIndex = 16;
+            this.buttonSendMail.Text = "Получить код";
+            this.buttonSendMail.UseVisualStyleBackColor = false;
+            this.buttonSendMail.Click += new System.EventHandler(this.buttonSendMail_Click);
             // 
-            // button1
+            // textBoxLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(147, 343);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(340, 57);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Восстановить";
-            this.button1.UseVisualStyleBackColor = false;
+            this.textBoxLogin.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBoxLogin.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLogin.Location = new System.Drawing.Point(99, 180);
+            this.textBoxLogin.MaxLength = 30;
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(270, 34);
+            this.textBoxLogin.TabIndex = 15;
             // 
-            // label2
+            // buttonExit
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(116, 266);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(381, 38);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Код отправлен на вашу почту";
+            this.buttonExit.BackColor = System.Drawing.Color.Transparent;
+            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExit.FlatAppearance.BorderSize = 0;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonExit.ForeColor = System.Drawing.Color.Black;
+            this.buttonExit.Location = new System.Drawing.Point(601, 4);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(40, 32);
+            this.buttonExit.TabIndex = 14;
+            this.buttonExit.Text = "X";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
-            // textBox1
+            // buttonBack
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(112, 119);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(421, 34);
-            this.textBox1.TabIndex = 9;
+            this.buttonBack.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBack.FlatAppearance.BorderSize = 0;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBack.ForeColor = System.Drawing.Color.Black;
+            this.buttonBack.Location = new System.Drawing.Point(0, 4);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(44, 32);
+            this.buttonBack.TabIndex = 13;
+            this.buttonBack.Text = "<-";
+            this.buttonBack.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // buttonRecovery
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBox3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(112, 226);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(180, 34);
-            this.textBox3.TabIndex = 7;
+            this.buttonRecovery.BackColor = System.Drawing.Color.Transparent;
+            this.buttonRecovery.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonRecovery.Enabled = false;
+            this.buttonRecovery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRecovery.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRecovery.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonRecovery.Location = new System.Drawing.Point(147, 343);
+            this.buttonRecovery.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRecovery.Name = "buttonRecovery";
+            this.buttonRecovery.Size = new System.Drawing.Size(340, 57);
+            this.buttonRecovery.TabIndex = 11;
+            this.buttonRecovery.Text = "Восстановить";
+            this.buttonRecovery.UseVisualStyleBackColor = false;
+            this.buttonRecovery.Click += new System.EventHandler(this.buttonRecovery_Click);
             // 
-            // label1
+            // labelNotification
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(87, 47);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(448, 59);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Восстановление пароля";
+            this.labelNotification.AutoSize = true;
+            this.labelNotification.BackColor = System.Drawing.Color.Transparent;
+            this.labelNotification.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNotification.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.labelNotification.Location = new System.Drawing.Point(131, 87);
+            this.labelNotification.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNotification.Name = "labelNotification";
+            this.labelNotification.Size = new System.Drawing.Size(381, 38);
+            this.labelNotification.TabIndex = 10;
+            this.labelNotification.Text = "Код отправлен на вашу почту";
+            // 
+            // textBoxNewPassword
+            // 
+            this.textBoxNewPassword.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBoxNewPassword.Enabled = false;
+            this.textBoxNewPassword.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxNewPassword.Location = new System.Drawing.Point(99, 262);
+            this.textBoxNewPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxNewPassword.MaxLength = 30;
+            this.textBoxNewPassword.Name = "textBoxNewPassword";
+            this.textBoxNewPassword.Size = new System.Drawing.Size(453, 34);
+            this.textBoxNewPassword.TabIndex = 9;
+            // 
+            // textBoxCode
+            // 
+            this.textBoxCode.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBoxCode.Enabled = false;
+            this.textBoxCode.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxCode.Location = new System.Drawing.Point(99, 219);
+            this.textBoxCode.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxCode.MaxLength = 4;
+            this.textBoxCode.Name = "textBoxCode";
+            this.textBoxCode.Size = new System.Drawing.Size(270, 34);
+            this.textBoxCode.TabIndex = 7;
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.BackColor = System.Drawing.Color.Transparent;
+            this.labelName.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.labelName.Location = new System.Drawing.Point(104, 9);
+            this.labelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(448, 59);
+            this.labelName.TabIndex = 2;
+            this.labelName.Text = "Восстановление пароля";
             // 
             // RecoveryPassword
             // 
@@ -175,12 +228,15 @@
         #endregion
 
         private GradientPanel gradientPanel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.TextBox textBoxCode;
+        private System.Windows.Forms.Label labelNotification;
+        private System.Windows.Forms.TextBox textBoxNewPassword;
+        private System.Windows.Forms.Button buttonRecovery;
+        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.TextBox textBoxLogin;
+        private System.Windows.Forms.Button buttonSendMail;
+        private System.Windows.Forms.Button buttonAcceptCode;
     }
 }

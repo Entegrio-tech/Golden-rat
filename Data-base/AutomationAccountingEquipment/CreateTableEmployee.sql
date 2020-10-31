@@ -6,8 +6,8 @@ CREATE TABLE Employee
   FirstName NVARCHAR(20),
   LastName NVARCHAR(20),
   Email NVARCHAR(30) UNIQUE,
-  Login NVARCHAR(20),
-  Password VARBINARY(60),
+  Login NVARCHAR(20) UNIQUE,
+  Password VARBINARY(30),
   Privilage BIT,
   PRIMARY KEY (id)
 );
