@@ -29,6 +29,8 @@ namespace Программа1
         private static Point lastPoint;
 
 
+        public static CreateRequest createRequest = new CreateRequest();
+
         private static void Validation(Label labelError, Button buttonLogin, TextBox textBoxLogin, TextBox textBoxPassword)
         {
             labelError.Text = "";

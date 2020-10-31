@@ -36,8 +36,9 @@ namespace Регистрация
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Methods.authorization.Show();
+            Authorization authorization = new Authorization();
+            this.Close();
+            authorization.Show();
         }
 
         private void buttonRegistration_Click(object sender, EventArgs e)
@@ -47,14 +48,15 @@ namespace Регистрация
                 using (SqlConnection connection = new SqlConnection(Methods.connectionString))
                 {
                     connection.Open();
-                    string sqlExpression = $@"INSERT INTO Employee (FirstName, LastName, Login, Email, Password) 
-                                          VALUES ('{textBoxName.Text}', '{textBoxSurname.Text}', '{textBoxLogin.Text}', '{textBoxEmail.Text}', CAST('{textBoxPassword1.Text}' AS VARBINARY))";
+                    string sqlExpression = $@"INSERT INTO Employee (FirstName, LastName, Login, Email, Password, Privilage) 
+                                          VALUES (N'{textBoxName.Text}', N'{textBoxSurname.Text}', N'{textBoxLogin.Text}', N'{textBoxEmail.Text}', CAST('{textBoxPassword1.Text}' AS VARBINARY), 0)";
                     SqlCommand command = new SqlCommand(sqlExpression, connection);
                     if (textBoxPassword1.Text == textBoxPassword2.Text)
                     {
                         command.ExecuteNonQuery();
-                        this.Hide();
-                        Methods.authorization.Show();
+                        Authorization authorization = new Authorization();
+                        this.Close();
+                        authorization.Show();
                     }
                     else
                         labelError.Text = "Пароли не совпадают";

@@ -46,8 +46,11 @@ namespace Регистрация
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
+                    reader.Read();
+                    Methods.createRequest.EmployeeID = reader.GetInt32(0); 
                     this.Hide();
-                    Methods.mainMenu.Show();
+                    MainMenu mainMenu = new MainMenu();
+                    mainMenu.Show();
                 }
                 else
                 {
@@ -105,7 +108,8 @@ namespace Регистрация
         private void ButtonRegistration_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Methods.registration.Show();
+            Registration registration = new Registration();
+            registration.Show();
         }
 
         private void gradientPanel1_MouseDown(object sender, MouseEventArgs e)

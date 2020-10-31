@@ -2,10 +2,10 @@ USE AutomationAccountingEquipment;
 
 CREATE TABLE Equipment 
 (
-	ID NVARCHAR(8) NOT NULL,
+	ID INT IDENTITY NOT NULL,
 	Name NVARCHAR(50) NOT NULL,
 	Type NVARCHAR(20),
-	EmployeeID SMALLINT,
+	EmployeeID INT,
 	Location NVARCHAR(40),
 	Components NVARCHAR(1000),
 	PRIMARY KEY(ID),

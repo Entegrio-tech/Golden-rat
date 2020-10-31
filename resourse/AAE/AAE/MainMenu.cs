@@ -35,8 +35,15 @@ namespace Регистрация
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Methods.authorization.Show();
+            Authorization authorization = new Authorization();
+            this.Close();
+            authorization.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Methods.createRequest.Show();
         }
     }
 }
