@@ -35,15 +35,20 @@ namespace Регистрация
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
-                    reader.Read();
-                    string sqlExpression = $@"INSERT INTO Requests (EmployeeID, EquipmentID, Text, Title, RequestDate, Status) 
-                                              VALUES ({Methods.EmployeeID}, {reader.GetInt32(0)}, N'{textBox3.Text}', N'{richTextBox1.Text}', GETDATE(), 0)";
-                    command.CommandText = sqlExpression;
-                    reader.Close();
-                    command.ExecuteNonQuery();
-                    textBox3.Clear();
-                    richTextBox1.Clear();
-                    MessageBox.Show("Заявка отправлена!", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    if (textBox3.Text != "" && richTextBox1.Text != "")
+                    {
+                        reader.Read();
+                        string sqlExpression = $@"INSERT INTO Requests (EmployeeID, EquipmentID, Text, Title, RequestDate, Status) 
+                                                  VALUES ({Methods.EmployeeID}, {reader.GetString(0)}, N'{textBox3.Text}', N'{richTextBox1.Text}', GETDATE(), 0)";
+                        command.CommandText = sqlExpression;
+                        reader.Close();
+                        command.ExecuteNonQuery();
+                        textBox3.Clear();
+                        richTextBox1.Clear();
+                        MessageBox.Show("Заявка отправлена!", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+                    else
+                        MessageBox.Show("Заполните поля!", "Ошибка 000001", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                     MessageBox.Show("Выберите оборудование!", "Ошибка 000000", MessageBoxButtons.OK, MessageBoxIcon.Error);
