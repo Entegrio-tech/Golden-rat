@@ -56,9 +56,8 @@
             this.gradientPanel1.Controls.Add(this.labelName);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(1045, 567);
+            this.gradientPanel1.Size = new System.Drawing.Size(784, 461);
             this.gradientPanel1.TabIndex = 0;
             // 
             // labelError
@@ -172,16 +171,14 @@
             // 
             // ViewRequest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 567);
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ViewRequest";
             this.Text = "Просмотр запроса";
-            this.Load += new System.EventHandler(this.ViewRequest_Load);
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
             this.ResumeLayout(false);

@@ -47,7 +47,8 @@ namespace Регистрация
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    //Methods.createRequest.EmployeeID = reader.GetInt32(0); 
+                    Methods.EmployeeID = reader.GetInt16(0);
+                    Methods.Privilage = reader.GetBoolean(6);
                     this.Hide();
                     MainMenu mainMenu = new MainMenu();
                     mainMenu.Show();
@@ -70,6 +71,7 @@ namespace Регистрация
         private void Authorization_Load(object sender, EventArgs e)
         {
             textBoxLogin.AddPlaceholder("Введите логин");
+            textBoxPassword.AddPlaceholder("Введите пароль");
         }
         private void TextBoxLogin_KeyDown(object sender, KeyEventArgs e)
         {
@@ -122,6 +124,16 @@ namespace Регистрация
             this.Hide();
             RecoveryPassword recoveryPassword = new RecoveryPassword();
             recoveryPassword.Show();
+        }
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBoxPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

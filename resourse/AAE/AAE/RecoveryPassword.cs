@@ -91,7 +91,7 @@ namespace Регистрация
                 if (reader.HasRows)
                 {
                     SendMail(code);
-                    labelNotification.Text = "Введите присланы вам на почту код";
+                    labelNotification.Text = "Введите присланый вам на почту код";
                     textBoxCode.Enabled = true;
                     buttonAcceptCode.Enabled = true;
                     PasswordEntryStates(false);
@@ -146,6 +146,18 @@ namespace Регистрация
         private void gradientPanel1_MouseMove(object sender, MouseEventArgs e)
         {
             Methods.GradientPanelMouseMove(this, e);
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            Authorization authorization = new Authorization();
+            this.Close();
+            authorization.Show();
+        }
+
+        private void labelNotification_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

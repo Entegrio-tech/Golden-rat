@@ -28,6 +28,8 @@ namespace Регистрация
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            textBoxName.AddPlaceholder("Введите имя");
+            textBoxSurname.AddPlaceholder("Введите фамилию");
             textBoxLogin.AddPlaceholder("Введите логин");
             textBoxEmail.AddPlaceholder("Введите E-MAIL");
             textBoxPassword1.AddPlaceholder("Введите пароль");
@@ -53,10 +55,35 @@ namespace Регистрация
                     SqlCommand command = new SqlCommand(sqlExpression, connection);
                     if (textBoxPassword1.Text == textBoxPassword2.Text)
                     {
-                        command.ExecuteNonQuery();
-                        Authorization authorization = new Authorization();
-                        this.Close();
-                        authorization.Show();
+                        if (textBoxSurname.Text != "Введите имя" && textBoxName.Text != "Введите фамилию" && textBoxEmail.Text != "Введите E-MAIL" && textBoxLogin.Text != "Введите логин")
+                        {
+                            if (textBoxSurname.Text.IndexOf(' ') < 0)
+                            {
+                                if (textBoxName.Text.IndexOf(' ') < 0)
+                                {
+                                    if (textBoxEmail.Text.IndexOf(' ') < 0)
+                                    {
+                                        if (textBoxLogin.Text.IndexOf(' ') < 0)
+                                        {
+                                            command.ExecuteNonQuery();
+                                            Authorization authorization = new Authorization();
+                                            this.Close();
+                                            authorization.Show();
+                                        }
+                                        else
+                                            labelError.Text = "Логин не может содержать пробелы";
+                                    }
+                                    else
+                                        labelError.Text = "E-MAIL не может содержать пробелы";
+                                }
+                                else
+                                    labelError.Text = "Имя не может содержать пробелы";
+                            }
+                            else
+                                labelError.Text = "Фамилия не может содержать пробелы";
+                        }
+                        else
+                            labelError.Text = "Заполните поля!";
                     }
                     else
                         labelError.Text = "Пароли не совпадают";
@@ -81,6 +108,16 @@ namespace Регистрация
         }
 
         private void gradientPanel1_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void labelError_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxName_TextChanged(object sender, EventArgs e)
         {
 
         }

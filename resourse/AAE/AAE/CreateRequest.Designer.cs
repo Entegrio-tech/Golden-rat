@@ -59,15 +59,17 @@
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(784, 461);
             this.gradientPanel1.TabIndex = 0;
+            this.gradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientPanel1_Paint);
             // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(609, 35);
+            this.comboBox1.Location = new System.Drawing.Point(581, 138);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(149, 21);
             this.comboBox1.TabIndex = 23;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -75,20 +77,22 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe Print", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(50, 81);
+            this.label2.Location = new System.Drawing.Point(50, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 33);
             this.label2.TabIndex = 22;
             this.label2.Text = "Тема заявки";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBox3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(45, 117);
+            this.textBox3.Location = new System.Drawing.Point(45, 103);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(685, 29);
             this.textBox3.TabIndex = 21;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // button5
             // 
