@@ -60,7 +60,8 @@ namespace Регистрация
             using (SqlConnection connection = new SqlConnection(Methods.connectionString))
             {
                 connection.Open();
-                string sqlExpression = $@"SELECT Name FROM Equipment";
+                string sqlExpression = $@"SELECT Name FROM Equipment
+                                          WHERE EmployeeID = {Methods.EmployeeID}";
                 string sqlExpression1 = "SELECT COUNT(*) FROM Equipment";
                 SqlCommand command = new SqlCommand(sqlExpression1, connection);
                 int N = Convert.ToInt32(command.ExecuteScalar());
