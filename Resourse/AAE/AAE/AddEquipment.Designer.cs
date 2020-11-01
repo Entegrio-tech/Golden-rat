@@ -116,9 +116,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(251, 93);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 13);
+            this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Код сотрудника";
+            this.label4.Text = "Заведующий";
             // 
             // label5
             // 

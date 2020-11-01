@@ -45,16 +45,23 @@ namespace AAE
                                 {
                                     if (textBoxComponent.Text != "")
                                     {
-                                        reader.Close();
-                                        command.CommandText = sqlExpression;
-                                        command.ExecuteNonQuery();
-                                        MessageBox.Show("Успех");
-                                        textBoxInventoryID.Clear();
-                                        textBoxName.Clear();
-                                        textBoxType.Clear();
-                                        comboBox1.Text = "";
-                                        textBoxLocation.Clear();
-                                        textBoxComponent.Clear();
+                                        try
+                                        {
+                                            reader.Close();
+                                            command.CommandText = sqlExpression;
+                                            command.ExecuteNonQuery();
+                                            MessageBox.Show("Успех");
+                                            textBoxInventoryID.Clear();
+                                            textBoxName.Clear();
+                                            textBoxType.Clear();
+                                            comboBox1.Text = "";
+                                            textBoxLocation.Clear();
+                                            textBoxComponent.Clear();
+                                        }
+                                        catch (Exception)
+                                        {
+                                            MessageBox.Show("Оборудование с таким инвентарным номером уже есть!", "Ошибка 098412", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        }
                                     }
                                     else
                                         MessageBox.Show("Компонент не должен быть пустым!", "Ошибка 000002", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -72,7 +79,7 @@ namespace AAE
                         MessageBox.Show("Некорректный инвентарный номер!", "Ошибка 000001", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Выберите код сотрудника!", "Ошибка 00000-1", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Выберите имя заведующего!", "Ошибка 00000-1", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
