@@ -35,7 +35,7 @@ namespace Регистрация
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
-                    if (textBox3.Text != "" && richTextBox1.Text != "")
+                    if (textBox3.Text != "" || richTextBox1.Text != "")
                     {
                         reader.Read();
                         string sqlExpression = $@"INSERT INTO Requests (EmployeeID, EquipmentID, Text, Title, RequestDate, Status) 

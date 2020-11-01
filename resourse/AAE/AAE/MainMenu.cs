@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AAE;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,9 +30,9 @@ namespace Регистрация
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -55,6 +56,10 @@ namespace Регистрация
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
+            if (Methods.Privilage)
+                buttonCreateRequest.Visible = false;
+            else
+                buttonEquipment.Visible = false;
             using (SqlConnection connection = new SqlConnection(Methods.connectionString))
             {
                 connection.Open();
@@ -67,8 +72,14 @@ namespace Регистрация
                 //string sqlExpression = $@"UPDATE Employee SET password = CAST('{password}' AS VARBINARY) WHERE Email = '{userEmail}'";
                 //SqlCommand command = new SqlCommand(sqlExpression, connection);
                 //SqlDataReader reader = command.ExecuteReader();
-                connection.Close();
             }
+        }
+
+        private void buttonEquipment_Click(object sender, EventArgs e)
+        {
+            Equipment equipment = new Equipment();
+            this.Hide();
+            equipment.Show();
         }
     }
 }
