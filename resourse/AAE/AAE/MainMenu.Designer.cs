@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.gradientPanel1 = new Регистрация.GradientPanel();
+            this.buttonJournal = new System.Windows.Forms.Button();
+            this.buttonEquipment = new System.Windows.Forms.Button();
             this.buttonViewRequest = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
@@ -37,7 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonCreateRequest = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.buttonEquipment = new System.Windows.Forms.Button();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             this.gradientPanel1.AutoSize = true;
             this.gradientPanel1.ColorBottom = System.Drawing.Color.Blue;
             this.gradientPanel1.ColorTop = System.Drawing.Color.White;
+            this.gradientPanel1.Controls.Add(this.buttonJournal);
             this.gradientPanel1.Controls.Add(this.buttonEquipment);
             this.gradientPanel1.Controls.Add(this.buttonViewRequest);
             this.gradientPanel1.Controls.Add(this.buttonBack);
@@ -60,6 +62,36 @@
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(816, 477);
             this.gradientPanel1.TabIndex = 0;
+            // 
+            // buttonJournal
+            // 
+            this.buttonJournal.BackColor = System.Drawing.Color.Transparent;
+            this.buttonJournal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonJournal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonJournal.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonJournal.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonJournal.Location = new System.Drawing.Point(395, 406);
+            this.buttonJournal.Name = "buttonJournal";
+            this.buttonJournal.Size = new System.Drawing.Size(255, 46);
+            this.buttonJournal.TabIndex = 21;
+            this.buttonJournal.Text = "Журнал";
+            this.buttonJournal.UseVisualStyleBackColor = false;
+            this.buttonJournal.Click += new System.EventHandler(this.buttonJournal_Click);
+            // 
+            // buttonEquipment
+            // 
+            this.buttonEquipment.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEquipment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEquipment.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEquipment.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonEquipment.Location = new System.Drawing.Point(395, 354);
+            this.buttonEquipment.Name = "buttonEquipment";
+            this.buttonEquipment.Size = new System.Drawing.Size(255, 46);
+            this.buttonEquipment.TabIndex = 20;
+            this.buttonEquipment.Text = "Оборудование";
+            this.buttonEquipment.UseVisualStyleBackColor = false;
+            this.buttonEquipment.Click += new System.EventHandler(this.buttonEquipment_Click);
             // 
             // buttonViewRequest
             // 
@@ -116,6 +148,7 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridView1.Location = new System.Drawing.Point(31, 115);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(755, 211);
             this.dataGridView1.TabIndex = 16;
@@ -140,7 +173,7 @@
             this.buttonCreateRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCreateRequest.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonCreateRequest.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonCreateRequest.Location = new System.Drawing.Point(271, 406);
+            this.buttonCreateRequest.Location = new System.Drawing.Point(134, 406);
             this.buttonCreateRequest.Name = "buttonCreateRequest";
             this.buttonCreateRequest.Size = new System.Drawing.Size(255, 46);
             this.buttonCreateRequest.TabIndex = 12;
@@ -159,21 +192,6 @@
             this.comboBox1.Size = new System.Drawing.Size(96, 31);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.Text = "Акаунт";
-            // 
-            // buttonEquipment
-            // 
-            this.buttonEquipment.BackColor = System.Drawing.Color.Transparent;
-            this.buttonEquipment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEquipment.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEquipment.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonEquipment.Location = new System.Drawing.Point(395, 354);
-            this.buttonEquipment.Name = "buttonEquipment";
-            this.buttonEquipment.Size = new System.Drawing.Size(255, 46);
-            this.buttonEquipment.TabIndex = 20;
-            this.buttonEquipment.Text = "Оборудование";
-            this.buttonEquipment.UseVisualStyleBackColor = false;
-            this.buttonEquipment.Click += new System.EventHandler(this.buttonEquipment_Click);
             // 
             // MainMenu
             // 
@@ -205,5 +223,6 @@
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonViewRequest;
         private System.Windows.Forms.Button buttonEquipment;
+        private System.Windows.Forms.Button buttonJournal;
     }
 }

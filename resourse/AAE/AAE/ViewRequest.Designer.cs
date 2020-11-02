@@ -57,7 +57,7 @@
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(784, 461);
+            this.gradientPanel1.Size = new System.Drawing.Size(1042, 536);
             this.gradientPanel1.TabIndex = 0;
             // 
             // labelError
@@ -65,7 +65,7 @@
             this.labelError.AutoSize = true;
             this.labelError.Location = new System.Drawing.Point(375, 412);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(70, 17);
+            this.labelError.Size = new System.Drawing.Size(51, 13);
             this.labelError.TabIndex = 23;
             this.labelError.Text = "labelError";
             // 
@@ -165,7 +165,7 @@
             this.labelName.Location = new System.Drawing.Point(80, 55);
             this.labelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(341, 59);
+            this.labelName.Size = new System.Drawing.Size(270, 47);
             this.labelName.TabIndex = 16;
             this.labelName.Text = "Просморт заявки";
             // 
@@ -173,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(1042, 536);
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

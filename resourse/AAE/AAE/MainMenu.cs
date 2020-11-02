@@ -81,5 +81,12 @@ namespace Регистрация
             this.Hide();
             equipment.Show();
         }
+
+        private void buttonJournal_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Journal journal = new Journal();
+            journal.Show();
+        }
     }
 }

@@ -44,3 +44,4 @@ E:\GitHub\Golden-rat\resourse\AAE\AAE\obj\Debug\AAE.pdb
 E:\GitHub\Golden-rat\resourse\AAE\AAE\obj\Debug\AAE.csprojAssemblyReference.cache
 E:\GitHub\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.Equipment.resources
 E:\GitHub\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.AddEquipment.resources
+E:\GitHub\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.Journal.resources
