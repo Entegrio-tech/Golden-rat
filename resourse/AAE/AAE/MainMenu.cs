@@ -76,8 +76,7 @@ namespace Регистрация
                 FillingTable($@"SELECT ID AS '№', EmployeeID AS 'Номер сотрудника', EquipmentID AS 'Номер оборудования', 
                     Text AS 'Текст', Title AS 'Заголовок', HostID AS 'Номер администратора', RequestDate AS 'Дата', Status AS 'Статус'
                     FROM Requests WHERE EmployeeId='{Methods.EmployeeID}'");
-            }
-            
+            }     
         }
 
         private void ButtonEquipment_Click(object sender, EventArgs e)
@@ -85,21 +84,6 @@ namespace Регистрация
             Equipment equipment = new Equipment();
             this.Close();
             equipment.Show();
-        }
-
-        private void DataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            DataGridView dataGridView = (DataGridView)sender;
-            row = new string[dataGridView.Columns.Count];
-            for (int i = 0; i < dataGridView.Columns.Count; i++)
-            {
-                row[i] = dataGridView.Rows[e.RowIndex].Cells[i].Value.ToString();
-            }
-            var viewRequest = new ViewRequest
-            {
-                Owner = this
-            };
-            viewRequest.Show();
         }
 
         private void GradientPanel1_MouseDown(object sender, MouseEventArgs e)
@@ -119,9 +103,19 @@ namespace Регистрация
             journal.Show();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            DataGridView dataGridView = (DataGridView)sender;
+            row = new string[dataGridView.Columns.Count];
+            for (int i = 0; i < dataGridView.Columns.Count; i++)
+            {
+                row[i] = dataGridView.Rows[e.RowIndex].Cells[i].Value.ToString();
+            }
+            var viewRequest = new ViewRequest
+            {
+                Owner = this
+            };
+            viewRequest.Show();
         }
     }
 }

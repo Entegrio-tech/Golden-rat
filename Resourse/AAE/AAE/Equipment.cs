@@ -37,14 +37,7 @@ namespace AAE
 
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(Methods.connectionString))
-            {
-                connection.Open();
-                var command = new SqlCommand($@"DELETE FROM Equipment
-                                                WHERE ID = '{textBox1.Text}'", connection);
-                command.ExecuteNonQuery();
-                Equipment_Load(sender, e);
-            }
+
         }
 
         private void ButtonBack_Click(object sender, EventArgs e)

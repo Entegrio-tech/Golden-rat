@@ -42,10 +42,9 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.buttonExit = new System.Windows.Forms.Button();
             this.gradientPanel1 = new Регистрация.GradientPanel();
-            this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.gradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +56,7 @@
             this.textBoxInventoryID.Location = new System.Drawing.Point(263, 76);
             this.textBoxInventoryID.MaxLength = 8;
             this.textBoxInventoryID.Name = "textBoxInventoryID";
-            this.textBoxInventoryID.Size = new System.Drawing.Size(420, 26);
+            this.textBoxInventoryID.Size = new System.Drawing.Size(420, 30);
             this.textBoxInventoryID.TabIndex = 0;
             // 
             // textBoxName
@@ -68,7 +67,7 @@
             this.textBoxName.Location = new System.Drawing.Point(263, 121);
             this.textBoxName.MaxLength = 50;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(420, 26);
+            this.textBoxName.Size = new System.Drawing.Size(420, 30);
             this.textBoxName.TabIndex = 1;
             // 
             // textBoxType
@@ -79,7 +78,7 @@
             this.textBoxType.Location = new System.Drawing.Point(263, 167);
             this.textBoxType.MaxLength = 20;
             this.textBoxType.Name = "textBoxType";
-            this.textBoxType.Size = new System.Drawing.Size(420, 26);
+            this.textBoxType.Size = new System.Drawing.Size(420, 30);
             this.textBoxType.TabIndex = 2;
             // 
             // textBoxLocation
@@ -90,7 +89,7 @@
             this.textBoxLocation.Location = new System.Drawing.Point(263, 259);
             this.textBoxLocation.MaxLength = 40;
             this.textBoxLocation.Name = "textBoxLocation";
-            this.textBoxLocation.Size = new System.Drawing.Size(420, 26);
+            this.textBoxLocation.Size = new System.Drawing.Size(420, 30);
             this.textBoxLocation.TabIndex = 4;
             // 
             // textBoxComponent
@@ -101,7 +100,7 @@
             this.textBoxComponent.Location = new System.Drawing.Point(263, 303);
             this.textBoxComponent.MaxLength = 1000;
             this.textBoxComponent.Name = "textBoxComponent";
-            this.textBoxComponent.Size = new System.Drawing.Size(420, 26);
+            this.textBoxComponent.Size = new System.Drawing.Size(420, 30);
             this.textBoxComponent.TabIndex = 5;
             // 
             // label1
@@ -112,7 +111,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(74, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 28);
+            this.label1.Size = new System.Drawing.Size(234, 35);
             this.label1.TabIndex = 6;
             this.label1.Text = "Инвентарный номер";
             // 
@@ -123,7 +122,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(171, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 28);
+            this.label2.Size = new System.Drawing.Size(109, 35);
             this.label2.TabIndex = 7;
             this.label2.Text = "Название";
             // 
@@ -134,7 +133,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(213, 165);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 28);
+            this.label3.Size = new System.Drawing.Size(53, 35);
             this.label3.TabIndex = 8;
             this.label3.Text = "Тип";
             // 
@@ -145,7 +144,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(144, 210);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 28);
+            this.label4.Size = new System.Drawing.Size(144, 35);
             this.label4.TabIndex = 9;
             this.label4.Text = "Заведующий";
             // 
@@ -156,7 +155,7 @@
             this.label5.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(188, 257);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 28);
+            this.label5.Size = new System.Drawing.Size(87, 35);
             this.label5.TabIndex = 10;
             this.label5.Text = "Место";
             // 
@@ -167,8 +166,7 @@
             this.label6.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(133, 303);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 28);
-
+            this.label6.Size = new System.Drawing.Size(156, 35);
             this.label6.TabIndex = 11;
             this.label6.Text = "Компоненты";
             // 
@@ -185,7 +183,7 @@
             this.buttonAdd.TabIndex = 12;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = false;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            this.buttonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
             // buttonBack
             // 
@@ -200,7 +198,7 @@
             this.buttonBack.TabIndex = 13;
             this.buttonBack.Text = "<-";
             this.buttonBack.UseVisualStyleBackColor = false;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            this.buttonBack.Click += new System.EventHandler(this.ButtonBack_Click);
             // 
             // comboBox1
             // 
@@ -210,7 +208,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(263, 210);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(420, 28);
+            this.comboBox1.Size = new System.Drawing.Size(420, 33);
             this.comboBox1.Sorted = true;
             this.comboBox1.TabIndex = 14;
             // 
@@ -241,6 +239,18 @@
             this.gradientPanel1.Size = new System.Drawing.Size(784, 421);
             this.gradientPanel1.TabIndex = 15;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label7.Location = new System.Drawing.Point(223, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(460, 59);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Просмотр оборудования";
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
@@ -255,19 +265,7 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(223, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(364, 47);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Просмотр оборудования";
+            this.button2.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // AddEquipment
             // 

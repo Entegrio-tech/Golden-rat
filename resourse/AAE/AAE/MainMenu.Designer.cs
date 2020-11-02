@@ -59,8 +59,9 @@
             this.gradientPanel1.Controls.Add(this.buttonCreateRequest);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(816, 477);
+            this.gradientPanel1.Size = new System.Drawing.Size(1088, 587);
             this.gradientPanel1.TabIndex = 0;
             this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseDown);
             this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseMove);
@@ -71,9 +72,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(312, 9);
+            this.label2.Location = new System.Drawing.Point(416, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(219, 47);
+            this.label2.Size = new System.Drawing.Size(275, 59);
             this.label2.TabIndex = 22;
             this.label2.Text = "Главное меню";
             // 
@@ -84,10 +86,10 @@
             this.buttonJournal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonJournal.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonJournal.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonJournal.Location = new System.Drawing.Point(449, 397);
-            this.buttonJournal.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonJournal.Location = new System.Drawing.Point(599, 489);
+            this.buttonJournal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonJournal.Name = "buttonJournal";
-            this.buttonJournal.Size = new System.Drawing.Size(191, 37);
+            this.buttonJournal.Size = new System.Drawing.Size(255, 46);
             this.buttonJournal.TabIndex = 21;
             this.buttonJournal.Text = "Журнал";
             this.buttonJournal.UseVisualStyleBackColor = false;
@@ -100,9 +102,10 @@
             this.buttonEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEquipment.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEquipment.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonEquipment.Location = new System.Drawing.Point(144, 397);
+            this.buttonEquipment.Location = new System.Drawing.Point(192, 489);
+            this.buttonEquipment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonEquipment.Name = "buttonEquipment";
-            this.buttonEquipment.Size = new System.Drawing.Size(191, 37);
+            this.buttonEquipment.Size = new System.Drawing.Size(255, 46);
             this.buttonEquipment.TabIndex = 20;
             this.buttonEquipment.Text = "Оборудование";
             this.buttonEquipment.UseVisualStyleBackColor = false;
@@ -116,9 +119,10 @@
             this.buttonViewRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonViewRequest.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonViewRequest.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonViewRequest.Location = new System.Drawing.Point(430, 329);
+            this.buttonViewRequest.Location = new System.Drawing.Point(573, 405);
+            this.buttonViewRequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonViewRequest.Name = "buttonViewRequest";
-            this.buttonViewRequest.Size = new System.Drawing.Size(255, 46);
+            this.buttonViewRequest.Size = new System.Drawing.Size(340, 57);
             this.buttonViewRequest.TabIndex = 19;
             this.buttonViewRequest.Text = "Просмотр заявки";
             this.buttonViewRequest.UseVisualStyleBackColor = false;
@@ -132,9 +136,10 @@
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonBack.ForeColor = System.Drawing.Color.Black;
-            this.buttonBack.Location = new System.Drawing.Point(3, 3);
+            this.buttonBack.Location = new System.Drawing.Point(4, 4);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(33, 26);
+            this.buttonBack.Size = new System.Drawing.Size(44, 32);
             this.buttonBack.TabIndex = 18;
             this.buttonBack.Text = "<-";
             this.buttonBack.UseVisualStyleBackColor = false;
@@ -148,9 +153,10 @@
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonExit.ForeColor = System.Drawing.Color.Black;
-            this.buttonExit.Location = new System.Drawing.Point(783, 3);
+            this.buttonExit.Location = new System.Drawing.Point(1044, 4);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(30, 26);
+            this.buttonExit.Size = new System.Drawing.Size(40, 32);
             this.buttonExit.TabIndex = 17;
             this.buttonExit.Text = "X";
             this.buttonExit.UseVisualStyleBackColor = false;
@@ -162,13 +168,14 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 99);
+            this.dataGridView1.Location = new System.Drawing.Point(36, 122);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(755, 211);
+            this.dataGridView1.Size = new System.Drawing.Size(1007, 260);
             this.dataGridView1.TabIndex = 16;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentDoubleClick);
             // 
             // label1
             // 
@@ -176,9 +183,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(31, 54);
+            this.label1.Location = new System.Drawing.Point(41, 66);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 42);
+            this.label1.Size = new System.Drawing.Size(126, 52);
             this.label1.TabIndex = 14;
             this.label1.Text = "Заявки";
             // 
@@ -189,9 +197,10 @@
             this.buttonCreateRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCreateRequest.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonCreateRequest.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonCreateRequest.Location = new System.Drawing.Point(110, 329);
+            this.buttonCreateRequest.Location = new System.Drawing.Point(147, 405);
+            this.buttonCreateRequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCreateRequest.Name = "buttonCreateRequest";
-            this.buttonCreateRequest.Size = new System.Drawing.Size(255, 46);
+            this.buttonCreateRequest.Size = new System.Drawing.Size(340, 57);
             this.buttonCreateRequest.TabIndex = 12;
             this.buttonCreateRequest.Text = "Создать заявку";
             this.buttonCreateRequest.UseVisualStyleBackColor = false;
@@ -199,12 +208,13 @@
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 477);
+            this.ClientSize = new System.Drawing.Size(1088, 587);
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainMenu";
             this.Text = "Главное меню";
             this.Load += new System.EventHandler(this.MainMenu_Load);

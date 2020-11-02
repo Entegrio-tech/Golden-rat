@@ -43,8 +43,8 @@
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.buttonSetting = new System.Windows.Forms.Button();
             this.gradientPanel1 = new Регистрация.GradientPanel();
-            this.buttonExit = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.buttonExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +72,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(28, 79);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(727, 188);
             this.dataGridView1.TabIndex = 1;
             // 
@@ -88,6 +89,7 @@
             this.buttonSearch.TabIndex = 2;
             this.buttonSearch.Text = "Поиск";
             this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
             // 
             // buttonPrint
             // 
@@ -102,6 +104,7 @@
             this.buttonPrint.TabIndex = 3;
             this.buttonPrint.Text = "Печать";
             this.buttonPrint.UseVisualStyleBackColor = false;
+            this.buttonPrint.Click += new System.EventHandler(this.ButtonPrint_Click);
             // 
             // textBox1
             // 
@@ -110,7 +113,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(135, 291);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 26);
+            this.textBox1.Size = new System.Drawing.Size(137, 30);
             this.textBox1.TabIndex = 4;
             // 
             // label1
@@ -120,7 +123,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(85, 289);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 28);
+            this.label1.Size = new System.Drawing.Size(56, 35);
             this.label1.TabIndex = 5;
             this.label1.Text = "Код";
             // 
@@ -131,7 +134,7 @@
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox2.Location = new System.Drawing.Point(545, 293);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(133, 26);
+            this.textBox2.Size = new System.Drawing.Size(133, 30);
             this.textBox2.TabIndex = 6;
             // 
             // label2
@@ -141,7 +144,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(362, 291);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 28);
+            this.label2.Size = new System.Drawing.Size(228, 35);
             this.label2.TabIndex = 7;
             this.label2.Text = "Дата (yyyy.mm.dd)";
             // 
@@ -183,6 +186,8 @@
             this.buttonSetting.Size = new System.Drawing.Size(166, 38);
             this.buttonSetting.TabIndex = 9;
             this.buttonSetting.Text = "Настройка";
+            this.buttonSetting.UseVisualStyleBackColor = false;
+            this.buttonSetting.Click += new System.EventHandler(this.ButtonSetting_Click);
             // 
             // gradientPanel1
             // 
@@ -205,6 +210,18 @@
             this.gradientPanel1.Size = new System.Drawing.Size(784, 411);
             this.gradientPanel1.TabIndex = 10;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(325, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(162, 59);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Журнал";
+            // 
             // buttonExit
             // 
             this.buttonExit.BackColor = System.Drawing.Color.Transparent;
@@ -220,18 +237,6 @@
             this.buttonExit.Text = "X";
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.ButtonExit_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(325, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 47);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Журнал";
             // 
             // Journal
             // 
