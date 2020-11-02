@@ -49,7 +49,7 @@
             this.textBoxInventoryID.Location = new System.Drawing.Point(368, 12);
             this.textBoxInventoryID.MaxLength = 8;
             this.textBoxInventoryID.Name = "textBoxInventoryID";
-            this.textBoxInventoryID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxInventoryID.Size = new System.Drawing.Size(420, 20);
             this.textBoxInventoryID.TabIndex = 0;
             // 
             // textBoxName
@@ -57,7 +57,7 @@
             this.textBoxName.Location = new System.Drawing.Point(368, 38);
             this.textBoxName.MaxLength = 50;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxName.Size = new System.Drawing.Size(420, 20);
             this.textBoxName.TabIndex = 1;
             // 
             // textBoxType
@@ -65,7 +65,7 @@
             this.textBoxType.Location = new System.Drawing.Point(368, 64);
             this.textBoxType.MaxLength = 20;
             this.textBoxType.Name = "textBoxType";
-            this.textBoxType.Size = new System.Drawing.Size(100, 20);
+            this.textBoxType.Size = new System.Drawing.Size(420, 20);
             this.textBoxType.TabIndex = 2;
             // 
             // textBoxLocation
@@ -73,7 +73,7 @@
             this.textBoxLocation.Location = new System.Drawing.Point(368, 116);
             this.textBoxLocation.MaxLength = 40;
             this.textBoxLocation.Name = "textBoxLocation";
-            this.textBoxLocation.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLocation.Size = new System.Drawing.Size(420, 20);
             this.textBoxLocation.TabIndex = 4;
             // 
             // textBoxComponent
@@ -81,7 +81,7 @@
             this.textBoxComponent.Location = new System.Drawing.Point(368, 142);
             this.textBoxComponent.MaxLength = 1000;
             this.textBoxComponent.Name = "textBoxComponent";
-            this.textBoxComponent.Size = new System.Drawing.Size(100, 20);
+            this.textBoxComponent.Size = new System.Drawing.Size(420, 20);
             this.textBoxComponent.TabIndex = 5;
             // 
             // label1
@@ -134,9 +134,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(251, 145);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 13);
+            this.label6.Size = new System.Drawing.Size(71, 13);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Компонент";
+            this.label6.Text = "Компоненты";
             // 
             // buttonAdd
             // 
@@ -160,10 +160,12 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(368, 89);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.Size = new System.Drawing.Size(420, 21);
+            this.comboBox1.Sorted = true;
             this.comboBox1.TabIndex = 14;
             // 
             // AddEquipment
