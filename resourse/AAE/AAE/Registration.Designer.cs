@@ -66,35 +66,32 @@
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(779, 567);
             this.gradientPanel1.TabIndex = 0;
-            this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseDown);
-            this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseMove);
             // 
             // labelError
             // 
             this.labelError.AutoSize = true;
-            this.labelError.Location = new System.Drawing.Point(347, 398);
-            this.labelError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelError.BackColor = System.Drawing.Color.Transparent;
+            this.labelError.Location = new System.Drawing.Point(260, 323);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(46, 17);
+            this.labelError.Size = new System.Drawing.Size(0, 13);
             this.labelError.TabIndex = 10;
-            this.labelError.Text = "label2";
             // 
             // textBoxSurname
             // 
-            this.textBoxSurname.Location = new System.Drawing.Point(249, 132);
-            this.textBoxSurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxSurname.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBoxSurname.Location = new System.Drawing.Point(198, 107);
             this.textBoxSurname.MaxLength = 20;
             this.textBoxSurname.Name = "textBoxSurname";
-            this.textBoxSurname.Size = new System.Drawing.Size(252, 22);
+            this.textBoxSurname.Size = new System.Drawing.Size(199, 20);
             this.textBoxSurname.TabIndex = 9;
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(249, 100);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxName.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBoxName.Location = new System.Drawing.Point(198, 81);
             this.textBoxName.MaxLength = 20;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(252, 22);
+            this.textBoxName.Size = new System.Drawing.Size(199, 20);
             this.textBoxName.TabIndex = 8;
             // 
             // button3
@@ -199,8 +196,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(239, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(199, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(258, 59);
             this.label1.TabIndex = 0;

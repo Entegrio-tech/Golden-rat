@@ -115,6 +115,5 @@ namespace Регистрация
         {
             Methods.GradientPanelMouseMove(this, e);
         }
-
     }
 }

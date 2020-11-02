@@ -43,187 +43,244 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.gradientPanel1 = new Регистрация.GradientPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.gradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxInventoryID
             // 
-            this.textBoxInventoryID.Location = new System.Drawing.Point(491, 15);
-            this.textBoxInventoryID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxInventoryID.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBoxInventoryID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxInventoryID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxInventoryID.Location = new System.Drawing.Point(263, 76);
             this.textBoxInventoryID.MaxLength = 8;
             this.textBoxInventoryID.Name = "textBoxInventoryID";
-            this.textBoxInventoryID.Size = new System.Drawing.Size(559, 22);
+            this.textBoxInventoryID.Size = new System.Drawing.Size(420, 26);
             this.textBoxInventoryID.TabIndex = 0;
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(491, 47);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxName.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxName.Location = new System.Drawing.Point(263, 121);
             this.textBoxName.MaxLength = 50;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(559, 22);
+            this.textBoxName.Size = new System.Drawing.Size(420, 26);
             this.textBoxName.TabIndex = 1;
             // 
             // textBoxType
             // 
-            this.textBoxType.Location = new System.Drawing.Point(491, 79);
-            this.textBoxType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxType.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBoxType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxType.Location = new System.Drawing.Point(263, 167);
             this.textBoxType.MaxLength = 20;
             this.textBoxType.Name = "textBoxType";
-            this.textBoxType.Size = new System.Drawing.Size(559, 22);
+            this.textBoxType.Size = new System.Drawing.Size(420, 26);
             this.textBoxType.TabIndex = 2;
             // 
             // textBoxLocation
             // 
-            this.textBoxLocation.Location = new System.Drawing.Point(491, 143);
-            this.textBoxLocation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxLocation.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBoxLocation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLocation.Location = new System.Drawing.Point(263, 259);
             this.textBoxLocation.MaxLength = 40;
             this.textBoxLocation.Name = "textBoxLocation";
-            this.textBoxLocation.Size = new System.Drawing.Size(559, 22);
+            this.textBoxLocation.Size = new System.Drawing.Size(420, 26);
             this.textBoxLocation.TabIndex = 4;
             // 
             // textBoxComponent
             // 
-            this.textBoxComponent.Location = new System.Drawing.Point(491, 175);
-            this.textBoxComponent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxComponent.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBoxComponent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxComponent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxComponent.Location = new System.Drawing.Point(263, 303);
             this.textBoxComponent.MaxLength = 1000;
             this.textBoxComponent.Name = "textBoxComponent";
-            this.textBoxComponent.Size = new System.Drawing.Size(559, 22);
+            this.textBoxComponent.Size = new System.Drawing.Size(420, 26);
             this.textBoxComponent.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(335, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(74, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 17);
+            this.label1.Size = new System.Drawing.Size(183, 28);
             this.label1.TabIndex = 6;
             this.label1.Text = "Инвентарный номер";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(335, 50);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(171, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 17);
+            this.label2.Size = new System.Drawing.Size(86, 28);
             this.label2.TabIndex = 7;
             this.label2.Text = "Название";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(335, 82);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(213, 165);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 17);
+            this.label3.Size = new System.Drawing.Size(44, 28);
             this.label3.TabIndex = 8;
             this.label3.Text = "Тип";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(335, 114);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(144, 210);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 17);
+            this.label4.Size = new System.Drawing.Size(113, 28);
             this.label4.TabIndex = 9;
             this.label4.Text = "Заведующий";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(335, 146);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(188, 257);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 17);
+            this.label5.Size = new System.Drawing.Size(69, 28);
             this.label5.TabIndex = 10;
             this.label5.Text = "Место";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(335, 178);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(133, 303);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 17);
+            this.label6.Size = new System.Drawing.Size(124, 28);
+
             this.label6.TabIndex = 11;
             this.label6.Text = "Компоненты";
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(415, 247);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAdd.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdd.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonAdd.Location = new System.Drawing.Point(367, 348);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(100, 28);
+            this.buttonAdd.Size = new System.Drawing.Size(199, 49);
             this.buttonAdd.TabIndex = 12;
             this.buttonAdd.Text = "Добавить";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
+            this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(16, 15);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonBack.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBack.FlatAppearance.BorderSize = 0;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBack.Location = new System.Drawing.Point(3, 3);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(100, 28);
+            this.buttonBack.Size = new System.Drawing.Size(38, 28);
             this.buttonBack.TabIndex = 13;
             this.buttonBack.Text = "<-";
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.ButtonBack_Click);
+            this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(491, 110);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Location = new System.Drawing.Point(263, 210);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(559, 24);
+            this.comboBox1.Size = new System.Drawing.Size(420, 28);
             this.comboBox1.Sorted = true;
             this.comboBox1.TabIndex = 14;
             // 
-            // buttonExit
+            // gradientPanel1
             // 
-            this.buttonExit.BackColor = System.Drawing.Color.Transparent;
-            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonExit.FlatAppearance.BorderSize = 0;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonExit.ForeColor = System.Drawing.Color.Black;
-            this.buttonExit.Location = new System.Drawing.Point(16, 51);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(40, 32);
-            this.buttonExit.TabIndex = 15;
-            this.buttonExit.Text = "X";
-            this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.ButtonExit_Click);
+            this.gradientPanel1.AutoSize = true;
+            this.gradientPanel1.ColorBottom = System.Drawing.Color.Blue;
+            this.gradientPanel1.ColorTop = System.Drawing.Color.White;
+            this.gradientPanel1.Controls.Add(this.label7);
+            this.gradientPanel1.Controls.Add(this.textBoxLocation);
+            this.gradientPanel1.Controls.Add(this.textBoxComponent);
+            this.gradientPanel1.Controls.Add(this.comboBox1);
+            this.gradientPanel1.Controls.Add(this.label3);
+            this.gradientPanel1.Controls.Add(this.label6);
+            this.gradientPanel1.Controls.Add(this.button2);
+            this.gradientPanel1.Controls.Add(this.textBoxType);
+            this.gradientPanel1.Controls.Add(this.label5);
+            this.gradientPanel1.Controls.Add(this.textBoxName);
+            this.gradientPanel1.Controls.Add(this.label2);
+            this.gradientPanel1.Controls.Add(this.label4);
+            this.gradientPanel1.Controls.Add(this.buttonAdd);
+            this.gradientPanel1.Controls.Add(this.label1);
+            this.gradientPanel1.Controls.Add(this.buttonBack);
+            this.gradientPanel1.Controls.Add(this.textBoxInventoryID);
+            this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gradientPanel1.Name = "gradientPanel1";
+            this.gradientPanel1.Size = new System.Drawing.Size(784, 421);
+            this.gradientPanel1.TabIndex = 15;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(751, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(30, 26);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "X";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label7.Location = new System.Drawing.Point(223, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(364, 47);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Просмотр оборудования";
             // 
             // AddEquipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxComponent);
-            this.Controls.Add(this.textBoxLocation);
-            this.Controls.Add(this.textBoxType);
-            this.Controls.Add(this.textBoxName);
-            this.Controls.Add(this.textBoxInventoryID);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(784, 421);
+            this.Controls.Add(this.gradientPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddEquipment";
             this.Text = "AddEquipment";
             this.Load += new System.EventHandler(this.AddEquipment_Load);
+            this.gradientPanel1.ResumeLayout(false);
+            this.gradientPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,6 +302,9 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button buttonExit;
+        private Регистрация.GradientPanel gradientPanel1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label7;
+
     }
 }

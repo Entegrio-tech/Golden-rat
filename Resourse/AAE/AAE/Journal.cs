@@ -22,7 +22,9 @@ namespace AAE
             InitializeComponent();
         }
 
-        private void ButtonBack_Click(object sender, EventArgs e)
+
+        RichTextBox richTextBox1 = new RichTextBox();
+        private void buttonBack_Click(object sender, EventArgs e)
         {
             Регистрация.MainMenu mainMenu = new Регистрация.MainMenu();
             this.Close();          
@@ -170,6 +172,7 @@ namespace AAE
         {
             pageSetupDialog1.ShowDialog(); // отобразить окно
         }
+
 
         private void ButtonExit_Click(object sender, EventArgs e)
         {
