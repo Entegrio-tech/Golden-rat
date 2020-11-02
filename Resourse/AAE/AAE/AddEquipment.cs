@@ -107,5 +107,10 @@ namespace AAE
                 }
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

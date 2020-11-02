@@ -81,6 +81,28 @@ namespace Регистрация
         {
             DecisionMaking(true);
             this.Close();
-        }     
+        }
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            this.Close();
+            mainMenu.Show();
+        }
+
+        private void labelRequestIDName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelEmployeeID_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
