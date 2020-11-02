@@ -1,0 +1,6 @@
+INSERT INTO Requests(EmployeeID, EquipmentID, Text, Title, RequestDate) VALUES (1, N'1', N'ПК сгорел...', N'Сгорел ПК...', GETDATE());
+INSERT INTO Requests(EmployeeID, EquipmentID, Text, Title, RequestDate) VALUES (2, N'12', N'Намочил клавиатуру и теперь черный экран', N'Намочил клавиатуру', GETDATE());
+INSERT INTO Requests(EmployeeID, EquipmentID, Text, Title, RequestDate) VALUES (3, N'123', N'Оборвался кабель, нужен новый', N'Разрыв кабеля', GETDATE());
+INSERT INTO Requests(EmployeeID, EquipmentID, Text, Title, RequestDate) VALUES (4, N'2', N'Пытался переустановить Windows и вытащил загрузочную флешку во время установки, больше ПК не включался', N'Переустановил Windows', GETDATE());
+INSERT INTO Requests(EmployeeID, EquipmentID, Text, Title, RequestDate) VALUES (5, N'213', N'Лазил в настройках реестра и сделал что-то не то, ПК завис', N'Реестр', GETDATE());
+INSERT INTO Requests(EmployeeID, EquipmentID, Text, Title, RequestDate) VALUES (6, N'23d', N'Курсор мыши не двигается', N'Проблема с мышью', GETDATE());

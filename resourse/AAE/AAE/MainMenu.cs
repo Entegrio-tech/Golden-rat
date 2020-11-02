@@ -71,6 +71,7 @@ namespace Регистрация
             }
             else
             {
+                buttonJournal.Visible = false;
                 buttonEquipment.Visible = false;
                 FillingTable($@"SELECT ID AS '№', EmployeeID AS 'Номер сотрудника', EquipmentID AS 'Номер оборудования', 
                     Text AS 'Текст', Title AS 'Заголовок', HostID AS 'Номер администратора', RequestDate AS 'Дата', Status AS 'Статус'
