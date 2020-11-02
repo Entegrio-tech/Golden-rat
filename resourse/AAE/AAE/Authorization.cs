@@ -125,11 +125,6 @@ namespace Регистрация
             RecoveryPassword recoveryPassword = new RecoveryPassword();
             recoveryPassword.Show();
         }
-
-        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
 
