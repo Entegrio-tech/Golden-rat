@@ -59,7 +59,11 @@ namespace Регистрация
             if (Methods.Privilage)
                 buttonCreateRequest.Visible = false;
             else
+            {
+                buttonJournal.Visible = false;
                 buttonEquipment.Visible = false;
+            }
+            
             using (SqlConnection connection = new SqlConnection(Methods.connectionString))
             {
                 connection.Open();

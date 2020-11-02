@@ -22,13 +22,6 @@ namespace AAE
             InitializeComponent();
         }
 
-        private string result = "";
-
-        void PrintPageHandler(object sender, PrintPageEventArgs e)
-        {
-            e.Graphics.DrawString(result, new Font("Arial", 14), Brushes.Black, 0, 0);
-        }
-
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -74,6 +67,7 @@ namespace AAE
 
         private void buttonPrint_Click(object sender, EventArgs e)
         {
+            string result = "";
             string sqlExpression = $@"SELECT ID AS '№', EmployeeID AS 'Номер сотрудника', EquipmentID AS 'Номер оборудования', Text AS 'Текст', Title AS 'Заголовок', HostID AS 'Номер администратора', RequestDate AS 'Дата', Status AS 'Статус' FROM Requests
                                    WHERE RequestDate = '{textBox2.Text}'";
             using (SqlConnection connection = new SqlConnection(Methods.connectionString))
@@ -96,28 +90,85 @@ namespace AAE
                     {
                         result += $"{name0} - {reader.GetValue(0)}\n{name1} - {reader.GetValue(1)}\n{name2} - {reader.GetValue(2)}\n{name3} - {SplitToLines(reader.GetString(3), 78)}\n{name4} - {reader.GetValue(4)}\n{name5} - {reader.GetValue(5)}\n{name6} - {reader.GetValue(6)}\n\n";
                     }
-                    // объект для печати
-                    PrintDocument printDocument = new PrintDocument();
-
-                    // обработчик события печати
-                    printDocument.PrintPage += PrintPageHandler;
-
-                    // диалог настройки печати
-                    PrintDialog printDialog = new PrintDialog();
-
-                    // установка объекта печати для его настройки
-                    printDialog.Document = printDocument;
-
-                    // если в диалоге было нажато ОК
-                    if (printDialog.ShowDialog() == DialogResult.OK)
-                        printDialog.Document.Print(); // печатаем
+                    richTextBox1.Text = result;
+                    if (printDialog1.ShowDialog() == DialogResult.OK)
+                        printDocument1.Print();
                 }
                 else
                     MessageBox.Show("Записей не найдено");
 
                 reader.Close();
             }
+        }
+        // Количество выделенных строк:
+        // 0 <= counter <= richTextBox1.Lines.Length
+        int counter = 0; // сквозной номер строки в массиве строк, которые выводятся
+        int curPage; // текущая страница
 
+        // Обработчик события PrintPage - здесь нужно программировать печать
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            // Создать шрифт myFont
+            Font myFont = new Font("Arial", 14, FontStyle.Regular, GraphicsUnit.Pixel);
+
+            string curLine; // текущая выводимая строка
+
+            // Отступы внутри страницы
+            float leftMargin = e.MarginBounds.Left; // отступы слева в документе
+            float topMargin = e.MarginBounds.Top; // отступы сверху в документе
+            float yPos = 0; // текущая позиция Y для вывода строки
+
+            int nPages; // количество страниц
+            int nLines; // максимально-возможное количество строк на странице
+            int i; // номер текущей строки для вывода на странице
+
+            // Вычислить максимально возможное количество строк на странице
+            nLines = (int)(e.MarginBounds.Height / myFont.GetHeight(e.Graphics));
+
+            // Вычислить количество страниц для печати
+            nPages = (richTextBox1.Lines.Length - 1) / nLines + 1;
+
+            // Цикл печати/вывода одной страницы
+            i = 0;
+            while ((i < nLines) && (counter < richTextBox1.Lines.Length))
+            {
+                // Взять строку для вывода из richTextBox1
+                curLine = richTextBox1.Lines[counter];
+
+                // Вычислить текущую позицию по оси Y
+                yPos = topMargin + i * myFont.GetHeight(e.Graphics);
+
+                // Вывести строку в документ
+                e.Graphics.DrawString(curLine, myFont, Brushes.Blue,
+                  leftMargin, yPos, new StringFormat());
+
+                counter++;
+                i++;
+            }
+
+            // Если весь текст не помещается на 1 страницу, то
+            // нужно добавить дополнительную страницу для печати
+            e.HasMorePages = false;
+
+            if (curPage < nPages)
+            {
+                curPage++;
+                e.HasMorePages = true;
+            }
+        }
+
+        // Начало печати
+        private void printDocument1_BeginPrint(object sender, PrintEventArgs e)
+        {
+            // Перед началом печати переменные-счетчики
+            // установить в начальные значения
+            counter = 0;
+            curPage = 1;
+        }
+
+        private void buttonSetting_Click(object sender, EventArgs e)
+        {
+            pageSetupDialog1.ShowDialog(); // отобразить окно
         }
     }
 }
