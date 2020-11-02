@@ -77,6 +77,12 @@
     <Compile Include="Equipment.Designer.cs">
       <DependentUpon>Equipment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Journal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Journal.Designer.cs">
+      <DependentUpon>Journal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Methods.cs" />
     <Compile Include="Registration.cs">
       <SubType>Form</SubType>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Equipment.resx">
       <DependentUpon>Equipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Journal.resx">
+      <DependentUpon>Journal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>

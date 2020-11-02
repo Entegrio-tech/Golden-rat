@@ -72,7 +72,7 @@
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(1036, 588);
+            this.gradientPanel1.Size = new System.Drawing.Size(1042, 536);
             this.gradientPanel1.TabIndex = 0;
             this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gradientPanel1_MouseDown);
             this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.gradientPanel1_MouseMove);
@@ -163,7 +163,7 @@
             this.labelError.Location = new System.Drawing.Point(609, 136);
             this.labelError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(70, 17);
+            this.labelError.Size = new System.Drawing.Size(51, 13);
             this.labelError.TabIndex = 23;
             this.labelError.Text = "labelError";
             // 
@@ -237,7 +237,7 @@
             this.labelName.Location = new System.Drawing.Point(106, 52);
             this.labelName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(341, 59);
+            this.labelName.Size = new System.Drawing.Size(270, 47);
             this.labelName.TabIndex = 16;
             this.labelName.Text = "Просморт заявки";
             // 
@@ -245,7 +245,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 588);
+            this.ClientSize = new System.Drawing.Size(1042, 536);
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

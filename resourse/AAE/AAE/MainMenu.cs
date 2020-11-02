@@ -110,5 +110,12 @@ namespace Регистрация
         {
             Methods.GradientPanelMouseMove(this, e);
         }
+
+        private void buttonJournal_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Journal journal = new Journal();
+            journal.Show();
+        }
     }
 }

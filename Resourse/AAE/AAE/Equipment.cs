@@ -60,5 +60,21 @@ namespace AAE
             AddEquipment add = new AddEquipment();
             add.Show();
         }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].Selected = false;
+                for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    if (dataGridView1.Rows[i].Cells[j].Value != null)
+                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox1.Text))
+                        {
+                            dataGridView1.Rows[i].Selected = true;
+                            dataGridView1.FirstDisplayedScrollingRowIndex = i;
+                            break;
+                        }
+            }
+        }
     }
 }
