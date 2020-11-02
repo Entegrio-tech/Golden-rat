@@ -74,8 +74,8 @@
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(1042, 536);
             this.gradientPanel1.TabIndex = 0;
-            this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gradientPanel1_MouseDown);
-            this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.gradientPanel1_MouseMove);
+            this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseDown);
+            this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseMove);
             // 
             // labelDate
             // 
@@ -182,7 +182,7 @@
             this.buttonExit.TabIndex = 15;
             this.buttonExit.Text = "X";
             this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            this.buttonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // buttonReject
             // 
@@ -198,7 +198,7 @@
             this.buttonReject.TabIndex = 20;
             this.buttonReject.Text = "Отклонить";
             this.buttonReject.UseVisualStyleBackColor = false;
-            this.buttonReject.Click += new System.EventHandler(this.buttonReject_Click);
+            this.buttonReject.Click += new System.EventHandler(this.ButtonReject_Click);
             // 
             // buttonAcсept
             // 
@@ -214,7 +214,7 @@
             this.buttonAcсept.TabIndex = 19;
             this.buttonAcсept.Text = "Принять";
             this.buttonAcсept.UseVisualStyleBackColor = false;
-            this.buttonAcсept.Click += new System.EventHandler(this.buttonAcсept_Click);
+            this.buttonAcсept.Click += new System.EventHandler(this.ButtonAcсept_Click);
             // 
             // richTextBoxRequest
             // 

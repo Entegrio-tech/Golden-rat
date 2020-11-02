@@ -20,11 +20,10 @@ namespace Регистрация
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -36,14 +35,14 @@ namespace Регистрация
             textBoxPassword2.AddPlaceholder("Введите ещё раз пароль");
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             Authorization authorization = new Authorization();
             this.Close();
             authorization.Show();
         }
 
-        private void buttonRegistration_Click(object sender, EventArgs e)
+        private void ButtonRegistration_Click(object sender, EventArgs e)
         {
             try
             {
@@ -95,31 +94,27 @@ namespace Регистрация
             }
         }
 
-        private void textBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBoxLogin_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Метод выключает кнопку регистрации, когда в TextBoxLogin введено меньше 4 символов.
             Methods.LockButtonLogin(sender, Methods.minimumLoginLength, "Логин", labelError, buttonRegistration, textBoxLogin, textBoxPassword1);
         }
 
-        private void textBoxPassword1_TextChanged(object sender, EventArgs e)
+        private void TextBoxPassword1_TextChanged(object sender, EventArgs e)
         {
             // Метод выключает кнопку регистрации, когда в TextBoxPassword введено меньше 8 символов.
             Methods.LockButtonLogin(sender, Methods.minimumPasswordLength, "Пароль", labelError, buttonRegistration, textBoxLogin, textBoxPassword1);
         }
 
-        private void gradientPanel1_MouseMove(object sender, MouseEventArgs e)
+        private void GradientPanel1_MouseDown(object sender, MouseEventArgs e)
         {
-
+            Methods.gradientPanelMouseDown(e);
         }
 
-        private void labelError_Click(object sender, EventArgs e)
+        private void GradientPanel1_MouseMove(object sender, MouseEventArgs e)
         {
-
+            Methods.GradientPanelMouseMove(this, e);
         }
 
-        private void textBoxName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

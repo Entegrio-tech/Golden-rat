@@ -22,10 +22,10 @@ namespace AAE
             InitializeComponent();
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void ButtonBack_Click(object sender, EventArgs e)
         {
-            this.Close();
             Регистрация.MainMenu mainMenu = new Регистрация.MainMenu();
+            this.Close();          
             mainMenu.Show();
         }
 
@@ -44,7 +44,7 @@ namespace AAE
             }
         }
 
-        private void buttonSearch_Click(object sender, EventArgs e)
+        private void ButtonSearch_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < dataGridView1.RowCount; i++)
             {
@@ -65,7 +65,7 @@ namespace AAE
             return Regex.Replace(str, ".{" + n + "}(?!$)", "$0\n");
         }
 
-        private void buttonPrint_Click(object sender, EventArgs e)
+        private void ButtonPrint_Click(object sender, EventArgs e)
         {
             string result = "";
             string sqlExpression = $@"SELECT ID AS '№', EmployeeID AS 'Номер сотрудника', EquipmentID AS 'Номер оборудования', Text AS 'Текст', Title AS 'Заголовок', HostID AS 'Номер администратора', RequestDate AS 'Дата', Status AS 'Статус' FROM Requests
@@ -106,7 +106,7 @@ namespace AAE
         int curPage; // текущая страница
 
         // Обработчик события PrintPage - здесь нужно программировать печать
-        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        private void PrintDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
             // Создать шрифт myFont
             Font myFont = new Font("Arial", 14, FontStyle.Regular, GraphicsUnit.Pixel);
@@ -158,7 +158,7 @@ namespace AAE
         }
 
         // Начало печати
-        private void printDocument1_BeginPrint(object sender, PrintEventArgs e)
+        private void PrintDocument1_BeginPrint(object sender, PrintEventArgs e)
         {
             // Перед началом печати переменные-счетчики
             // установить в начальные значения
@@ -166,9 +166,14 @@ namespace AAE
             curPage = 1;
         }
 
-        private void buttonSetting_Click(object sender, EventArgs e)
+        private void ButtonSetting_Click(object sender, EventArgs e)
         {
             pageSetupDialog1.ShowDialog(); // отобразить окно
+        }
+
+        private void ButtonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

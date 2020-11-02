@@ -63,8 +63,8 @@
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(484, 361);
             this.gradientPanel1.TabIndex = 0;
-            this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gradientPanel1_MouseDown);
-            this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.gradientPanel1_MouseMove);
+            this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseDown);
+            this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseMove);
             // 
             // buttonAcceptCode
             // 
@@ -80,7 +80,7 @@
             this.buttonAcceptCode.TabIndex = 17;
             this.buttonAcceptCode.Text = "Подтвердить";
             this.buttonAcceptCode.UseVisualStyleBackColor = false;
-            this.buttonAcceptCode.Click += new System.EventHandler(this.buttonAcceptCode_Click);
+            this.buttonAcceptCode.Click += new System.EventHandler(this.ButtonAcceptCode_Click);
             // 
             // buttonSendMail
             // 
@@ -95,7 +95,7 @@
             this.buttonSendMail.TabIndex = 16;
             this.buttonSendMail.Text = "Получить код";
             this.buttonSendMail.UseVisualStyleBackColor = false;
-            this.buttonSendMail.Click += new System.EventHandler(this.buttonSendMail_Click);
+            this.buttonSendMail.Click += new System.EventHandler(this.ButtonSendMail_Click);
             // 
             // textBoxLogin
             // 
@@ -122,7 +122,7 @@
             this.buttonExit.TabIndex = 14;
             this.buttonExit.Text = "X";
             this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            this.buttonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // buttonBack
             // 
@@ -138,7 +138,7 @@
             this.buttonBack.TabIndex = 13;
             this.buttonBack.Text = "<-";
             this.buttonBack.UseVisualStyleBackColor = false;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            this.buttonBack.Click += new System.EventHandler(this.ButtonBack_Click);
             // 
             // buttonRecovery
             // 
@@ -154,7 +154,7 @@
             this.buttonRecovery.TabIndex = 11;
             this.buttonRecovery.Text = "Восстановить";
             this.buttonRecovery.UseVisualStyleBackColor = false;
-            this.buttonRecovery.Click += new System.EventHandler(this.buttonRecovery_Click);
+            this.buttonRecovery.Click += new System.EventHandler(this.ButtonRecovery_Click);
             // 
             // labelNotification
             // 
@@ -166,7 +166,6 @@
             this.labelNotification.Name = "labelNotification";
             this.labelNotification.Size = new System.Drawing.Size(0, 31);
             this.labelNotification.TabIndex = 10;
-            this.labelNotification.Click += new System.EventHandler(this.labelNotification_Click);
             // 
             // textBoxNewPassword
             // 

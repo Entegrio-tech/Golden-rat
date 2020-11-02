@@ -35,7 +35,7 @@ namespace AAE
             }
         }
 
-        private void buttonDelete_Click(object sender, EventArgs e)
+        private void ButtonDelete_Click(object sender, EventArgs e)
         {
             using (SqlConnection connection = new SqlConnection(Methods.connectionString))
             {
@@ -47,21 +47,21 @@ namespace AAE
             }
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void ButtonBack_Click(object sender, EventArgs e)
         {
             this.Close();
             Регистрация.MainMenu mainMenu = new Регистрация.MainMenu();
             mainMenu.Show();
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
+        private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            this.Close();
             AddEquipment add = new AddEquipment();
+            this.Close();
             add.Show();
         }
 
-        private void buttonSearch_Click(object sender, EventArgs e)
+        private void ButtonSearch_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < dataGridView1.RowCount; i++)
             {
@@ -75,6 +75,11 @@ namespace AAE
                             break;
                         }
             }
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

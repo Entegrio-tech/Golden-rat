@@ -36,25 +36,25 @@ namespace Регистрация
             }
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
+        private void ButtonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void ButtonBack_Click(object sender, EventArgs e)
         {
             Authorization authorization = new Authorization();
             this.Close();
             authorization.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             this.Close();
             Methods.createRequest.Show();
         }
 
-        private void buttonViewRequest_Click(object sender, EventArgs e)
+        private void ButtonViewRequest_Click(object sender, EventArgs e)
         {
             this.Close();
             Methods.viewRequest.Show();
@@ -80,42 +80,42 @@ namespace Регистрация
             
         }
 
-        private void buttonEquipment_Click(object sender, EventArgs e)
+        private void ButtonEquipment_Click(object sender, EventArgs e)
         {
             Equipment equipment = new Equipment();
-            this.Hide();
+            this.Close();
             equipment.Show();
         }
 
-        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void DataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             DataGridView dataGridView = (DataGridView)sender;
-            
-            MessageBox.Show($"строка: {e.RowIndex}, столбец: {e.ColumnIndex}");
             row = new string[dataGridView.Columns.Count];
             for (int i = 0; i < dataGridView.Columns.Count; i++)
             {
                 row[i] = dataGridView.Rows[e.RowIndex].Cells[i].Value.ToString();
-            }          
-            var viewRequest = new ViewRequest();
-            viewRequest.Owner = this;
+            }
+            var viewRequest = new ViewRequest
+            {
+                Owner = this
+            };
             viewRequest.Show();
         }
 
-        private void gradientPanel1_MouseDown(object sender, MouseEventArgs e)
+        private void GradientPanel1_MouseDown(object sender, MouseEventArgs e)
         {
             Methods.gradientPanelMouseDown(e);
         }
 
-        private void gradientPanel1_MouseMove(object sender, MouseEventArgs e)
+        private void GradientPanel1_MouseMove(object sender, MouseEventArgs e)
         {
             Methods.GradientPanelMouseMove(this, e);
         }
 
-        private void buttonJournal_Click(object sender, EventArgs e)
+        private void ButtonJournal_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Journal journal = new Journal();
+            this.Close();
             journal.Show();
         }
     }

@@ -45,7 +45,7 @@ namespace Регистрация
             }
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
+        private void ButtonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -61,23 +61,23 @@ namespace Регистрация
             labelEquipmentID.Text = mainMenu.row[(byte)Request.EquipmentID];
         }
 
-        private void gradientPanel1_MouseDown(object sender, MouseEventArgs e)
+        private void GradientPanel1_MouseDown(object sender, MouseEventArgs e)
         {
             Methods.gradientPanelMouseDown(e);
         }
 
-        private void gradientPanel1_MouseMove(object sender, MouseEventArgs e)
+        private void GradientPanel1_MouseMove(object sender, MouseEventArgs e)
         {
             Methods.GradientPanelMouseMove(this, e);
         }
 
-        private void buttonReject_Click(object sender, EventArgs e)
+        private void ButtonReject_Click(object sender, EventArgs e)
         {
             DecisionMaking(false);
             this.Close();
         }
 
-        private void buttonAcсept_Click(object sender, EventArgs e)
+        private void ButtonAcсept_Click(object sender, EventArgs e)
         {
             DecisionMaking(true);
             this.Close();

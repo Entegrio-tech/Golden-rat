@@ -59,7 +59,6 @@
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(784, 461);
             this.gradientPanel1.TabIndex = 0;
-            this.gradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientPanel1_Paint);
             // 
             // comboBox1
             // 
@@ -69,7 +68,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(149, 21);
             this.comboBox1.TabIndex = 23;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -82,7 +80,6 @@
             this.label2.Size = new System.Drawing.Size(137, 33);
             this.label2.TabIndex = 22;
             this.label2.Text = "Тема заявки";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox3
             // 
@@ -92,7 +89,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(685, 29);
             this.textBox3.TabIndex = 21;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // button5
             // 
@@ -108,7 +104,7 @@
             this.button5.TabIndex = 20;
             this.button5.Text = "<-";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // button4
             // 
@@ -124,7 +120,7 @@
             this.button4.TabIndex = 19;
             this.button4.Text = "X";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // button2
             // 
@@ -139,7 +135,7 @@
             this.button2.TabIndex = 18;
             this.button2.Text = "Отправить";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // richTextBox1
             // 

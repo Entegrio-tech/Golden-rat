@@ -61,8 +61,8 @@
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(1088, 587);
             this.gradientPanel1.TabIndex = 0;
-            this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gradientPanel1_MouseDown);
-            this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.gradientPanel1_MouseMove);
+            this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseDown);
+            this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseMove);
             // 
             // buttonEquipment
             // 
@@ -78,7 +78,7 @@
             this.buttonEquipment.TabIndex = 20;
             this.buttonEquipment.Text = "Оборудование";
             this.buttonEquipment.UseVisualStyleBackColor = false;
-            this.buttonEquipment.Click += new System.EventHandler(this.buttonEquipment_Click);
+            this.buttonEquipment.Click += new System.EventHandler(this.ButtonEquipment_Click);
             // 
             // buttonJournal
             // 
@@ -93,7 +93,7 @@
             this.buttonJournal.TabIndex = 21;
             this.buttonJournal.Text = "Журнал";
             this.buttonJournal.UseVisualStyleBackColor = false;
-            this.buttonJournal.Click += new System.EventHandler(this.buttonJournal_Click);
+            this.buttonJournal.Click += new System.EventHandler(this.ButtonJournal_Click);
             // 
             // buttonEquipment
             // 
@@ -108,7 +108,7 @@
             this.buttonEquipment.TabIndex = 20;
             this.buttonEquipment.Text = "Оборудование";
             this.buttonEquipment.UseVisualStyleBackColor = false;
-            this.buttonEquipment.Click += new System.EventHandler(this.buttonEquipment_Click);
+            this.buttonEquipment.Click += new System.EventHandler(this.ButtonEquipment_Click);
             // 
             // buttonViewRequest
             // 
@@ -125,7 +125,7 @@
             this.buttonViewRequest.TabIndex = 19;
             this.buttonViewRequest.Text = "Просмотр заявки";
             this.buttonViewRequest.UseVisualStyleBackColor = false;
-            this.buttonViewRequest.Click += new System.EventHandler(this.buttonViewRequest_Click);
+            this.buttonViewRequest.Click += new System.EventHandler(this.ButtonViewRequest_Click);
             // 
             // buttonBack
             // 
@@ -142,7 +142,7 @@
             this.buttonBack.TabIndex = 18;
             this.buttonBack.Text = "<-";
             this.buttonBack.UseVisualStyleBackColor = false;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            this.buttonBack.Click += new System.EventHandler(this.ButtonBack_Click);
             // 
             // buttonExit
             // 
@@ -159,7 +159,7 @@
             this.buttonExit.TabIndex = 17;
             this.buttonExit.Text = "X";
             this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            this.buttonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // dataGridView1
             // 
@@ -174,7 +174,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1007, 260);
             this.dataGridView1.TabIndex = 16;
-            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView1_CellMouseDoubleClick);
             // 
             // label1
             // 
@@ -203,7 +203,7 @@
             this.buttonCreateRequest.TabIndex = 12;
             this.buttonCreateRequest.Text = "Создать заявку";
             this.buttonCreateRequest.UseVisualStyleBackColor = false;
-            this.buttonCreateRequest.Click += new System.EventHandler(this.button1_Click);
+            this.buttonCreateRequest.Click += new System.EventHandler(this.Button1_Click);
             // 
             // MainMenu
             // 

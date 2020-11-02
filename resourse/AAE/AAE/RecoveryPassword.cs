@@ -51,23 +51,27 @@ namespace Регистрация
             MailAddress from = new MailAddress(mail, "AAE");
             // кому отправляем
             MailAddress to = new MailAddress($"{userEmail}");
-            MailMessage m = new MailMessage(from, to);
-            // тема письма
-            m.Subject = "Тест";
-            // текст письма
-            m.Body = $"<h2>Ваш код: {code}</h2>";
-            m.IsBodyHtml = true;
+            MailMessage m = new MailMessage(from, to)
+            {
+                // тема письма
+                Subject = "Тест",
+                // текст письма
+                Body = $"<h2>Ваш код: {code}</h2>",
+                IsBodyHtml = true
+            };
             // SMTP outlook
-            SmtpClient smtp = new SmtpClient("SMTP.Office365.com", 587);
-            // логин и пароль
-            smtp.Credentials = new NetworkCredential(mail, "EntegrioAdmin2");
-            smtp.EnableSsl = true;
+            SmtpClient smtp = new SmtpClient("SMTP.Office365.com", 587)
+            {
+                // логин и пароль
+                Credentials = new NetworkCredential(mail, "EntegrioAdmin2"),
+                EnableSsl = true
+            };
             smtp.Send(m);
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
+        private void ButtonExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -78,7 +82,7 @@ namespace Регистрация
             
         }
 
-        private void buttonSendMail_Click(object sender, EventArgs e)
+        private void ButtonSendMail_Click(object sender, EventArgs e)
         {
             code = GeneratingCode();
             userEmail = textBoxLogin.Text;
@@ -107,7 +111,7 @@ namespace Регистрация
             }
         }
 
-        private void buttonAcceptCode_Click(object sender, EventArgs e)
+        private void ButtonAcceptCode_Click(object sender, EventArgs e)
         {
             if (textBoxCode.Text == code.ToString())
             {
@@ -123,7 +127,7 @@ namespace Регистрация
             }
         }
 
-        private void buttonRecovery_Click(object sender, EventArgs e)
+        private void ButtonRecovery_Click(object sender, EventArgs e)
         {
             string password = textBoxNewPassword.Text;
             using (SqlConnection connection = new SqlConnection(Methods.connectionString))
@@ -138,26 +142,21 @@ namespace Регистрация
             labelNotification.Text = "Пароль установлен!\nИспользуйте новые данные для входа";
         }
 
-        private void gradientPanel1_MouseDown(object sender, MouseEventArgs e)
+        private void GradientPanel1_MouseDown(object sender, MouseEventArgs e)
         {
             Methods.gradientPanelMouseDown(e);
         }
 
-        private void gradientPanel1_MouseMove(object sender, MouseEventArgs e)
+        private void GradientPanel1_MouseMove(object sender, MouseEventArgs e)
         {
             Methods.GradientPanelMouseMove(this, e);
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void ButtonBack_Click(object sender, EventArgs e)
         {
             Authorization authorization = new Authorization();
             this.Close();
             authorization.Show();
-        }
-
-        private void labelNotification_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

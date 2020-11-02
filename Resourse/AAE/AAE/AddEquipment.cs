@@ -20,7 +20,7 @@ namespace AAE
             InitializeComponent();
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
+        private void ButtonAdd_Click(object sender, EventArgs e)
         {
             using (SqlConnection connection = new SqlConnection(Methods.connectionString))
             {
@@ -83,10 +83,10 @@ namespace AAE
             }
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void ButtonBack_Click(object sender, EventArgs e)
         {
-            this.Close();
             Equipment equipment = new Equipment();
+            this.Close();         
             equipment.Show();
         }
 
@@ -106,6 +106,11 @@ namespace AAE
                     comboBox1.Items.Add(reader.GetString(0));
                 }
             }
+        }
+
+        private void ButtonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

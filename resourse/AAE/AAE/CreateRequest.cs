@@ -19,12 +19,12 @@ namespace Регистрация
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             using (SqlConnection connection = new SqlConnection(Methods.connectionString))
             {
@@ -38,8 +38,9 @@ namespace Регистрация
                     if (textBox3.Text != "" || richTextBox1.Text != "")
                     {
                         reader.Read();
-                        string sqlExpression = $@"INSERT INTO Requests (EmployeeID, EquipmentID, Text, Title, RequestDate, Status) 
-                                                  VALUES ({Methods.EmployeeID}, {reader.GetString(0)}, N'{textBox3.Text}', N'{richTextBox1.Text}', GETDATE(), 0)";
+                        string sqlExpression = $@"SET DATEFORMAT dmy;
+                                                  INSERT INTO Requests (EmployeeID, EquipmentID, Text, Title, RequestDate, Status) 
+                                                  VALUES ({Methods.EmployeeID}, {reader.GetString(0)}, N'{textBox3.Text}', N'{richTextBox1.Text}', '{DateTime.Now}', 0)";
                         command.CommandText = sqlExpression;
                         reader.Close();
                         command.ExecuteNonQuery();
@@ -74,31 +75,11 @@ namespace Регистрация
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Button5_Click(object sender, EventArgs e)
         {
-            this.Hide();
             MainMenu mainMenu = new MainMenu();
+            this.Close();
             mainMenu.Show();
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
