@@ -74,5 +74,35 @@ namespace AAE
         {
             Application.Exit();
         }
+
+        RichTextBox RichTextBox = new RichTextBox();
+
+        private void buttonSetting_Click(object sender, EventArgs e)
+        {
+            pageSetupDialog1.ShowDialog(); // отобразить окно
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            printDocument1.Print();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Methods.Print(e, RichTextBox);
+        }
+
+        private void printDocument1_BeginPrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            // Перед началом печати переменные-счетчики
+            // установить в начальные значения
+            Methods.counter = 0;
+            Methods.curPage = 1;
+        }
+
+        private void buttonPreview_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.ShowDialog();
+        }
     }
 }

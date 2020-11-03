@@ -67,7 +67,7 @@ namespace AAE
             return Regex.Replace(str, ".{" + n + "}(?!$)", "$0\n");
         }
 
-        private void ButtonPrint_Click(object sender, EventArgs e)
+        private string PrintString()
         {
             string result = "";
             string sqlExpression = $@"SELECT ID AS '№', EmployeeID AS 'Номер сотрудника', EquipmentID AS 'Номер оборудования', Text AS 'Текст', Title AS 'Заголовок', HostID AS 'Номер администратора', RequestDate AS 'Дата', Status AS 'Статус' FROM Requests
@@ -93,70 +93,31 @@ namespace AAE
                         result += $"{name0} - {reader.GetValue(0)}\n{name1} - {reader.GetValue(1)}\n{name2} - {reader.GetValue(2)}\n{name3} - {SplitToLines(reader.GetString(3), 78)}\n{name4} - {reader.GetValue(4)}\n{name5} - {reader.GetValue(5)}\n{name6} - {reader.GetValue(6)}\n\n";
                     }
                     richTextBox1.Text = result;
-                    if (printDialog1.ShowDialog() == DialogResult.OK)
-                        printDocument1.Print();
+                    return result;
                 }
                 else
-                    MessageBox.Show("Записей не найдено");
-
-                reader.Close();
+                {
+                    result = "";
+                    return result;
+                }
             }
         }
-        // Количество выделенных строк:
-        // 0 <= counter <= richTextBox1.Lines.Length
-        int counter = 0; // сквозной номер строки в массиве строк, которые выводятся
-        int curPage; // текущая страница
+
+        private void ButtonPrint_Click(object sender, EventArgs e)
+        {
+            if (PrintString() != "")
+            {
+                if (printDialog1.ShowDialog() == DialogResult.OK)
+                    printDocument1.Print();
+            }
+            else
+                MessageBox.Show("Записей не найдено");
+        }
 
         // Обработчик события PrintPage - здесь нужно программировать печать
         private void PrintDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
-            // Создать шрифт myFont
-            Font myFont = new Font("Arial", 14, FontStyle.Regular, GraphicsUnit.Pixel);
-
-            string curLine; // текущая выводимая строка
-
-            // Отступы внутри страницы
-            float leftMargin = e.MarginBounds.Left; // отступы слева в документе
-            float topMargin = e.MarginBounds.Top; // отступы сверху в документе
-            float yPos = 0; // текущая позиция Y для вывода строки
-
-            int nPages; // количество страниц
-            int nLines; // максимально-возможное количество строк на странице
-            int i; // номер текущей строки для вывода на странице
-
-            // Вычислить максимально возможное количество строк на странице
-            nLines = (int)(e.MarginBounds.Height / myFont.GetHeight(e.Graphics));
-
-            // Вычислить количество страниц для печати
-            nPages = (richTextBox1.Lines.Length - 1) / nLines + 1;
-
-            // Цикл печати/вывода одной страницы
-            i = 0;
-            while ((i < nLines) && (counter < richTextBox1.Lines.Length))
-            {
-                // Взять строку для вывода из richTextBox1
-                curLine = richTextBox1.Lines[counter];
-
-                // Вычислить текущую позицию по оси Y
-                yPos = topMargin + i * myFont.GetHeight(e.Graphics);
-
-                // Вывести строку в документ
-                e.Graphics.DrawString(curLine, myFont, Brushes.Blue,
-                  leftMargin, yPos, new StringFormat());
-
-                counter++;
-                i++;
-            }
-
-            // Если весь текст не помещается на 1 страницу, то
-            // нужно добавить дополнительную страницу для печати
-            e.HasMorePages = false;
-
-            if (curPage < nPages)
-            {
-                curPage++;
-                e.HasMorePages = true;
-            }
+            Methods.Print(e, richTextBox1);
         }
 
         // Начало печати
@@ -164,8 +125,8 @@ namespace AAE
         {
             // Перед началом печати переменные-счетчики
             // установить в начальные значения
-            counter = 0;
-            curPage = 1;
+            Methods.counter = 0;
+            Methods.curPage = 1;
         }
 
         private void ButtonSetting_Click(object sender, EventArgs e)
@@ -178,5 +139,14 @@ namespace AAE
         {
             Application.Exit();
         }
+
+        private void buttonPreview_Click(object sender, EventArgs e)
+        {
+            if (PrintString() != "")
+                printPreviewDialog1.ShowDialog();
+            else
+                MessageBox.Show("Печать пуста");
+        }
     }
+
 }
