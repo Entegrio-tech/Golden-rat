@@ -63,3 +63,4 @@ D:\Документы\github\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.csproj.Ge
 D:\Документы\github\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.csproj.CoreCompileInputs.cache
 D:\Документы\github\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.exe
 D:\Документы\github\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.pdb
+E:\GitHub\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.csproj.ResolveComReference.cache

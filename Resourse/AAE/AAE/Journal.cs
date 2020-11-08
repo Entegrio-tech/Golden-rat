@@ -62,11 +62,6 @@ namespace AAE
             }
         }
 
-        public static string SplitToLines(string str, int n)
-        {
-            return Regex.Replace(str, ".{" + n + "}(?!$)", "$0\n");
-        }
-
         private string PrintString()
         {
             string result = "";
@@ -90,7 +85,7 @@ namespace AAE
 
                     while (reader.Read()) // построчно считываем данные
                     {
-                        result += $"{name0} - {reader.GetValue(0)}\n{name1} - {reader.GetValue(1)}\n{name2} - {reader.GetValue(2)}\n{name3} - {SplitToLines(reader.GetString(3), 78)}\n{name4} - {reader.GetValue(4)}\n{name5} - {reader.GetValue(5)}\n{name6} - {reader.GetValue(6)}\n\n";
+                        result += $"{name0} - {reader.GetValue(0)}\n{name1} - {reader.GetValue(1)}\n{name2} - {reader.GetValue(2)}\n{name3} - {reader.GetString(3), 78}\n{name4} - {reader.GetValue(4)}\n{name5} - {reader.GetValue(5)}\n{name6} - {reader.GetValue(6)}\n\n";
                     }
                     richTextBox1.Text = result;
                     return result;
@@ -140,7 +135,7 @@ namespace AAE
             Application.Exit();
         }
 
-        private void buttonPreview_Click(object sender, EventArgs e)
+        private void buttonPreview_Click_1(object sender, EventArgs e)
         {
             if (PrintString() != "")
                 printPreviewDialog1.ShowDialog();

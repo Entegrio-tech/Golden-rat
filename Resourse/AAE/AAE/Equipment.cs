@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Программа1;
 using Регистрация;
+using System.IO;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Reflection;
+using System.Runtime.InteropServices;
 
 namespace AAE
 {
@@ -19,6 +23,8 @@ namespace AAE
         {
             InitializeComponent();
         }
+
+        RichTextBox richTextBox1 = new RichTextBox();
 
         private void Equipment_Load(object sender, EventArgs e)
         {
@@ -75,13 +81,6 @@ namespace AAE
             Application.Exit();
         }
 
-        RichTextBox RichTextBox = new RichTextBox();
-
-        private void buttonSetting_Click(object sender, EventArgs e)
-        {
-            pageSetupDialog1.ShowDialog(); // отобразить окно
-        }
-
         private void buttonPrint_Click(object sender, EventArgs e)
         {
             printDocument1.Print();
@@ -89,7 +88,7 @@ namespace AAE
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            Methods.Print(e, RichTextBox);
+            Methods.Print(e, richTextBox1);
         }
 
         private void printDocument1_BeginPrint(object sender, System.Drawing.Printing.PrintEventArgs e)
@@ -104,5 +103,118 @@ namespace AAE
         {
             printPreviewDialog1.ShowDialog();
         }
+
+        private void buttonSetting_Click_1(object sender, EventArgs e)
+        {
+            pageSetupDialog1.ShowDialog(); // отобразить окно
+        }
+
+        private void buttonPrint_Click_1(object sender, EventArgs e)
+        {
+            if (PrintString() != "")
+            {
+                if (printDialog1.ShowDialog() == DialogResult.OK)
+                    printDocument1.Print();
+            }
+            else
+                MessageBox.Show("Записей не найдено");
+        }
+
+        private void buttonPreview_Click_1(object sender, EventArgs e)
+        {
+            if (PrintString() != "")
+                printPreviewDialog1.ShowDialog();
+            else
+                MessageBox.Show("Печать пуста");
+        }
+
+        private string PrintString()
+        {
+            string result = "";
+            string sqlExpression = $@"SELECT * FROM Equipment";
+            using (SqlConnection connection = new SqlConnection(Methods.connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(sqlExpression, connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows) // если есть данные
+                {
+                    string name0 = reader.GetName(0);
+                    string name1 = reader.GetName(1);
+                    string name2 = reader.GetName(2);
+                    string name3 = reader.GetName(3);
+                    string name4 = reader.GetName(4);
+                    string name5 = reader.GetName(5);
+
+                    while (reader.Read()) // построчно считываем данные
+                    {
+                        result += $"{name0} - {reader.GetValue(0)}\n{name1} - {reader.GetValue(1)}\n{name2} - {reader.GetValue(2)}\n{name3} - {reader.GetValue(3),78}\n{name4} - {reader.GetValue(4)}\n{name5} - {reader.GetValue(5)}\n\n";
+                    }
+                    richTextBox1.Text = result;
+                    return result;
+                }
+                else
+                {
+                    result = "";
+                    return result;
+                }
+            }
+        }
+
+        Excel.Application ex;
+        public BindingSource binding = new BindingSource();
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //пытаемся подключиться к запущенному Excel
+            try
+            {
+                ex = Marshal.GetActiveObject("Excel.Application")
+                as Excel.Application;
+            }
+            //если Excel на запущен, запускаем его
+            catch (COMException err)
+            {
+                ex = new Excel.Application();
+            }
+            //создаем новую книгу на основе шаблона
+            object fileName = @"E:\GitHub\Golden-rat\Resourse\AAE\anketa.xltx";
+            ex.Workbooks.Add(fileName);
+            //во вторую колонку листа напротив введенных названий отобразим значения полей таблицы
+            //в первую колонку первой строки листа отображаем второе поле таблицы
+            (ex.ActiveWorkbook.Sheets[1] as Excel.Worksheet).Cells[1, 2] =
+            (binding.Current as DataRowView)["fam"].ToString();
+            //во вторую колонку второй строки листа отображаем третье поле поле таблицы и т.д.
+            (ex.ActiveWorkbook.Sheets[1] as Excel.Worksheet).Cells[
+            2, 2] =
+            (binding.Current as DataRowView)["imya"].ToString()
+            ;
+            (ex.ActiveWorkbook.Sheets[1] as Excel.Worksheet).Cells[
+            3, 2] =
+            (binding.Current as DataRowView)["otch"].ToString()
+            ;
+            (ex.ActiveWorkbook.Sheets[1] as Excel.Worksheet).Cells[
+            4, 2] =
+            (binding.Current as DataRowView)["grup"].ToString()
+            ;
+            (ex.ActiveWorkbook.Sheets[1] as Excel.Worksheet).Cells[
+            5, 2] =
+
+            (binding.Current as DataRowView)["finance"].ToString();
+            //поле типа Дата/Время выводится по шаблону, чтобы не выводилось время
+            (ex.ActiveWorkbook.Sheets[1] as Excel.Worksheet).Cells[
+            6, 2] =
+            Convert.ToDateTime((binding.Current as DataRowView)
+            ["datar"]).ToString("dd/MM/yyyy");
+            (ex.ActiveWorkbook.Sheets[1] as Excel.Worksheet).Cells[
+            7, 2] =
+            (binding.Current as DataRowView)["srbal"].ToString(
+            );
+            //делаем окно Excel видимым
+            ex.Visible = true;
+        }
     }
+    
 }
+
