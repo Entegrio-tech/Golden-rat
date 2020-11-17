@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Configuration;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 using Программа1;
@@ -17,6 +15,9 @@ namespace Регистрация
 
         private byte counter;
 
+        private string textPassword = "Введите пароль";
+
+        #region Methods
         internal static void Open()
         {
             throw new NotImplementedException();
@@ -41,7 +42,7 @@ namespace Регистрация
             {
                 connection.Open();
                 string sqlExpression = $@"SELECT * FROM Employee
-                                          WHERE Login = '{textBoxLogin.Text}' AND Password = CAST('{textBoxPassword.Text}' AS varbinary)";
+                                          WHERE Login = '{textBoxLogin.Text}' AND Password = CAST('{textBoxPassword.Text}' AS VARBINARY)";
                 SqlCommand command = new SqlCommand(sqlExpression, connection);
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
@@ -68,10 +69,19 @@ namespace Регистрация
             }
         }
 
+        private void HidePassword(TextBox sender)
+        {
+            sender.PasswordChar = '*';
+            if (sender.Text.Equals(textPassword))
+                sender.PasswordChar = '\0';
+        }
+        #endregion
+
+        #region Events
         private void Authorization_Load(object sender, EventArgs e)
         {
             textBoxLogin.AddPlaceholder("Введите логин");
-            textBoxPassword.AddPlaceholder("Введите пароль");
+            textBoxPassword.AddPlaceholder(textPassword);
         }
         private void TextBoxLogin_KeyDown(object sender, KeyEventArgs e)
         {
@@ -125,6 +135,12 @@ namespace Регистрация
             RecoveryPassword recoveryPassword = new RecoveryPassword();
             recoveryPassword.Show();
         }
+
+        private void TextBoxPassword_TextChanged(object sender, EventArgs e)
+        {
+           HidePassword((TextBox)sender);
+        }
+        #endregion
     }
 }
 

@@ -1,21 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Программа1;
-using Регистрация;
 
 namespace AAE
 {
-    public partial class AddEquipment : Form
+    public partial class EquipmentAdd : Form
     {
-        public AddEquipment()
+        public EquipmentAdd()
         {
             InitializeComponent();
         }

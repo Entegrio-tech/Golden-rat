@@ -39,6 +39,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonCreateRequest = new System.Windows.Forms.Button();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +49,7 @@
             this.gradientPanel1.AutoSize = true;
             this.gradientPanel1.ColorBottom = System.Drawing.Color.Blue;
             this.gradientPanel1.ColorTop = System.Drawing.Color.White;
+            this.gradientPanel1.Controls.Add(this.buttonRefresh);
             this.gradientPanel1.Controls.Add(this.label2);
             this.gradientPanel1.Controls.Add(this.buttonJournal);
             this.gradientPanel1.Controls.Add(this.buttonEquipment);
@@ -59,7 +61,7 @@
             this.gradientPanel1.Controls.Add(this.buttonCreateRequest);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(1088, 587);
             this.gradientPanel1.TabIndex = 0;
@@ -86,7 +88,7 @@
             this.buttonJournal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonJournal.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonJournal.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonJournal.Location = new System.Drawing.Point(599, 489);
+            this.buttonJournal.Location = new System.Drawing.Point(408, 530);
             this.buttonJournal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonJournal.Name = "buttonJournal";
             this.buttonJournal.Size = new System.Drawing.Size(255, 46);
@@ -102,8 +104,8 @@
             this.buttonEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEquipment.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEquipment.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonEquipment.Location = new System.Drawing.Point(192, 489);
-            this.buttonEquipment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonEquipment.Location = new System.Drawing.Point(408, 478);
+            this.buttonEquipment.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEquipment.Name = "buttonEquipment";
             this.buttonEquipment.Size = new System.Drawing.Size(255, 46);
             this.buttonEquipment.TabIndex = 20;
@@ -119,10 +121,10 @@
             this.buttonViewRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonViewRequest.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonViewRequest.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonViewRequest.Location = new System.Drawing.Point(573, 405);
-            this.buttonViewRequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonViewRequest.Location = new System.Drawing.Point(408, 424);
+            this.buttonViewRequest.Margin = new System.Windows.Forms.Padding(4);
             this.buttonViewRequest.Name = "buttonViewRequest";
-            this.buttonViewRequest.Size = new System.Drawing.Size(340, 57);
+            this.buttonViewRequest.Size = new System.Drawing.Size(255, 46);
             this.buttonViewRequest.TabIndex = 19;
             this.buttonViewRequest.Text = "Просмотр заявки";
             this.buttonViewRequest.UseVisualStyleBackColor = false;
@@ -137,7 +139,7 @@
             this.buttonBack.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonBack.ForeColor = System.Drawing.Color.Black;
             this.buttonBack.Location = new System.Drawing.Point(4, 4);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(44, 32);
             this.buttonBack.TabIndex = 18;
@@ -154,7 +156,7 @@
             this.buttonExit.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonExit.ForeColor = System.Drawing.Color.Black;
             this.buttonExit.Location = new System.Drawing.Point(1044, 4);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(40, 32);
             this.buttonExit.TabIndex = 17;
@@ -169,13 +171,15 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridView1.Location = new System.Drawing.Point(36, 122);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1007, 260);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentDoubleClick);
+            this.dataGridView1.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView1_CellMouseDown);
             // 
             // label1
             // 
@@ -197,14 +201,24 @@
             this.buttonCreateRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCreateRequest.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonCreateRequest.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonCreateRequest.Location = new System.Drawing.Point(147, 405);
-            this.buttonCreateRequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCreateRequest.Location = new System.Drawing.Point(408, 424);
+            this.buttonCreateRequest.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCreateRequest.Name = "buttonCreateRequest";
-            this.buttonCreateRequest.Size = new System.Drawing.Size(340, 57);
+            this.buttonCreateRequest.Size = new System.Drawing.Size(255, 46);
             this.buttonCreateRequest.TabIndex = 12;
             this.buttonCreateRequest.Text = "Создать заявку";
             this.buttonCreateRequest.UseVisualStyleBackColor = false;
             this.buttonCreateRequest.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Location = new System.Drawing.Point(925, 77);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(72, 29);
+            this.buttonRefresh.TabIndex = 23;
+            this.buttonRefresh.Text = "Обновить";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // MainMenu
             // 
@@ -214,7 +228,7 @@
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainMenu";
             this.Text = "Главное меню";
             this.Load += new System.EventHandler(this.MainMenu_Load);
@@ -238,5 +252,6 @@
         private System.Windows.Forms.Button buttonEquipment;
         private System.Windows.Forms.Button buttonJournal;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }

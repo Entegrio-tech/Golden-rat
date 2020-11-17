@@ -3,11 +3,11 @@ USE AutomationAccountingEquipment
 CREATE TABLE Requests
 (
 	ID INT PRIMARY KEY IDENTITY,
-	EmployeeID INT REFERENCES Employee (ID),
-	EquipmentID INT REFERENCES Equipment (ID),
+	EmployeeID SMALLINT REFERENCES Employee (ID),
+	EquipmentID NVARCHAR(10) REFERENCES Equipment (ID),
+	Title NVARCHAR(100),
 	Text NVARCHAR(1000),
-    Title NVARCHAR(100),
-    HostID INT REFERENCES Employee (ID),
+    HostID SMALLINT REFERENCES Employee (ID),
 	RequestDate DATE,
 	Status BIT
 );

@@ -72,7 +72,7 @@
             this.gradientPanel1.Controls.Add(this.gradientPanel2);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(1043, 537);
             this.gradientPanel1.TabIndex = 0;
@@ -122,7 +122,7 @@
             this.buttonExit.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonExit.ForeColor = System.Drawing.Color.Black;
             this.buttonExit.Location = new System.Drawing.Point(984, 5);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(5);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(53, 39);
             this.buttonExit.TabIndex = 15;
@@ -138,7 +138,7 @@
             this.buttonReject.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonReject.ForeColor = System.Drawing.Color.Transparent;
             this.buttonReject.Location = new System.Drawing.Point(105, 450);
-            this.buttonReject.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonReject.Margin = new System.Windows.Forms.Padding(5);
             this.buttonReject.Name = "buttonReject";
             this.buttonReject.Size = new System.Drawing.Size(384, 70);
             this.buttonReject.TabIndex = 20;
@@ -154,11 +154,11 @@
             this.buttonAcсept.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAcсept.ForeColor = System.Drawing.Color.Transparent;
             this.buttonAcсept.Location = new System.Drawing.Point(580, 450);
-            this.buttonAcсept.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonAcсept.Margin = new System.Windows.Forms.Padding(5);
             this.buttonAcсept.Name = "buttonAcсept";
             this.buttonAcсept.Size = new System.Drawing.Size(368, 70);
             this.buttonAcсept.TabIndex = 19;
-            this.buttonAcсept.Text = "Принять";
+            this.buttonAcсept.Text = "Выполнено";
             this.buttonAcсept.UseVisualStyleBackColor = false;
             this.buttonAcсept.Click += new System.EventHandler(this.ButtonAcсept_Click);
             // 
@@ -167,7 +167,7 @@
             this.richTextBoxRequest.BackColor = System.Drawing.Color.LightGray;
             this.richTextBoxRequest.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.richTextBoxRequest.Location = new System.Drawing.Point(41, 159);
-            this.richTextBoxRequest.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.richTextBoxRequest.Margin = new System.Windows.Forms.Padding(5);
             this.richTextBoxRequest.Name = "richTextBoxRequest";
             this.richTextBoxRequest.ReadOnly = true;
             this.richTextBoxRequest.Size = new System.Drawing.Size(513, 274);
@@ -196,7 +196,7 @@
             this.gradientPanel3.Controls.Add(this.labelDate);
             this.gradientPanel3.Controls.Add(this.labelDateName);
             this.gradientPanel3.Location = new System.Drawing.Point(41, 74);
-            this.gradientPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gradientPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.gradientPanel3.Name = "gradientPanel3";
             this.gradientPanel3.Size = new System.Drawing.Size(251, 43);
             this.gradientPanel3.TabIndex = 36;
@@ -243,7 +243,7 @@
             this.gradientPanel2.Controls.Add(this.labelRequestID);
             this.gradientPanel2.Controls.Add(this.labelEquipmentIDName);
             this.gradientPanel2.Location = new System.Drawing.Point(580, 159);
-            this.gradientPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gradientPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.gradientPanel2.Name = "gradientPanel2";
             this.gradientPanel2.Size = new System.Drawing.Size(390, 274);
             this.gradientPanel2.TabIndex = 35;
@@ -348,7 +348,7 @@
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ViewRequest";
             this.Text = "Просмотр запроса";
             this.Load += new System.EventHandler(this.ViewRequest_Load);

@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Программа1;
-using Регистрация;
 using System.Drawing.Printing;
-using System.Text.RegularExpressions;
 
 namespace AAE
 {
@@ -22,9 +14,9 @@ namespace AAE
             InitializeComponent();
         }
 
+        private readonly RichTextBox richTextBox1 = new RichTextBox();
 
-        RichTextBox richTextBox1 = new RichTextBox();
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void ButtonBack_Click(object sender, EventArgs e)
         {
             Регистрация.MainMenu mainMenu = new Регистрация.MainMenu();
             this.Close();          
@@ -53,7 +45,7 @@ namespace AAE
                 dataGridView1.Rows[i].Selected = false;
                 for (int j = 0; j < dataGridView1.ColumnCount; j++)
                     if (dataGridView1.Rows[i].Cells[j].Value != null)
-                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox1.Text))
+                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBoxSearch.Text))
                         {
                             dataGridView1.Rows[i].Selected = true;
                             dataGridView1.FirstDisplayedScrollingRowIndex = i;
@@ -65,15 +57,17 @@ namespace AAE
         private string PrintString()
         {
             string result = "";
-            string sqlExpression = $@"SELECT ID AS '№', EmployeeID AS 'Номер сотрудника', EquipmentID AS 'Номер оборудования', Text AS 'Текст', Title AS 'Заголовок', HostID AS 'Номер администратора', RequestDate AS 'Дата', Status AS 'Статус' FROM Requests
-                                   WHERE RequestDate = '{textBox2.Text}'";
+            string sqlExpression = $@"SET DATEFORMAT dmy
+                                    SELECT ID AS '№', EmployeeID AS 'Номер сотрудника', EquipmentID AS 'Номер оборудования', Text AS 'Текст', Title AS 'Заголовок', HostID AS 'Номер администратора', RequestDate AS 'Дата', Status AS 'Статус' 
+                                    FROM Requests
+                                    WHERE RequestDate = '{maskedTextBoxDate.Text}'";
             using (SqlConnection connection = new SqlConnection(Methods.connectionString))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(sqlExpression, connection);
                 SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows) // если есть данные
+                // если есть данные
+                if (reader.HasRows) 
                 {
                     string name0 = reader.GetName(0);
                     string name1 = reader.GetName(1);
@@ -82,8 +76,8 @@ namespace AAE
                     string name4 = reader.GetName(4);
                     string name5 = reader.GetName(5);
                     string name6 = reader.GetName(6);
-
-                    while (reader.Read()) // построчно считываем данные
+                    // построчно считываем данные
+                    while (reader.Read()) 
                     {
                         result += $"{name0} - {reader.GetValue(0)}\n{name1} - {reader.GetValue(1)}\n{name2} - {reader.GetValue(2)}\n{name3} - {reader.GetString(3), 78}\n{name4} - {reader.GetValue(4)}\n{name5} - {reader.GetValue(5)}\n{name6} - {reader.GetValue(6)}\n\n";
                     }
@@ -126,7 +120,8 @@ namespace AAE
 
         private void ButtonSetting_Click(object sender, EventArgs e)
         {
-            pageSetupDialog1.ShowDialog(); // отобразить окно
+            // отобразить окно
+            pageSetupDialog1.ShowDialog();
         }
 
 
@@ -135,12 +130,22 @@ namespace AAE
             Application.Exit();
         }
 
-        private void buttonPreview_Click_1(object sender, EventArgs e)
+        private void ButtonPreview_Click_1(object sender, EventArgs e)
         {
             if (PrintString() != "")
                 printPreviewDialog1.ShowDialog();
             else
                 MessageBox.Show("Печать пуста");
+        }
+
+        private void buttonPreview_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -1,6 +1,6 @@
 ﻿namespace AAE
 {
-    partial class AddEquipment
+    partial class EquipmentAdd
     {
         /// <summary>
         /// Required designer variable.
@@ -109,7 +109,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(74, 74);
+            this.label1.Location = new System.Drawing.Point(23, 76);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(234, 35);
             this.label1.TabIndex = 6;
@@ -120,7 +120,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(171, 121);
+            this.label2.Location = new System.Drawing.Point(148, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 35);
             this.label2.TabIndex = 7;
@@ -131,7 +131,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(213, 165);
+            this.label3.Location = new System.Drawing.Point(204, 164);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 35);
             this.label3.TabIndex = 8;
@@ -142,7 +142,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(144, 210);
+            this.label4.Location = new System.Drawing.Point(113, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 35);
             this.label4.TabIndex = 9;
@@ -153,7 +153,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(188, 257);
+            this.label5.Location = new System.Drawing.Point(170, 256);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 35);
             this.label5.TabIndex = 10;
@@ -164,7 +164,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(133, 303);
+            this.label6.Location = new System.Drawing.Point(101, 300);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(156, 35);
             this.label6.TabIndex = 11;
@@ -267,14 +267,14 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
-            // AddEquipment
+            // EquipmentAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 421);
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddEquipment";
+            this.Name = "EquipmentAdd";
             this.Text = "AddEquipment";
             this.Load += new System.EventHandler(this.AddEquipment_Load);
             this.gradientPanel1.ResumeLayout(false);

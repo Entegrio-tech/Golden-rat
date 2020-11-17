@@ -34,16 +34,16 @@
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.gradientPanel1 = new Регистрация.GradientPanel();
+            this.maskedTextBoxDate = new System.Windows.Forms.MaskedTextBox();
             this.buttonPreview = new System.Windows.Forms.Button();
             this.buttonSetting = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonPrint = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.buttonBack = new System.Windows.Forms.Button();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -79,23 +79,32 @@
             // 
             this.gradientPanel1.ColorBottom = System.Drawing.Color.Blue;
             this.gradientPanel1.ColorTop = System.Drawing.Color.White;
+            this.gradientPanel1.Controls.Add(this.maskedTextBoxDate);
             this.gradientPanel1.Controls.Add(this.buttonPreview);
             this.gradientPanel1.Controls.Add(this.buttonSetting);
             this.gradientPanel1.Controls.Add(this.label3);
             this.gradientPanel1.Controls.Add(this.buttonPrint);
-            this.gradientPanel1.Controls.Add(this.textBox2);
             this.gradientPanel1.Controls.Add(this.buttonSearch);
             this.gradientPanel1.Controls.Add(this.label2);
             this.gradientPanel1.Controls.Add(this.buttonExit);
             this.gradientPanel1.Controls.Add(this.dataGridView1);
-            this.gradientPanel1.Controls.Add(this.textBox1);
+            this.gradientPanel1.Controls.Add(this.textBoxSearch);
             this.gradientPanel1.Controls.Add(this.buttonBack);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(588, 334);
+            this.gradientPanel1.Size = new System.Drawing.Size(784, 411);
             this.gradientPanel1.TabIndex = 10;
+            // 
+            // maskedTextBoxDate
+            // 
+            this.maskedTextBoxDate.Location = new System.Drawing.Point(553, 298);
+            this.maskedTextBoxDate.Mask = "00/00/0000";
+            this.maskedTextBoxDate.Name = "maskedTextBoxDate";
+            this.maskedTextBoxDate.Size = new System.Drawing.Size(83, 22);
+            this.maskedTextBoxDate.TabIndex = 29;
+            this.maskedTextBoxDate.ValidatingType = typeof(System.DateTime);
             // 
             // buttonPreview
             // 
@@ -104,14 +113,14 @@
             this.buttonPreview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPreview.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPreview.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.buttonPreview.Location = new System.Drawing.Point(333, 303);
-            this.buttonPreview.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonPreview.Location = new System.Drawing.Point(444, 373);
+            this.buttonPreview.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPreview.Name = "buttonPreview";
-            this.buttonPreview.Size = new System.Drawing.Size(252, 35);
+            this.buttonPreview.Size = new System.Drawing.Size(336, 43);
             this.buttonPreview.TabIndex = 28;
             this.buttonPreview.Text = "Предварительный просмотр";
             this.buttonPreview.UseVisualStyleBackColor = false;
-            this.buttonPreview.Click += new System.EventHandler(this.buttonPreview_Click_1);
+            this.buttonPreview.Click += new System.EventHandler(this.ButtonPreview_Click_1);
             // 
             // buttonSetting
             // 
@@ -120,10 +129,10 @@
             this.buttonSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSetting.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.buttonSetting.Location = new System.Drawing.Point(333, 268);
-            this.buttonSetting.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSetting.Location = new System.Drawing.Point(444, 330);
+            this.buttonSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSetting.Name = "buttonSetting";
-            this.buttonSetting.Size = new System.Drawing.Size(124, 31);
+            this.buttonSetting.Size = new System.Drawing.Size(165, 38);
             this.buttonSetting.TabIndex = 9;
             this.buttonSetting.Text = "Настройка";
             this.buttonSetting.UseVisualStyleBackColor = false;
@@ -135,10 +144,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(244, 7);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(325, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 47);
+            this.label3.Size = new System.Drawing.Size(162, 59);
             this.label3.TabIndex = 23;
             this.label3.Text = "Журнал";
             // 
@@ -149,25 +157,14 @@
             this.buttonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrint.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.buttonPrint.Location = new System.Drawing.Point(461, 268);
-            this.buttonPrint.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonPrint.Location = new System.Drawing.Point(615, 330);
+            this.buttonPrint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(124, 31);
+            this.buttonPrint.Size = new System.Drawing.Size(165, 38);
             this.buttonPrint.TabIndex = 3;
             this.buttonPrint.Text = "Печать";
             this.buttonPrint.UseVisualStyleBackColor = false;
             this.buttonPrint.Click += new System.EventHandler(this.ButtonPrint_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(409, 238);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 6;
             // 
             // buttonSearch
             // 
@@ -176,10 +173,10 @@
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearch.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.buttonSearch.Location = new System.Drawing.Point(89, 266);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSearch.Location = new System.Drawing.Point(119, 327);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(124, 31);
+            this.buttonSearch.Size = new System.Drawing.Size(165, 38);
             this.buttonSearch.TabIndex = 2;
             this.buttonSearch.Text = "Поиск";
             this.buttonSearch.UseVisualStyleBackColor = false;
@@ -190,12 +187,11 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(228, 234);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(362, 290);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 28);
+            this.label2.Size = new System.Drawing.Size(79, 35);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Дата (yyyy.mm.dd)";
+            this.label2.Text = "Дата";
             // 
             // buttonExit
             // 
@@ -205,10 +201,10 @@
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonExit.ForeColor = System.Drawing.Color.Black;
-            this.buttonExit.Location = new System.Drawing.Point(563, 2);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonExit.Location = new System.Drawing.Point(751, 2);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(22, 21);
+            this.buttonExit.Size = new System.Drawing.Size(29, 26);
             this.buttonExit.TabIndex = 18;
             this.buttonExit.Text = "X";
             this.buttonExit.UseVisualStyleBackColor = false;
@@ -219,24 +215,24 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 64);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 79);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(545, 153);
+            this.dataGridView1.Size = new System.Drawing.Size(727, 188);
             this.dataGridView1.TabIndex = 1;
             // 
-            // textBox1
+            // textBoxSearch
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(101, 236);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(103, 26);
-            this.textBox1.TabIndex = 4;
+            this.textBoxSearch.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSearch.Location = new System.Drawing.Point(135, 290);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(137, 30);
+            this.textBoxSearch.TabIndex = 4;
             // 
             // buttonBack
             // 
@@ -245,23 +241,23 @@
             this.buttonBack.FlatAppearance.BorderSize = 0;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonBack.Location = new System.Drawing.Point(2, 2);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBack.Location = new System.Drawing.Point(3, 2);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(32, 21);
+            this.buttonBack.Size = new System.Drawing.Size(43, 26);
             this.buttonBack.TabIndex = 0;
             this.buttonBack.Text = "<-";
             this.buttonBack.UseVisualStyleBackColor = false;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            this.buttonBack.Click += new System.EventHandler(this.ButtonBack_Click);
             // 
             // Journal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 334);
+            this.ClientSize = new System.Drawing.Size(784, 411);
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Journal";
             this.Text = "Journal";
             this.Load += new System.EventHandler(this.Journal_Load);
@@ -278,8 +274,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Button buttonPrint;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Label label2;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
@@ -290,5 +285,6 @@
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonPreview;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxDate;
     }
 }

@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Программа1;
-using Регистрация;
-using System.IO;
 using Excel = Microsoft.Office.Interop.Excel;
-using System.Reflection;
 using System.Runtime.InteropServices;
 
 namespace AAE
@@ -24,7 +15,7 @@ namespace AAE
             InitializeComponent();
         }
 
-        RichTextBox richTextBox1 = new RichTextBox();
+        readonly RichTextBox richTextBox1 = new RichTextBox();
 
         private void Equipment_Load(object sender, EventArgs e)
         {
@@ -55,7 +46,7 @@ namespace AAE
 
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            AddEquipment add = new AddEquipment();
+            EquipmentAdd add = new EquipmentAdd();
             this.Close();
             add.Show();
         }
@@ -76,22 +67,22 @@ namespace AAE
             }
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
+        private void ButtonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void buttonPrint_Click(object sender, EventArgs e)
+        private void ButtonPrint_Click(object sender, EventArgs e)
         {
             printDocument1.Print();
         }
 
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void PrintDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             Methods.Print(e, richTextBox1);
         }
 
-        private void printDocument1_BeginPrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void PrintDocument1_BeginPrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
             // Перед началом печати переменные-счетчики
             // установить в начальные значения
@@ -99,17 +90,17 @@ namespace AAE
             Methods.curPage = 1;
         }
 
-        private void buttonPreview_Click(object sender, EventArgs e)
+        private void ButtonPreview_Click(object sender, EventArgs e)
         {
             printPreviewDialog1.ShowDialog();
         }
 
-        private void buttonSetting_Click_1(object sender, EventArgs e)
+        private void ButtonSetting_Click_1(object sender, EventArgs e)
         {
             pageSetupDialog1.ShowDialog(); // отобразить окно
         }
 
-        private void buttonPrint_Click_1(object sender, EventArgs e)
+        private void ButtonPrint_Click_1(object sender, EventArgs e)
         {
             if (PrintString() != "")
             {
@@ -120,7 +111,7 @@ namespace AAE
                 MessageBox.Show("Записей не найдено");
         }
 
-        private void buttonPreview_Click_1(object sender, EventArgs e)
+        private void ButtonPreview_Click_1(object sender, EventArgs e)
         {
             if (PrintString() != "")
                 printPreviewDialog1.ShowDialog();
@@ -165,7 +156,7 @@ namespace AAE
         Excel.Application ex;
         public BindingSource binding = new BindingSource();
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             //пытаемся подключиться к запущенному Excel
             try
@@ -174,7 +165,7 @@ namespace AAE
                 as Excel.Application;
             }
             //если Excel на запущен, запускаем его
-            catch (COMException err)
+            catch (COMException)
             {
                 ex = new Excel.Application();
             }

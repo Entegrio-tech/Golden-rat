@@ -1,13 +1,7 @@
 ﻿using AAE;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Программа1;
 
@@ -17,6 +11,7 @@ namespace Регистрация
     {
         public string[] row;
 
+        #region Method
         public MainMenu()
         {
             InitializeComponent();
@@ -36,6 +31,41 @@ namespace Регистрация
             }
         }
 
+        private void OpenVievRequest(DataGridView dataGridView, int rowIndex)
+        {
+            row = new string[dataGridView.Columns.Count];
+            for (int i = 0; i < dataGridView.Columns.Count; i++)
+            {
+                row[i] = dataGridView.Rows[rowIndex].Cells[i].Value.ToString();
+            }
+            var viewRequest = new ViewRequest
+            {
+                Owner = this
+            };
+            viewRequest.Show();
+        }
+
+        public void FillDataGridViev()
+        {
+            if (Methods.Privilage)
+            {
+                buttonCreateRequest.Visible = false;
+                FillingTable(@"SELECT ID AS '№', EmployeeID AS 'Номер сотрудника', EquipmentID AS 'Номер оборудования', 
+                    Text AS 'Текст', Title AS 'Заголовок', RequestDate AS 'Дата'
+                    FROM Requests WHERE Status IS Null");
+            }
+            else
+            {
+                buttonJournal.Visible = false;
+                buttonEquipment.Visible = false;
+                FillingTable($@"SELECT ID AS '№', EmployeeID AS 'Номер сотрудника', EquipmentID AS 'Номер оборудования', 
+                    Text AS 'Текст', Title AS 'Заголовок', RequestDate AS 'Дата', Status AS 'Статус'
+                    FROM Requests WHERE EmployeeId='{Methods.EmployeeID}'");
+            }
+        }
+        #endregion
+
+        #region Event
         private void ButtonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -56,27 +86,13 @@ namespace Регистрация
 
         private void ButtonViewRequest_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Methods.viewRequest.Show();
+            OpenVievRequest(dataGridView1, dataGridView1.CurrentCell.RowIndex);
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
-            if (Methods.Privilage)
-            {
-                buttonCreateRequest.Visible = false;
-                FillingTable(@"SELECT ID AS '№', EmployeeID AS 'Номер сотрудника', EquipmentID AS 'Номер оборудования', 
-                    Text AS 'Текст', Title AS 'Заголовок', HostID AS 'Номер администратора', RequestDate AS 'Дата'
-                    FROM Requests WHERE Status IS Null");
-            }
-            else
-            {
-                buttonJournal.Visible = false;
-                buttonEquipment.Visible = false;
-                FillingTable($@"SELECT ID AS '№', EmployeeID AS 'Номер сотрудника', EquipmentID AS 'Номер оборудования', 
-                    Text AS 'Текст', Title AS 'Заголовок', HostID AS 'Номер администратора', RequestDate AS 'Дата', Status AS 'Статус'
-                    FROM Requests WHERE EmployeeId='{Methods.EmployeeID}'");
-            }     
+            // Заполняет DataGriedViev данными с БД.
+            FillDataGridViev();
         }
 
         private void ButtonEquipment_Click(object sender, EventArgs e)
@@ -105,17 +121,19 @@ namespace Регистрация
 
         private void DataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dataGridView = (DataGridView)sender;
-            row = new string[dataGridView.Columns.Count];
-            for (int i = 0; i < dataGridView.Columns.Count; i++)
-            {
-                row[i] = dataGridView.Rows[e.RowIndex].Cells[i].Value.ToString();
-            }
-            var viewRequest = new ViewRequest
-            {
-                Owner = this
-            };
-            viewRequest.Show();
+            OpenVievRequest((DataGridView)sender, e.RowIndex);
+        }
+
+        private void DataGridView1_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            buttonViewRequest.Enabled = true;
+        }
+        #endregion
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            // Заполняет DataGriedViev данными с БД.
+            FillDataGridViev();
         }
     }
 }

@@ -41,9 +41,7 @@ E:\GitHub\Golden-rat\resourse\AAE\AAE\bin\Debug\AAE.pdb
 E:\GitHub\Golden-rat\resourse\AAE\AAE\obj\Debug\AAE.Properties.Resources.resources
 E:\GitHub\Golden-rat\resourse\AAE\AAE\obj\Debug\AAE.exe
 E:\GitHub\Golden-rat\resourse\AAE\AAE\obj\Debug\AAE.pdb
-E:\GitHub\Golden-rat\resourse\AAE\AAE\obj\Debug\AAE.csprojAssemblyReference.cache
 E:\GitHub\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.Equipment.resources
-E:\GitHub\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.AddEquipment.resources
 E:\GitHub\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.Journal.resources
 D:\Документы\github\Golden-rat\Resourse\AAE\AAE\bin\Debug\AAE.exe.config
 D:\Документы\github\Golden-rat\Resourse\AAE\AAE\bin\Debug\AAE.exe
@@ -64,3 +62,5 @@ D:\Документы\github\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.csproj.Co
 D:\Документы\github\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.exe
 D:\Документы\github\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.pdb
 E:\GitHub\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.csproj.ResolveComReference.cache
+E:\GitHub\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.EquipmentAdd.resources
+E:\GitHub\Golden-rat\Resourse\AAE\AAE\obj\Debug\AAE.csprojAssemblyReference.cache

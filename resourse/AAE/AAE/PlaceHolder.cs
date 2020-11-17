@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace Регистрация
@@ -21,9 +16,7 @@ namespace Регистрация
                 {
                     tb.Text = "";
                     tb.ForeColor = Color.Black;
-
                 }
-
             };
             tb.Leave += (s, e) =>
             {
@@ -33,8 +26,6 @@ namespace Регистрация
                     tb.Text = placeholderText;
                 }
             };
-
-
         }
     }
 }

@@ -65,11 +65,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddEquipment.cs">
+    <Compile Include="EquipmentAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEquipment.Designer.cs">
-      <DependentUpon>AddEquipment.cs</DependentUpon>
+    <Compile Include="EquipmentAdd.Designer.cs">
+      <DependentUpon>EquipmentAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Equipment.cs">
       <SubType>Form</SubType>
@@ -109,17 +109,17 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateRequest.cs">
+    <Compile Include="RequestCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateRequest.Designer.cs">
-      <DependentUpon>CreateRequest.cs</DependentUpon>
+    <Compile Include="RequestCreate.Designer.cs">
+      <DependentUpon>RequestCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewRequest.cs">
+    <Compile Include="RequestView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewRequest.Designer.cs">
-      <DependentUpon>ViewRequest.cs</DependentUpon>
+    <Compile Include="RequestView.Designer.cs">
+      <DependentUpon>RequestView.cs</DependentUpon>
     </Compile>
     <Compile Include="GradientPanel.cs">
       <SubType>Component</SubType>
@@ -127,8 +127,8 @@
     <Compile Include="PlaceHolder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddEquipment.resx">
-      <DependentUpon>AddEquipment.cs</DependentUpon>
+    <EmbeddedResource Include="EquipmentAdd.resx">
+      <DependentUpon>EquipmentAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Equipment.resx">
       <DependentUpon>Equipment.cs</DependentUpon>
@@ -148,11 +148,11 @@
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateRequest.resx">
-      <DependentUpon>CreateRequest.cs</DependentUpon>
+    <EmbeddedResource Include="RequestCreate.resx">
+      <DependentUpon>RequestCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewRequest.resx">
-      <DependentUpon>ViewRequest.cs</DependentUpon>
+    <EmbeddedResource Include="RequestView.resx">
+      <DependentUpon>RequestView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

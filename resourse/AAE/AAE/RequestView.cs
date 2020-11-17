@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Программа1;
 
@@ -22,12 +15,11 @@ namespace Регистрация
         // Перечисление для массива row.
         enum Request : byte
         {
-            ID = 0,
+            ID,
             EmployeeID,
             EquipmentID,
             Text,
             Title,
-            HostID,
             Date,
             Status
         }
@@ -37,12 +29,28 @@ namespace Регистрация
             MainMenu mainMenu = this.Owner as MainMenu;
             using (SqlConnection connection = new SqlConnection(Methods.connectionString))
             {
+                string status = "";
                 connection.Open();
-                string sqlExpression = $@"UPDATE Requests SET Status = '{decision}' WHERE ID = '{mainMenu.row[(byte)Request.ID]}'";
+                string sqlExpression = $@"SELECT Status FROM Requests WHERE ID = '{mainMenu.row[(byte)Request.ID]}'";
                 SqlCommand command = new SqlCommand(sqlExpression, connection);
                 SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                    status = Convert.ToString(reader["Status"]);
+                reader.Close();
+
+                if (status.Length != 0)
+                    MessageBox.Show("Заявка уже обработана!");
+                else
+                {           
+                    sqlExpression = $@"UPDATE Requests SET Status = '{decision}', HostID = '{Methods.EmployeeID}' WHERE ID = '{mainMenu.row[(byte)Request.ID]}'";
+                    command = new SqlCommand(sqlExpression, connection);
+                    command.ExecuteReader();
+                }
                 connection.Close();
             }
+            // Обновляем данные в таблице.
+            mainMenu.FillDataGridViev();
         }
 
         private void ButtonExit_Click(object sender, EventArgs e)
@@ -79,13 +87,8 @@ namespace Регистрация
 
         private void ButtonAcсept_Click(object sender, EventArgs e)
         {
-            DecisionMaking(true);
+            DecisionMaking(true);            
             this.Close();
-        }
-
-        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
