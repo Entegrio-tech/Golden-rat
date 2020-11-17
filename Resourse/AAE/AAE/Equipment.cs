@@ -158,52 +158,34 @@ namespace AAE
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            //пытаемся подключиться к запущенному Excel
-            try
-            {
-                ex = Marshal.GetActiveObject("Excel.Application")
-                as Excel.Application;
-            }
-            //если Excel на запущен, запускаем его
-            catch (COMException)
-            {
-                ex = new Excel.Application();
-            }
-            //создаем новую книгу на основе шаблона
-            object fileName = @"E:\GitHub\Golden-rat\Resourse\AAE\anketa.xltx";
-            ex.Workbooks.Add(fileName);
-            //во вторую колонку листа напротив введенных названий отобразим значения полей таблицы
-            //в первую колонку первой строки листа отображаем второе поле таблицы
-            (ex.ActiveWorkbook.Sheets[1] as Excel.Worksheet).Cells[1, 2] =
-            (binding.Current as DataRowView)["fam"].ToString();
-            //во вторую колонку второй строки листа отображаем третье поле поле таблицы и т.д.
-            (ex.ActiveWorkbook.Sheets[1] as Excel.Worksheet).Cells[
-            2, 2] =
-            (binding.Current as DataRowView)["imya"].ToString()
-            ;
-            (ex.ActiveWorkbook.Sheets[1] as Excel.Worksheet).Cells[
-            3, 2] =
-            (binding.Current as DataRowView)["otch"].ToString()
-            ;
-            (ex.ActiveWorkbook.Sheets[1] as Excel.Worksheet).Cells[
-            4, 2] =
-            (binding.Current as DataRowView)["grup"].ToString()
-            ;
-            (ex.ActiveWorkbook.Sheets[1] as Excel.Worksheet).Cells[
-            5, 2] =
-
-            (binding.Current as DataRowView)["finance"].ToString();
-            //поле типа Дата/Время выводится по шаблону, чтобы не выводилось время
-            (ex.ActiveWorkbook.Sheets[1] as Excel.Worksheet).Cells[
-            6, 2] =
-            Convert.ToDateTime((binding.Current as DataRowView)
-            ["datar"]).ToString("dd/MM/yyyy");
-            (ex.ActiveWorkbook.Sheets[1] as Excel.Worksheet).Cells[
-            7, 2] =
-            (binding.Current as DataRowView)["srbal"].ToString(
-            );
-            //делаем окно Excel видимым
+            //Объявляем приложение
+            Excel.Application ex = new Microsoft.Office.Interop.Excel.Application();
+            //Отобразить Excel
             ex.Visible = true;
+            //Количество листов в рабочей книге
+            ex.SheetsInNewWorkbook = 2;
+            //Добавить рабочую книгу
+            Excel.Workbook workBook = ex.Workbooks.Add(Type.Missing);
+            //Отключить отображение окон с сообщениями
+            ex.DisplayAlerts = false;
+            //Получаем первый лист документа (счет начинается с 1)
+            Excel.Worksheet sheet = (Excel.Worksheet)ex.Worksheets.get_Item(1);
+            //Название листа (вкладки снизу)
+            sheet.Name = $"Отчет";
+            //Пример заполнения ячеек
+            sheet.Cells[1, 1] = "Код";
+            sheet.Cells[1, 2] = "Название";
+            sheet.Cells[1, 3] = "Тип";
+            sheet.Cells[1, 4] = "Заведующий";
+            sheet.Cells[1, 5] = "Место";
+            sheet.Cells[1, 6] = "Компонент";
+            for (int i = 2; i < dataGridView1.Rows.Count + 1; i++)
+            {
+                for (int j = 1; j < dataGridView1.Columns.Count + 1; j++)
+                {
+                    sheet.Cells[i, j] = dataGridView1[j - 1, i - 2].Value;
+                }
+            }
         }
     }
     
