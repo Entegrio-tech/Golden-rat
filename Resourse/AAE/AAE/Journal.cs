@@ -138,14 +138,21 @@ namespace AAE
                 MessageBox.Show("Печать пуста");
         }
 
-        private void buttonPreview_Click_1(object sender, EventArgs e)
+        private void textBoxSearch_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonPrint.PerformClick();
+            }
+        }
+        private void GradientPanel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            Methods.gradientPanelMouseDown(e);
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void GradientPanel1_MouseMove(object sender, MouseEventArgs e)
         {
-
+            Methods.GradientPanelMouseMove(this, e);
         }
     }
 

@@ -53,7 +53,7 @@
             this.textBoxInventoryID.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBoxInventoryID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxInventoryID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxInventoryID.Location = new System.Drawing.Point(263, 76);
+            this.textBoxInventoryID.Location = new System.Drawing.Point(320, 78);
             this.textBoxInventoryID.MaxLength = 8;
             this.textBoxInventoryID.Name = "textBoxInventoryID";
             this.textBoxInventoryID.Size = new System.Drawing.Size(420, 30);
@@ -109,7 +109,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(23, 76);
+            this.label1.Location = new System.Drawing.Point(12, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(234, 35);
             this.label1.TabIndex = 6;
@@ -238,6 +238,8 @@
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(784, 421);
             this.gradientPanel1.TabIndex = 15;
+            this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseDown);
+            this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseMove);
             // 
             // label7
             // 
@@ -245,11 +247,11 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(223, 9);
+            this.label7.Location = new System.Drawing.Point(166, 5);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(460, 59);
+            this.label7.Size = new System.Drawing.Size(473, 59);
             this.label7.TabIndex = 23;
-            this.label7.Text = "Просмотр оборудования";
+            this.label7.Text = "Добавление оборудования";
             // 
             // button2
             // 

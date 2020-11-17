@@ -124,5 +124,11 @@ namespace Программа1
                 e.HasMorePages = true;
             }
         }
+        public static void HidePassword(TextBox sender, string textPassword)
+        {
+            sender.PasswordChar = '*';
+            if (sender.Text.Equals(textPassword))
+                sender.PasswordChar = '\0';
+        }
     }
 }

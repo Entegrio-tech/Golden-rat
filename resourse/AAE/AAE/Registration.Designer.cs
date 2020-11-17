@@ -62,18 +62,20 @@
             this.gradientPanel1.Controls.Add(this.label1);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(779, 567);
             this.gradientPanel1.TabIndex = 0;
+            this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseDown);
+            this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseMove);
             // 
             // labelError
             // 
             this.labelError.AutoSize = true;
             this.labelError.BackColor = System.Drawing.Color.Transparent;
-            this.labelError.Location = new System.Drawing.Point(260, 323);
+            this.labelError.Location = new System.Drawing.Point(163, 412);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(0, 13);
+            this.labelError.Size = new System.Drawing.Size(0, 17);
             this.labelError.TabIndex = 10;
             // 
             // textBoxSurname
@@ -82,7 +84,7 @@
             this.textBoxSurname.Location = new System.Drawing.Point(198, 107);
             this.textBoxSurname.MaxLength = 20;
             this.textBoxSurname.Name = "textBoxSurname";
-            this.textBoxSurname.Size = new System.Drawing.Size(199, 20);
+            this.textBoxSurname.Size = new System.Drawing.Size(199, 22);
             this.textBoxSurname.TabIndex = 9;
             // 
             // textBoxName
@@ -91,7 +93,7 @@
             this.textBoxName.Location = new System.Drawing.Point(198, 81);
             this.textBoxName.MaxLength = 20;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(199, 20);
+            this.textBoxName.Size = new System.Drawing.Size(199, 22);
             this.textBoxName.TabIndex = 8;
             // 
             // button3
@@ -103,7 +105,7 @@
             this.button3.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(4, 4);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(40, 32);
             this.button3.TabIndex = 7;
@@ -120,7 +122,7 @@
             this.button2.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(735, 4);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(40, 32);
             this.button2.TabIndex = 6;
@@ -136,7 +138,7 @@
             this.buttonRegistration.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonRegistration.ForeColor = System.Drawing.Color.Transparent;
             this.buttonRegistration.Location = new System.Drawing.Point(221, 442);
-            this.buttonRegistration.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRegistration.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRegistration.Name = "buttonRegistration";
             this.buttonRegistration.Size = new System.Drawing.Size(315, 57);
             this.buttonRegistration.TabIndex = 5;
@@ -149,7 +151,7 @@
             this.textBoxPassword2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBoxPassword2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassword2.Location = new System.Drawing.Point(131, 358);
-            this.textBoxPassword2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPassword2.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPassword2.MaxLength = 60;
             this.textBoxPassword2.Name = "textBoxPassword2";
             this.textBoxPassword2.Size = new System.Drawing.Size(495, 34);
@@ -160,7 +162,7 @@
             this.textBoxPassword1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBoxPassword1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassword1.Location = new System.Drawing.Point(131, 299);
-            this.textBoxPassword1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPassword1.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPassword1.MaxLength = 60;
             this.textBoxPassword1.Name = "textBoxPassword1";
             this.textBoxPassword1.Size = new System.Drawing.Size(495, 34);
@@ -172,18 +174,19 @@
             this.textBoxEmail.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBoxEmail.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxEmail.Location = new System.Drawing.Point(131, 238);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxEmail.MaxLength = 30;
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(495, 34);
             this.textBoxEmail.TabIndex = 2;
+            this.textBoxEmail.TextChanged += new System.EventHandler(this.textBoxEmail_TextChanged);
             // 
             // textBoxLogin
             // 
             this.textBoxLogin.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBoxLogin.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxLogin.Location = new System.Drawing.Point(131, 182);
-            this.textBoxLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxLogin.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxLogin.MaxLength = 20;
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(495, 34);
@@ -210,7 +213,7 @@
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Registration";
             this.Text = "Регистрация";
             this.Load += new System.EventHandler(this.Form1_Load);

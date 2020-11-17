@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRequest));
             this.gradientPanel1 = new Регистрация.GradientPanel();
             this.labelEmployeeIDName = new System.Windows.Forms.Label();
-            this.labelError = new System.Windows.Forms.Label();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonReject = new System.Windows.Forms.Button();
@@ -61,7 +60,6 @@
             this.gradientPanel1.ColorBottom = System.Drawing.Color.Blue;
             this.gradientPanel1.ColorTop = System.Drawing.Color.White;
             this.gradientPanel1.Controls.Add(this.labelEmployeeIDName);
-            this.gradientPanel1.Controls.Add(this.labelError);
             this.gradientPanel1.Controls.Add(this.textBoxTitle);
             this.gradientPanel1.Controls.Add(this.buttonExit);
             this.gradientPanel1.Controls.Add(this.buttonReject);
@@ -90,17 +88,6 @@
             this.labelEmployeeIDName.Size = new System.Drawing.Size(215, 35);
             this.labelEmployeeIDName.TabIndex = 27;
             this.labelEmployeeIDName.Text = "Номер сотрудника";
-            // 
-            // labelError
-            // 
-            this.labelError.AutoSize = true;
-            this.labelError.BackColor = System.Drawing.Color.Transparent;
-            this.labelError.Location = new System.Drawing.Point(563, 129);
-            this.labelError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(70, 17);
-            this.labelError.TabIndex = 23;
-            this.labelError.Text = "labelError";
             // 
             // textBoxTitle
             // 
@@ -371,7 +358,6 @@
         private System.Windows.Forms.Button buttonReject;
         private System.Windows.Forms.Button buttonAcсept;
         private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.Label labelError;
         private System.Windows.Forms.TextBox textBoxTitle;
         private System.Windows.Forms.Label labelRequestIDName;
         private System.Windows.Forms.Label labelDate;

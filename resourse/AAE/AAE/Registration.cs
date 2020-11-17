@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Программа1;
+using System.Text.RegularExpressions;
 
 namespace Регистрация
 {
@@ -11,6 +12,23 @@ namespace Регистрация
         {
             InitializeComponent();
         }
+        private void InputValidationEmail()
+        {
+            string pattern = @"^(?("")(""[^""]+?""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9]{2,17}))$";
+
+            if (!Regex.IsMatch(textBoxEmail.Text, pattern, RegexOptions.IgnoreCase))
+            { 
+                labelError.Text = "Некорректный email";
+                buttonRegistration.Enabled = false;
+            }
+            else
+            {
+                labelError.Text = "";
+                buttonRegistration.Enabled = true;
+            }
+        }
+
 
         private void Button2_Click(object sender, EventArgs e)
         {
@@ -52,20 +70,15 @@ namespace Регистрация
                             {
                                 if (textBoxName.Text.IndexOf(' ') < 0)
                                 {
-                                    if (textBoxEmail.Text.IndexOf(' ') < 0)
+                                    if (textBoxLogin.Text.IndexOf(' ') < 0)
                                     {
-                                        if (textBoxLogin.Text.IndexOf(' ') < 0)
-                                        {
-                                            command.ExecuteNonQuery();
-                                            Authorization authorization = new Authorization();
-                                            this.Close();
-                                            authorization.Show();
-                                        }
-                                        else
-                                            labelError.Text = "Логин не может содержать пробелы";
+                                        command.ExecuteNonQuery();
+                                        Authorization authorization = new Authorization();
+                                        this.Close();
+                                        authorization.Show();
                                     }
                                     else
-                                        labelError.Text = "E-MAIL не может содержать пробелы";
+                                        labelError.Text = "Логин не может содержать пробелы";
                                 }
                                 else
                                     labelError.Text = "Имя не может содержать пробелы";
@@ -106,6 +119,11 @@ namespace Регистрация
         private void GradientPanel1_MouseMove(object sender, MouseEventArgs e)
         {
             Methods.GradientPanelMouseMove(this, e);
+        }
+
+        private void textBoxEmail_TextChanged(object sender, EventArgs e)
+        {
+            InputValidationEmail();
         }
     }
 }

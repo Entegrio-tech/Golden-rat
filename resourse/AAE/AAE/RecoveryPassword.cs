@@ -14,31 +14,33 @@ namespace Регистрация
             InitializeComponent();
         }
 
-        short code;
+        short? code;
 
         string userEmail;
 
         private void PasswordEntryStates(bool status)
         {
-            if (status == true)
+            if (status)
             {
-                textBoxNewPassword.Enabled = true;
+                textBoxNewPassword1.Enabled = true;
+                textBoxNewPassword2.Enabled = true;
                 buttonRecovery.Enabled = true;
             }
             else
             {
-                textBoxNewPassword.Enabled = false;
+                textBoxNewPassword1.Enabled = false;
+                textBoxNewPassword2.Enabled = false;
                 buttonRecovery.Enabled = false;
             }
         }
 
-        private short GeneratingCode()
+        private short? GeneratingCode()
         {
             Random rnd = new Random();
-            return (short)rnd.Next(1111, 9999);
+            return (short?)rnd.Next(1111, 9999);
         }
 
-        private void SendMail(short code)
+        private void SendMail(short? code)
         {
             string mail = "aae.manager@outlook.com";
             MailAddress from = new MailAddress(mail, "AAE");
@@ -47,9 +49,9 @@ namespace Регистрация
             MailMessage m = new MailMessage(from, to)
             {
                 // тема письма
-                Subject = "Тест",
+                Subject = "Восстановление пароля",
                 // текст письма
-                Body = $"<h2>Ваш код: {code}</h2>",
+                Body = $"<h3>Здравствуйте, вы отправили запрос на восстановление пароля, если это были не вы - проигнорируйте это письмо.</h3>\n<h1>Ваш код: {code}</h1>",
                 IsBodyHtml = true
             };
             // SMTP outlook
@@ -62,6 +64,11 @@ namespace Регистрация
             smtp.Send(m);
         }
 
+        private bool PasswordMatches()
+        {            
+            return textBoxNewPassword1.Text.Equals(textBoxNewPassword2.Text);
+        }
+
         private void ButtonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -71,7 +78,8 @@ namespace Регистрация
         {
             textBoxLogin.AddPlaceholder("Введите вашу почту");
             textBoxCode.AddPlaceholder("Код");
-            textBoxNewPassword.AddPlaceholder("Введите новый пароль");
+            textBoxNewPassword1.AddPlaceholder("Введите новый пароль");
+            textBoxNewPassword2.AddPlaceholder("Повторно введите пароль");
             
         }
 
@@ -88,7 +96,7 @@ namespace Регистрация
                 if (reader.HasRows)
                 {
                     SendMail(code);
-                    labelNotification.Text = "Введите присланый вам на почту код";
+                    labelNotification.Text = "Введите присланный вам на почту код";
                     textBoxCode.Enabled = true;
                     buttonAcceptCode.Enabled = true;
                     PasswordEntryStates(false);
@@ -109,6 +117,7 @@ namespace Регистрация
             if (textBoxCode.Text == code.ToString())
             {
                 PasswordEntryStates(true);
+                code = null;
                 labelNotification.Text = "Введите новый пароль";
             }
             else 
@@ -122,17 +131,23 @@ namespace Регистрация
 
         private void ButtonRecovery_Click(object sender, EventArgs e)
         {
-            string password = textBoxNewPassword.Text;
-            using (SqlConnection connection = new SqlConnection(Methods.connectionString))
+            if (PasswordMatches())
             {
-                connection.Open();
-                string sqlExpression = $@"UPDATE Employee SET password = CAST('{password}' AS VARBINARY) WHERE Email = '{userEmail}'";
-                SqlCommand command = new SqlCommand(sqlExpression, connection);
-                SqlDataReader reader = command.ExecuteReader();
-                connection.Close();
+                labelNotification.Text = "";
+                string password = textBoxNewPassword1.Text;
+                using (SqlConnection connection = new SqlConnection(Methods.connectionString))
+                {
+                    connection.Open();
+                    string sqlExpression = $@"UPDATE Employee SET password = CAST('{password}' AS VARBINARY) WHERE Email = '{userEmail}'";
+                    SqlCommand command = new SqlCommand(sqlExpression, connection);
+                    SqlDataReader reader = command.ExecuteReader();
+                    connection.Close();
+                }
+                buttonRecovery.Enabled = false;
+                labelNotification.Text = "Пароль установлен!\nИспользуйте новые данные для входа";
             }
-            buttonRecovery.Enabled = false;
-            labelNotification.Text = "Пароль установлен!\nИспользуйте новые данные для входа";
+            else
+                labelNotification.Text = "Пароли не совпадают";
         }
 
         private void GradientPanel1_MouseDown(object sender, MouseEventArgs e)
@@ -150,6 +165,16 @@ namespace Регистрация
             Authorization authorization = new Authorization();
             this.Close();
             authorization.Show();
+        }
+
+        private void TextBoxNewPassword1_TextChanged(object sender, EventArgs e)
+        {
+            Methods.HidePassword((TextBox)sender, "Введите новый пароль");
+        }
+
+        private void TextBoxNewPassword2_TextChanged(object sender, EventArgs e)
+        {
+            Methods.HidePassword((TextBox)sender, "Повторно введите пароль");
         }
     }
 }

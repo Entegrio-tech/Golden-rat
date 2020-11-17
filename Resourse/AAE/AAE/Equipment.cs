@@ -153,17 +153,16 @@ namespace AAE
             }
         }
 
-        Excel.Application ex;
-        public BindingSource binding = new BindingSource();
-
         private void Button1_Click(object sender, EventArgs e)
         {
             //Объявляем приложение
-            Excel.Application ex = new Microsoft.Office.Interop.Excel.Application();
-            //Отобразить Excel
-            ex.Visible = true;
-            //Количество листов в рабочей книге
-            ex.SheetsInNewWorkbook = 2;
+            Excel.Application ex = new Microsoft.Office.Interop.Excel.Application
+            {
+                //Отобразить Excel
+                Visible = true,
+                //Количество листов в рабочей книге
+                SheetsInNewWorkbook = 2
+            };
             //Добавить рабочую книгу
             Excel.Workbook workBook = ex.Workbooks.Add(Type.Missing);
             //Отключить отображение окон с сообщениями
@@ -185,6 +184,24 @@ namespace AAE
                 {
                     sheet.Cells[i, j] = dataGridView1[j - 1, i - 2].Value;
                 }
+            }
+        }
+
+        private void GradientPanel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            Methods.gradientPanelMouseDown(e);
+        }
+
+        private void GradientPanel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            Methods.GradientPanelMouseMove(this, e);
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonSearch.PerformClick();
             }
         }
     }

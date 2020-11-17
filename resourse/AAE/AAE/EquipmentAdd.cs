@@ -104,5 +104,15 @@ namespace AAE
         {
             Application.Exit();
         }
+
+        private void GradientPanel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            Methods.gradientPanelMouseDown(e);
+        }
+
+        private void GradientPanel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            Methods.GradientPanelMouseMove(this, e);
+        }
     }
 }

@@ -69,12 +69,7 @@ namespace Регистрация
             }
         }
 
-        private void HidePassword(TextBox sender)
-        {
-            sender.PasswordChar = '*';
-            if (sender.Text.Equals(textPassword))
-                sender.PasswordChar = '\0';
-        }
+        
         #endregion
 
         #region Events
@@ -138,7 +133,7 @@ namespace Регистрация
 
         private void TextBoxPassword_TextChanged(object sender, EventArgs e)
         {
-           HidePassword((TextBox)sender);
+           Methods.HidePassword((TextBox)sender, textPassword);
         }
         #endregion
     }

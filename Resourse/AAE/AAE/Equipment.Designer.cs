@@ -74,6 +74,8 @@
             gradientPanel1.Name = "gradientPanel1";
             gradientPanel1.Size = new System.Drawing.Size(800, 430);
             gradientPanel1.TabIndex = 7;
+            gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseDown);
+            gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseMove);
             // 
             // button1
             // 
@@ -150,6 +152,8 @@
             this.label2.Size = new System.Drawing.Size(268, 59);
             this.label2.TabIndex = 23;
             this.label2.Text = "Оборудование";
+            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseDown);
+            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseMove);
             // 
             // buttonExit
             // 
@@ -224,6 +228,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(268, 30);
             this.textBox1.TabIndex = 3;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // buttonBack
             // 
