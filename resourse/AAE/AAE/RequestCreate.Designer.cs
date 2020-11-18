@@ -139,7 +139,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.LightGray;
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.richTextBox1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.richTextBox1.Location = new System.Drawing.Point(45, 174);
             this.richTextBox1.Name = "richTextBox1";

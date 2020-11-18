@@ -70,9 +70,8 @@
             this.gradientPanel1.Controls.Add(this.gradientPanel2);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(1043, 537);
+            this.gradientPanel1.Size = new System.Drawing.Size(782, 436);
             this.gradientPanel1.TabIndex = 0;
             this.gradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseDown);
             this.gradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GradientPanel1_MouseMove);
@@ -83,9 +82,10 @@
             this.labelEmployeeIDName.BackColor = System.Drawing.Color.Transparent;
             this.labelEmployeeIDName.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelEmployeeIDName.ForeColor = System.Drawing.Color.Cyan;
-            this.labelEmployeeIDName.Location = new System.Drawing.Point(593, 265);
+            this.labelEmployeeIDName.Location = new System.Drawing.Point(445, 215);
+            this.labelEmployeeIDName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEmployeeIDName.Name = "labelEmployeeIDName";
-            this.labelEmployeeIDName.Size = new System.Drawing.Size(215, 35);
+            this.labelEmployeeIDName.Size = new System.Drawing.Size(169, 28);
             this.labelEmployeeIDName.TabIndex = 27;
             this.labelEmployeeIDName.Text = "Номер сотрудника";
             // 
@@ -93,11 +93,11 @@
             // 
             this.textBoxTitle.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBoxTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxTitle.Location = new System.Drawing.Point(41, 123);
-            this.textBoxTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxTitle.Location = new System.Drawing.Point(31, 100);
+            this.textBoxTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.ReadOnly = true;
-            this.textBoxTitle.Size = new System.Drawing.Size(513, 26);
+            this.textBoxTitle.Size = new System.Drawing.Size(386, 23);
             this.textBoxTitle.TabIndex = 25;
             // 
             // buttonExit
@@ -108,10 +108,10 @@
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Segoe Print", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonExit.ForeColor = System.Drawing.Color.Black;
-            this.buttonExit.Location = new System.Drawing.Point(984, 5);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonExit.Location = new System.Drawing.Point(738, 4);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(53, 39);
+            this.buttonExit.Size = new System.Drawing.Size(40, 32);
             this.buttonExit.TabIndex = 15;
             this.buttonExit.Text = "X";
             this.buttonExit.UseVisualStyleBackColor = false;
@@ -124,10 +124,10 @@
             this.buttonReject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonReject.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonReject.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonReject.Location = new System.Drawing.Point(105, 450);
-            this.buttonReject.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonReject.Location = new System.Drawing.Point(79, 366);
+            this.buttonReject.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonReject.Name = "buttonReject";
-            this.buttonReject.Size = new System.Drawing.Size(384, 70);
+            this.buttonReject.Size = new System.Drawing.Size(288, 57);
             this.buttonReject.TabIndex = 20;
             this.buttonReject.Text = "Отклонить";
             this.buttonReject.UseVisualStyleBackColor = false;
@@ -140,10 +140,10 @@
             this.buttonAcсept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAcсept.Font = new System.Drawing.Font("Segoe Print", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAcсept.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonAcсept.Location = new System.Drawing.Point(580, 450);
-            this.buttonAcсept.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonAcсept.Location = new System.Drawing.Point(435, 366);
+            this.buttonAcсept.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonAcсept.Name = "buttonAcсept";
-            this.buttonAcсept.Size = new System.Drawing.Size(368, 70);
+            this.buttonAcсept.Size = new System.Drawing.Size(276, 57);
             this.buttonAcсept.TabIndex = 19;
             this.buttonAcсept.Text = "Выполнено";
             this.buttonAcсept.UseVisualStyleBackColor = false;
@@ -151,13 +151,13 @@
             // 
             // richTextBoxRequest
             // 
-            this.richTextBoxRequest.BackColor = System.Drawing.Color.LightGray;
+            this.richTextBoxRequest.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.richTextBoxRequest.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBoxRequest.Location = new System.Drawing.Point(41, 159);
-            this.richTextBoxRequest.Margin = new System.Windows.Forms.Padding(5);
+            this.richTextBoxRequest.Location = new System.Drawing.Point(31, 129);
+            this.richTextBoxRequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBoxRequest.Name = "richTextBoxRequest";
             this.richTextBoxRequest.ReadOnly = true;
-            this.richTextBoxRequest.Size = new System.Drawing.Size(513, 274);
+            this.richTextBoxRequest.Size = new System.Drawing.Size(386, 223);
             this.richTextBoxRequest.TabIndex = 17;
             this.richTextBoxRequest.Text = "";
             // 
@@ -167,10 +167,10 @@
             this.labelName.BackColor = System.Drawing.Color.Transparent;
             this.labelName.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelName.Location = new System.Drawing.Point(356, 11);
-            this.labelName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelName.Location = new System.Drawing.Point(267, 9);
+            this.labelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(341, 59);
+            this.labelName.Size = new System.Drawing.Size(270, 47);
             this.labelName.TabIndex = 16;
             this.labelName.Text = "Просморт заявки";
             // 
@@ -182,10 +182,9 @@
             this.gradientPanel3.ColorTop = System.Drawing.Color.Empty;
             this.gradientPanel3.Controls.Add(this.labelDate);
             this.gradientPanel3.Controls.Add(this.labelDateName);
-            this.gradientPanel3.Location = new System.Drawing.Point(41, 74);
-            this.gradientPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.gradientPanel3.Location = new System.Drawing.Point(31, 60);
             this.gradientPanel3.Name = "gradientPanel3";
-            this.gradientPanel3.Size = new System.Drawing.Size(251, 43);
+            this.gradientPanel3.Size = new System.Drawing.Size(189, 35);
             this.gradientPanel3.TabIndex = 36;
             // 
             // labelDate
@@ -196,9 +195,10 @@
             this.labelDate.Cursor = System.Windows.Forms.Cursors.Default;
             this.labelDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelDate.Location = new System.Drawing.Point(97, 11);
+            this.labelDate.Location = new System.Drawing.Point(73, 9);
+            this.labelDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(18, 20);
+            this.labelDate.Size = new System.Drawing.Size(16, 17);
             this.labelDate.TabIndex = 32;
             this.labelDate.Text = "1";
             // 
@@ -209,9 +209,10 @@
             this.labelDateName.BackColor = System.Drawing.Color.Transparent;
             this.labelDateName.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelDateName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelDateName.Location = new System.Drawing.Point(25, 12);
+            this.labelDateName.Location = new System.Drawing.Point(19, 10);
+            this.labelDateName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDateName.Name = "labelDateName";
-            this.labelDateName.Size = new System.Drawing.Size(47, 19);
+            this.labelDateName.Size = new System.Drawing.Size(40, 16);
             this.labelDateName.TabIndex = 31;
             this.labelDateName.Text = "Дата";
             // 
@@ -229,19 +230,19 @@
             this.gradientPanel2.Controls.Add(this.label1);
             this.gradientPanel2.Controls.Add(this.labelRequestID);
             this.gradientPanel2.Controls.Add(this.labelEquipmentIDName);
-            this.gradientPanel2.Location = new System.Drawing.Point(580, 159);
-            this.gradientPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.gradientPanel2.Location = new System.Drawing.Point(435, 129);
             this.gradientPanel2.Name = "gradientPanel2";
-            this.gradientPanel2.Size = new System.Drawing.Size(390, 274);
+            this.gradientPanel2.Size = new System.Drawing.Size(293, 223);
             this.gradientPanel2.TabIndex = 35;
             // 
             // labelEquipmentID
             // 
             this.labelEquipmentID.AutoSize = true;
             this.labelEquipmentID.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelEquipmentID.Location = new System.Drawing.Point(304, 180);
+            this.labelEquipmentID.Location = new System.Drawing.Point(228, 146);
+            this.labelEquipmentID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEquipmentID.Name = "labelEquipmentID";
-            this.labelEquipmentID.Size = new System.Drawing.Size(30, 32);
+            this.labelEquipmentID.Size = new System.Drawing.Size(24, 25);
             this.labelEquipmentID.TabIndex = 30;
             this.labelEquipmentID.Text = "1";
             // 
@@ -251,10 +252,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe Print", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(260, 172);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Location = new System.Drawing.Point(195, 140);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 42);
+            this.label3.Size = new System.Drawing.Size(38, 33);
             this.label3.TabIndex = 36;
             this.label3.Text = "№";
             // 
@@ -262,9 +263,10 @@
             // 
             this.labelEmployeeID.AutoSize = true;
             this.labelEmployeeID.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelEmployeeID.Location = new System.Drawing.Point(291, 110);
+            this.labelEmployeeID.Location = new System.Drawing.Point(218, 89);
+            this.labelEmployeeID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEmployeeID.Name = "labelEmployeeID";
-            this.labelEmployeeID.Size = new System.Drawing.Size(30, 32);
+            this.labelEmployeeID.Size = new System.Drawing.Size(24, 25);
             this.labelEmployeeID.TabIndex = 28;
             this.labelEmployeeID.Text = "1";
             // 
@@ -274,10 +276,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe Print", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(247, 101);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Location = new System.Drawing.Point(185, 82);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 42);
+            this.label2.Size = new System.Drawing.Size(38, 33);
             this.label2.TabIndex = 35;
             this.label2.Text = "№";
             // 
@@ -287,9 +289,10 @@
             this.labelRequestIDName.BackColor = System.Drawing.Color.Transparent;
             this.labelRequestIDName.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelRequestIDName.ForeColor = System.Drawing.Color.Cyan;
-            this.labelRequestIDName.Location = new System.Drawing.Point(13, 28);
+            this.labelRequestIDName.Location = new System.Drawing.Point(10, 23);
+            this.labelRequestIDName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRequestIDName.Name = "labelRequestIDName";
-            this.labelRequestIDName.Size = new System.Drawing.Size(156, 35);
+            this.labelRequestIDName.Size = new System.Drawing.Size(125, 28);
             this.labelRequestIDName.TabIndex = 24;
             this.labelRequestIDName.Text = "Номер заявки";
             // 
@@ -299,10 +302,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(188, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Location = new System.Drawing.Point(141, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 42);
+            this.label1.Size = new System.Drawing.Size(38, 33);
             this.label1.TabIndex = 34;
             this.label1.Text = "№";
             // 
@@ -310,9 +313,10 @@
             // 
             this.labelRequestID.AutoSize = true;
             this.labelRequestID.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRequestID.Location = new System.Drawing.Point(235, 32);
+            this.labelRequestID.Location = new System.Drawing.Point(176, 26);
+            this.labelRequestID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRequestID.Name = "labelRequestID";
-            this.labelRequestID.Size = new System.Drawing.Size(30, 32);
+            this.labelRequestID.Size = new System.Drawing.Size(24, 25);
             this.labelRequestID.TabIndex = 26;
             this.labelRequestID.Text = "1";
             // 
@@ -321,21 +325,21 @@
             this.labelEquipmentIDName.AutoSize = true;
             this.labelEquipmentIDName.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelEquipmentIDName.ForeColor = System.Drawing.Color.Cyan;
-            this.labelEquipmentIDName.Location = new System.Drawing.Point(15, 177);
+            this.labelEquipmentIDName.Location = new System.Drawing.Point(11, 144);
+            this.labelEquipmentIDName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEquipmentIDName.Name = "labelEquipmentIDName";
-            this.labelEquipmentIDName.Size = new System.Drawing.Size(225, 35);
+            this.labelEquipmentIDName.Size = new System.Drawing.Size(178, 28);
             this.labelEquipmentIDName.TabIndex = 29;
             this.labelEquipmentIDName.Text = "Номер оборудование";
             // 
             // ViewRequest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1043, 537);
+            this.ClientSize = new System.Drawing.Size(782, 436);
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ViewRequest";
             this.Text = "Просмотр запроса";
             this.Load += new System.EventHandler(this.ViewRequest_Load);
