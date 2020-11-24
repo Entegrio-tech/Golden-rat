@@ -56,6 +56,8 @@ namespace Регистрация
             }
             else
             {
+                buttonCreateRequest.Visible = true;
+                buttonViewRequest.Visible = false;
                 buttonJournal.Visible = false;
                 buttonEquipment.Visible = false;
                 FillingTable($@"SELECT ID AS '№', EmployeeID AS 'Номер сотрудника', EquipmentID AS 'Номер оборудования', 
@@ -80,8 +82,9 @@ namespace Регистрация
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            CreateRequest createRequest = new CreateRequest();
             this.Close();
-            Methods.createRequest.Show();
+            createRequest.Show();
         }
 
         private void ButtonViewRequest_Click(object sender, EventArgs e)
@@ -121,7 +124,11 @@ namespace Регистрация
 
         private void DataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            OpenVievRequest((DataGridView)sender, e.RowIndex);
+            if (Methods.Privilage)
+            {
+                OpenVievRequest((DataGridView)sender, e.RowIndex);
+            }
+            
         }
 
         private void DataGridView1_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
